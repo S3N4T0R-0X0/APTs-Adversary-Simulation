@@ -19,7 +19,7 @@ This attack included several stages including DodgeBox, a reflective DLL loader 
 3. Data exfiltration: over GoogleDrive API C2 Channe, This integrates GoogleDrive API functionality to facilitate communication between the compromised system and the attacker-controlled server thereby potentially hiding the traffic within legitimate GoogleDrive communication.
 
 
-## The first stage (DodgeBox) DLL loader
+## The first stage (DodgeBox DLL loader)
 
 
 This payload detects sandbox environments by checking for the presence of the SbieDll module and halts execution if found. It dynamically resolves API functions using obfuscated hashes to evade detection. The code allocates memory in the process using NtAllocateVirtualMemory, potentially for injecting or executing malicious code. It employs FNV-1a hashing to obscure strings like DLL and function names. Additionally, it uses DLL sideloading to execute DodgeBox, leveraging a legitimate executable like taskhost.exe to bypass security mechanisms.
@@ -63,4 +63,33 @@ The provided test values demonstrate hashing of DLL and function names (ntdll an
 
 ![Screenshot From 2024-12-09 00-37-20](https://github.com/user-attachments/assets/b95faa30-b9aa-4d0c-a631-e06f37af81d3)
 
+
+## The Second stage (generate obfuscated hashes - fnv1a_salted)
+
+The fnv1a_salted function can be used to generate obfuscated hashes for string identifiers (like DLL or function names) by combining them with a salt. These hashes can then be used in the code for API function resolution or obfuscation to avoid detection.
+
+![Screenshot From 2024-12-09 14-21-21](https://github.com/user-attachments/assets/07497535-0aaa-40ca-ac88-fb357c4d0ac0)
+
+
+Use fnv1a_salted
+
+Input Preparation:
+Prepare the data (e.g., ntdll or LdrLoadDll) as a byte string.
+Prepare the salt, which is also a byte string.
+Use the default or custom seed_value for the hash calculation.
+
+Function Usage:
+Call fnv1a_salted(data, salt) to generate the obfuscated hash.
+The hash output is a 32-bit integer, which can be converted to hexadecimal for use in your program.
+
+Practical Application:
+Use the calculated hash values as constants in your code for obfuscated API resolution, avoiding the use of plain strings (e.g., "ntdll").
+
+Why the attackers Use Hashing?
+
+1.Evasion: Prevents easy detection by antivirus or static analysis tools.
+  
+2.Obfuscation: Masks the real purpose of the payload by hiding sensitive strings.
+  
+3.Memory-Only Execution: Useful in memory-resident malware that avoids writing cleartext strings to disk.
 

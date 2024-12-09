@@ -93,3 +93,4 @@ Why the attackers Use Hashing?
   
 3.Memory-Only Execution: Useful in memory-resident malware that avoids writing cleartext strings to disk.
 
+## The third stage (MoonWalk backdoor)

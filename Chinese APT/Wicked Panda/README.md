@@ -12,9 +12,11 @@ This attack included several stages including DodgeBox, a reflective DLL loader 
 
 ![imageedit_2_3915351931](https://github.com/user-attachments/assets/1ddd642e-4cd1-4bb5-bfc1-6a8e342d6364)
 
-1. Employs DLL sideloading as a means of executing DodgeBox. employs DLL sideloading as a means of executing DodgeBox. They utilize a legitimate executable (taskhost.exe). The malicious DLL, DodgeBox, serves as a loader and is responsible for decrypting a second stage payload from an encrypted DAT file (sbiedll.dat), The decrypted payload, MoonWalk functions as a backdoor.
+1. Employs DLL sideloading as a means of executing DodgeBox. employs DLL sideloading as a means of executing DodgeBox. They utilize a legitimate executable (taskhost.exe).
 
-2. Data exfiltration: over GoogleDrive API C2 Channe, This integrates GoogleDrive API functionality to facilitate communication between the compromised system and the attacker-controlled server thereby potentially hiding the traffic within legitimate GoogleDrive communication.
+2.  The malicious DLL, DodgeBox, serves as a loader and is responsible for decrypting a second stage payload from an encrypted DAT file (sbiedll.dat), The decrypted payload, MoonWalk functions as a backdoor.
+
+3. Data exfiltration: over GoogleDrive API C2 Channe, This integrates GoogleDrive API functionality to facilitate communication between the compromised system and the attacker-controlled server thereby potentially hiding the traffic within legitimate GoogleDrive communication.
 
 
 ## The first stage (DodgeBox) DLL loader

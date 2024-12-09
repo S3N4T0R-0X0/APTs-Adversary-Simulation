@@ -17,3 +17,19 @@ This attack included several stages including DodgeBox, a reflective DLL loader 
 2. The malicious DLL, DodgeBox, serves as a loader and is responsible for decrypting a second stage payload from an encrypted DAT file (sbiedll.dat), The decrypted payload, MoonWalk functions as a backdoor.
 
 3. Data exfiltration: over GoogleDrive API C2 Channe, This integrates GoogleDrive API functionality to facilitate communication between the compromised system and the attacker-controlled server thereby potentially hiding the traffic within legitimate GoogleDrive communication.
+
+
+## The first stage (DodgeBox) DLL loader
+
+
+This payload detects sandbox environments by checking for the presence of the SbieDll module and halts execution if found. It dynamically resolves API functions using obfuscated hashes to evade detection. The code allocates memory in the process using NtAllocateVirtualMemory, potentially for injecting or executing malicious code. It employs FNV-1a hashing to obscure strings like DLL and function names. Additionally, it uses DLL sideloading to execute DodgeBox, leveraging a legitimate executable like taskhost.exe to bypass security mechanisms.
+
+1. Sandbox Detection
+
+The SbieDll_Hook function attempts to detect a sandbox environment (e.g., Sandboxie) by checking for the SbieDll module using GetModuleHandle(L"SbieDll").
+
+If the module is detected, it triggers an infinite sleep (Sleep(INFINITE)) to prevent further execution, a common evasion tactic used by malware to avoid analysis in sandboxed environments.
+
+2. Triggering Core Logic
+
+If the sandbox module is not detected, it proceeds to execute the core malicious functionality in the MalwareMain function.

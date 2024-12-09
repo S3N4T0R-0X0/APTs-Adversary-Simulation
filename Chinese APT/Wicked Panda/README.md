@@ -11,3 +11,9 @@ part 2: https://www.zscaler.com/blogs/security-research/moonwalk-deep-dive-updat
 This attack included several stages including DodgeBox, a reflective DLL loader written in C, showcases similarities to StealthVector in terms of concept but incorporates significant improvements in its implementation. It offers various capabilities, including decrypting and loading embedded DLLs, conducting environment checks and bindings, and executing cleanup procedures. What sets DodgeBox apart from other malware is its unique algorithms and techniques.
 
 ![imageedit_2_3915351931](https://github.com/user-attachments/assets/1ddd642e-4cd1-4bb5-bfc1-6a8e342d6364)
+
+1. Employs DLL sideloading as a means of executing DodgeBox.
+ 
+2. The malicious DLL, DodgeBox, serves as a loader and is responsible for decrypting a second stage payload from an encrypted DAT file (sbiedll.dat).
+
+3. MoonWalk functions as a backdoor

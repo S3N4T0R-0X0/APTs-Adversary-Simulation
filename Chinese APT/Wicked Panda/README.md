@@ -38,3 +38,29 @@ If the sandbox module is not detected, it proceeds to execute the core malicious
 ![Screenshot From 2024-12-09 00-26-50](https://github.com/user-attachments/assets/c8380ffa-729b-452b-93ff-3b898f350b1f)
 
 
+3. Dynamic API Resolution
+
+The ResolveImport function dynamically resolves Windows API functions by loading the required DLLs and identifying functions by their hashed names. This is an obfuscation and anti-analysis technique to hide API calls.
+It is specifically designed to resolve APIs like NtAllocateVirtualMemory.
+
+4. Memory Allocation
+
+MalwareMain uses the resolved API NtAllocateVirtualMemory to allocate memory in the process space. This allocated memory could be used for malicious purposes such as:
+Injecting malicious code.
+Executing a payload from memory.
+The allocation is made with read-write permissions (PAGE_READWRITE).
+
+
+![Screenshot From 2024-12-09 00-35-19](https://github.com/user-attachments/assets/9da6c6c8-65f6-4181-b658-71dbdc557e78)
+
+
+5. Custom Hashing
+
+The fnv1a_salted function calculates a hash value using the FNV-1a algorithm, which is commonly used in malware for:
+Obfuscating strings or API names.
+Making it harder for analysts to interpret the payload.
+The provided test values demonstrate hashing of DLL and function names (ntdll and LdrLoadDll) with a specific salt.
+
+![Screenshot From 2024-12-09 00-37-20](https://github.com/user-attachments/assets/b95faa30-b9aa-4d0c-a631-e06f37af81d3)
+
+

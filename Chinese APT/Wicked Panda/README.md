@@ -33,3 +33,8 @@ If the module is detected, it triggers an infinite sleep (Sleep(INFINITE)) to pr
 2. Triggering Core Logic
 
 If the sandbox module is not detected, it proceeds to execute the core malicious functionality in the MalwareMain function.
+
+
+![Screenshot From 2024-12-09 00-26-50](https://github.com/user-attachments/assets/c8380ffa-729b-452b-93ff-3b898f350b1f)
+
+

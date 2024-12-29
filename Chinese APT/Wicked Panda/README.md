@@ -122,3 +122,7 @@ This payload is a malicious program that establishes a reverse shell to an attac
     Uses Windows' Winsock API to set up the socket connection to the attacker.
 
 ## Final result: payload connect to OneDrive C2 server
+
+I have previously performed Data Exfiltration during an APT28 attack via OneDrive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
+
+

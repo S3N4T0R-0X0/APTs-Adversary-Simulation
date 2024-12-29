@@ -129,3 +129,11 @@ The attackers used the OneDrive C2 (Command and Control) API as a means to estab
 
 We will use the Application (client) ID for the inputs needed by the C2 server
 
+![322307987-6e73395a-2221-411b-ab4a-e6c23f2b2897](https://github.com/user-attachments/assets/a9a0fe6d-50b2-44d1-9d3e-a8edc9ec3a75)
+
+After that, we will go to the Certificates & secrets menu to generate the Secret ID for the Microsoft Azure account, and this is what we will use in OneDrive C2.
+
+![322308364-fec5b59d-57ed-47f4-b640-d06782d8c16b](https://github.com/user-attachments/assets/e1ece1c0-7c4a-4ac0-9228-a8e92d6489fd)
+
+
+

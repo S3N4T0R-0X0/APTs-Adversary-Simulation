@@ -136,4 +136,10 @@ After that, we will go to the Certificates & secrets menu to generate the Secret
 ![322308364-fec5b59d-57ed-47f4-b640-d06782d8c16b](https://github.com/user-attachments/assets/e1ece1c0-7c4a-4ac0-9228-a8e92d6489fd)
 
 
+## Final result: payload connect to OneDrive By using BEAR-C2
+
+
+https://github.com/user-attachments/assets/15f4c8dc-e983-41c5-ba25-96d64e1b9a02
+
+
 

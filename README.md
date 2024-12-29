@@ -29,7 +29,7 @@ These are all the names of the APT groups, and I simulated one attack for each g
 
 `China`🇨🇳️
 1. Mustang Panda ✅️
-2. Wicked Panda APT41               
+2. Wicked Panda APT41 ✅️          
 3. Goblin Panda
 4. Anchor Panda
 5. Deep Panda

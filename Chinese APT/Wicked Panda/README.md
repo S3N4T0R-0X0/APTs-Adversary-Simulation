@@ -125,4 +125,7 @@ This payload is a malicious program that establishes a reverse shell to an attac
 
 I have previously performed Data Exfiltration during an APT28 attack via OneDrive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
 
+The attackers used the OneDrive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using OneDrive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to OneDrive, making it harder for security teams to detect the threat. First, we need to create a Microsoft Azure account and activate its permissions, as shown in the following figure.
+
+We will use the Application (client) ID for the inputs needed by the C2 server
 

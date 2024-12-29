@@ -94,3 +94,5 @@ Why the attackers Use Hashing?
 3.Memory-Only Execution: Useful in memory-resident malware that avoids writing cleartext strings to disk.
 
 ## The third stage (MoonWalk backdoor)
+
+This payload is a malicious program that establishes a reverse shell to an attacker's machine, enabling them to remotely execute commands on the victim's system via cmd.exe. It communicates with the attacker's system using an unencrypted TCP connection. The shell receives commands, executes them, and sends the output back to the attacker. To ensure persistence, it modifies the Windows Registry under HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run, adding a key named MoonWalkBackdoor. This key points to a file path intended to make the payload launch automatically on user login. However, the path specified (C:\\Windows\\System32\\payload.dll).

@@ -107,6 +107,9 @@ This payload is a malicious program that establishes a reverse shell to an attac
         Opens a cmd.exe process on the victim's machine.
         Sends commands received from the attacker to the shell and returns the output to the attacker.
 
+![Screenshot From 2024-12-29 07-31-37](https://github.com/user-attachments/assets/c8a504c7-e77a-4005-a3ad-03e33fa86943)
+
+
 2. Persistence Mechanism:
 
     Registry Manipulation:
@@ -117,3 +120,5 @@ This payload is a malicious program that establishes a reverse shell to an attac
 3. Networking:
 
     Uses Windows' Winsock API to set up the socket connection to the attacker.
+
+## Final result: payload connect to OneDrive C2 server

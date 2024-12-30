@@ -95,7 +95,7 @@ Why the attackers Use Hashing?
 
 ## The third stage (MoonWalk backdoor)
 
-This payload is a malicious program that establishes a reverse shell to an attacker's machine, enabling them to remotely execute commands on the victim's system via cmd.exe. It communicates with the attacker's system using an unencrypted TCP connection. The shell receives commands, executes them, and sends the output back to the attacker. To ensure persistence, it modifies the Windows Registry under HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run, adding a key named MoonWalkBackdoor. This key points to a file path intended to make the payload launch automatically on user login. However, the path specified (C:\\Windows\\System32\\payload.dll).
+This payload is a malicious program that establishes a reverse shell to an attacker's machine, enabling them to remotely execute commands on the victim's system via cmd.exe. It communicates with the attacker's system using an unencrypted TCP connection. The shell receives commands, executes them, and sends the output back to the attacker. To ensure persistence, it modifies the Windows Registry under HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run, adding a key named MoonWalkBackdoor. This key points to a file path intended to make the payload launch automatically on user login. However, the path specified (`C:\\Windows\\System32\\payload.dll`).
 
 ![Screenshot From 2024-12-29 07-24-47](https://github.com/user-attachments/assets/e4a1d6c4-923d-4a40-a179-e07e2a4fae9e)
 
@@ -112,14 +112,14 @@ This payload is a malicious program that establishes a reverse shell to an attac
 
 2. Persistence Mechanism:
 
-    Registry Manipulation:
-        Adds an entry in the Windows Registry under HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run.
-        This ensures the backdoor runs every time the user logs in.
-        The value points to C:\\Windows\\System32\\payload.dll (a likely misconfiguration, as the current code produces an executable, not a DLL).
+Registry Manipulation:
+Adds an entry in the Windows Registry under `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`.   
+This ensures the backdoor runs every time the user logs in.
+The value points to `C:\\Windows\\System32\\payload.dll` (a likely misconfiguration, as the current code produces an executable, not a DLL).
 
-3. Networking:
+4. Networking:
 
-    Uses Windows' Winsock API to set up the socket connection to the attacker.
+Uses Windows' Winsock API to set up the socket connection to the attacker.
 
 ## The fourth stage (Data Exfiltration) over OneDrive API C2 Channe
 
@@ -141,7 +141,7 @@ After that, we will go to the Certificates & secrets menu to generate the Secret
 ![Screenshot From 2024-12-30 01-55-36](https://github.com/user-attachments/assets/84af56a2-19c3-4eaa-a805-ad790a0c5143)
 
 
-The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both OneDrive API-based C2 server.
+The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both OneDrive API-based BEAR-C2 server Profil.
 
 https://github.com/user-attachments/assets/15f4c8dc-e983-41c5-ba25-96d64e1b9a02
 

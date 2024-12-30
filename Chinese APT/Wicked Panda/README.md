@@ -141,7 +141,7 @@ After that, we will go to the Certificates & secrets menu to generate the Secret
 ![Screenshot From 2024-12-30 01-55-36](https://github.com/user-attachments/assets/84af56a2-19c3-4eaa-a805-ad790a0c5143)
 
 
-The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both OneDrive API-based BEAR-C2 server Profil.
+The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both OneDrive API-based BEAR-C2 server profile.
 
 https://github.com/user-attachments/assets/15f4c8dc-e983-41c5-ba25-96d64e1b9a02
 

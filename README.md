@@ -9,6 +9,10 @@ This repository is a compilation of all Russian, Chinese, Iranian and North Kore
 > [!CAUTION]
 > It's essential to note that this project is for educational and research purposes only, and any unauthorized use of it could lead to legal consequences.
 
+The names of APT groups vary from one company to another, and in this simulations I have followed the names approved by CrowdStrike.
+
+![photo_2024-12-30_02-13-54](https://github.com/user-attachments/assets/a3305839-89c9-4b26-ac74-047166cf4479)
+
 
 These are all the names of the APT groups, and I simulated one attack for each group.
 

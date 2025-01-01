@@ -148,7 +148,10 @@ I used the GoogleDrive C2 (Command and Control) API as a means to establish a co
 
 The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both GoogleDrive API-based BEAR-C2 server profile.
 
-https://github.com/user-attachments/assets/15f4c8dc-e983-41c5-ba25-96d64e1b9a02
+
+
+https://github.com/user-attachments/assets/1c910c85-1ef5-4752-b8f9-0e06a64d3a0c
+
 
 
 

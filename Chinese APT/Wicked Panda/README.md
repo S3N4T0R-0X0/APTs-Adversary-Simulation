@@ -123,25 +123,25 @@ Uses Windows' Winsock API to set up the socket connection to the attacker.
 
 ## The fourth stage (Data Exfiltration) over Google Drive API C2 Channe
 
-I have previously performed Data Exfiltration during an APT28 attack via OneDrive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
+I have previously performed Data Exfiltration during an Gossamer-Bear-APT attack via Google Drive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/Gossamer-Bear-APT for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
 
-The attackers used the OneDrive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using OneDrive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to OneDrive, making it harder for security teams to detect the threat. First, we need to create a Microsoft Azure account and activate its permissions, as shown in the following figure.
+The attackers used the Google Drive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using Google Drive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to OneDrive, making it harder for security teams to detect the threat. First i need to create a google Drive account, as shown in the following figure
 
-We will use the Application (client) ID for the inputs needed by the C2 server
+1.Log into the Google Cloud Platform
+2.Create a project in Google Cloud Platform dashboard
+3.Enable Google Drive API
+4.Create a Google Drive API key
 
-![322307987-6e73395a-2221-411b-ab4a-e6c23f2b2897](https://github.com/user-attachments/assets/a9a0fe6d-50b2-44d1-9d3e-a8edc9ec3a75)
+![337354597-b90e328c-5184-4072-adcb-6a6d7fb2debd](https://github.com/user-attachments/assets/8c63b7b4-6458-45ba-8715-374d471906dc)
 
-After that, we will go to the Certificates & secrets menu to generate the Secret ID for the Microsoft Azure account, and this is what we will use in Google Drive C2.
-
-![322308364-fec5b59d-57ed-47f4-b640-d06782d8c16b](https://github.com/user-attachments/assets/e1ece1c0-7c4a-4ac0-9228-a8e92d6489fd)
+I used the GoogleDrive C2 (Command and Control) API as a means to establish a communication channel between the payload and the attacker's server, By using GoogleDrive as a C2 server, i can hide the malicious activities among the legitimate traffic to GoogleDrive, making it harder for security teams to detect the threat.
+![Screenshot From 2025-01-01 02-48-44](https://github.com/user-attachments/assets/0d47a318-c0c2-4846-b272-9ee30395b2c8)
 
 
 ## Final result: payload connect to Google Drive By using BEAR-C2
 
-![Screenshot From 2024-12-30 01-55-36](https://github.com/user-attachments/assets/84af56a2-19c3-4eaa-a805-ad790a0c5143)
 
-
-The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both OneDrive API-based BEAR-C2 server profile.
+The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both GoogleDrive API-based BEAR-C2 server profile.
 
 https://github.com/user-attachments/assets/15f4c8dc-e983-41c5-ba25-96d64e1b9a02
 

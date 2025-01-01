@@ -128,11 +128,16 @@ I have previously performed Data Exfiltration during an Gossamer-Bear-APT attack
 The attackers used the Google Drive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using Google Drive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to OneDrive, making it harder for security teams to detect the threat. First i need to create a google Drive account, as shown in the following figure
 
 1.Log into the Google Cloud Platform
+
 2.Create a project in Google Cloud Platform dashboard
+
 3.Enable Google Drive API
+
 4.Create a Google Drive API key
 
+
 ![337354597-b90e328c-5184-4072-adcb-6a6d7fb2debd](https://github.com/user-attachments/assets/8c63b7b4-6458-45ba-8715-374d471906dc)
+
 
 I used the GoogleDrive C2 (Command and Control) API as a means to establish a communication channel between the payload and the attacker's server, By using GoogleDrive as a C2 server, i can hide the malicious activities among the legitimate traffic to GoogleDrive, making it harder for security teams to detect the threat.
 ![Screenshot From 2025-01-01 02-48-44](https://github.com/user-attachments/assets/0d47a318-c0c2-4846-b272-9ee30395b2c8)

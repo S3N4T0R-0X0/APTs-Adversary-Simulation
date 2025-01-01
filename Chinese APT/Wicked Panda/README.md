@@ -125,7 +125,7 @@ Uses Windows' Winsock API to set up the socket connection to the attacker.
 
 I have previously performed Data Exfiltration during an Gossamer-Bear-APT attack via Google Drive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/Gossamer-Bear-APT for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
 
-The attackers used the Google Drive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using Google Drive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to OneDrive, making it harder for security teams to detect the threat. First i need to create a google Drive account, as shown in the following figure
+The attackers used the Google Drive C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server, By using Google Drive as a C2 server, attackers can hide their malicious activities among the legitimate traffic to GoogleDrive, making it harder for security teams to detect the threat. First i need to create a google drive account, as shown in the following figure
 
 1.Log into the Google Cloud Platform
 
@@ -140,6 +140,7 @@ The attackers used the Google Drive C2 (Command and Control) API as a means to e
 
 
 I used the GoogleDrive C2 (Command and Control) API as a means to establish a communication channel between the payload and the attacker's server, By using GoogleDrive as a C2 server, i can hide the malicious activities among the legitimate traffic to GoogleDrive, making it harder for security teams to detect the threat.
+
 ![Screenshot From 2025-01-01 02-48-44](https://github.com/user-attachments/assets/0d47a318-c0c2-4846-b272-9ee30395b2c8)
 
 

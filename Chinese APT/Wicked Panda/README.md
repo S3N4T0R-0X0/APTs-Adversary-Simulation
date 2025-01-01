@@ -121,7 +121,7 @@ The value points to `C:\\Windows\\System32\\payload.dll` (a likely misconfigurat
 
 Uses Windows' Winsock API to set up the socket connection to the attacker.
 
-## The fourth stage (Data Exfiltration) over OneDrive API C2 Channe
+## The fourth stage (Data Exfiltration) over Google Drive API C2 Channe
 
 I have previously performed Data Exfiltration during an APT28 attack via OneDrive. You can refer to this link: https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation for detailed steps on how this can be accomplished. However, in this particular attack, a more advanced and non-open-source version of BEAR-C2 was utilized for Data Exfiltration.
 
@@ -131,12 +131,12 @@ We will use the Application (client) ID for the inputs needed by the C2 server
 
 ![322307987-6e73395a-2221-411b-ab4a-e6c23f2b2897](https://github.com/user-attachments/assets/a9a0fe6d-50b2-44d1-9d3e-a8edc9ec3a75)
 
-After that, we will go to the Certificates & secrets menu to generate the Secret ID for the Microsoft Azure account, and this is what we will use in OneDrive C2.
+After that, we will go to the Certificates & secrets menu to generate the Secret ID for the Microsoft Azure account, and this is what we will use in Google Drive C2.
 
 ![322308364-fec5b59d-57ed-47f4-b640-d06782d8c16b](https://github.com/user-attachments/assets/e1ece1c0-7c4a-4ac0-9228-a8e92d6489fd)
 
 
-## Final result: payload connect to OneDrive By using BEAR-C2
+## Final result: payload connect to Google Drive By using BEAR-C2
 
 ![Screenshot From 2024-12-30 01-55-36](https://github.com/user-attachments/assets/84af56a2-19c3-4eaa-a805-ad790a0c5143)
 

@@ -1,5 +1,4 @@
-# Wicked Panda APT Adversary Simulation
+# Velvet Chollima APT Adversary Simulation
 
-This is a simulation of attack by the Wicked Panda group (APT-41) targeting U.S. state government networks the attack campaign was active between May 2021 and February 2022, in addition to attacks targeting Taiwanese media, the attack chain starts with the in-memory execution of MoonWalk backdoor. Once the MoonWalk backdoor is successfully loaded by DodgeBox, the malware decrypts and reflectively loads two embedded plugins (C2 and Utility). The C2 plugin uses a custom encrypted C2 protocol to communicate with the attacker-controlled Google Drive account.
-I relied on zscaler to figure out the details to make this simulation: https://www.zscaler.com/blogs/security-research/moonwalk-deep-dive-updated-arsenal-apt41-part-2
-
+This is a simulation of attack by the Velvet Chollima APT group targeting South Korean government official the attack campaign was starting January 2025, in addition to attacks targeting NGOs, government agencies, and media companies across North America, South America, Europe, and East Asia, the attack chain starts with the spear-phishing email with a PDF attachment. However, targets that want to read the document are directed to a fake device registration link that instructs them to run PowerShell as an administrator and paste attacker-provided code.
+I relied on Microsoft's Threat Intelligence and bleeping computer to figure out the details to make this simulation: https://www.bleepingcomputer.com/news/security/dprk-hackers-dupe-targets-into-typing-powershell-commands-as-admin/

@@ -24,7 +24,7 @@ These are all the names of the APT groups, and I simulated one attack for each g
 |                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ | Stardust Chollima    | Clever Kitten          |
 |                  | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
 |                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
-|                  | Gossamer Bear ✅      | Deep Panda              | Velvet Chollima      | Nemesis Kitten         |
+|                  | Gossamer Bear ✅      | Deep Panda              | Velvet Chollima ✅   | Nemesis Kitten         |
 |                  | Voodoo Bear (APT44) ✅| Samurai Panda           | Famous Chollima      | Spectral Kitten        |
 |                  | Ember Bear ✅         | Phantom Panda           |                      | Pioneer Kitten         |
 |                  | Venomous Bear ✅      | Sunrise Panda           |                      |                        |

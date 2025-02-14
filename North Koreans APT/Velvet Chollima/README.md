@@ -31,3 +31,31 @@ https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-error
 First the attackers created PDF file includes a Hyperlink that leads to a (Fake-Captcha) page, The advantage of the hyperlink is that it does not appear in texts, and this is exactly what the attackers wanted to exploit.
 
 ![Screenshot From 2025-02-14 17-40-19](https://github.com/user-attachments/assets/ffcebb81-af32-4700-83ed-1a916b6db8a5)
+
+## The second stage (Fake-Captcha)
+
+This file is a fake CAPTCHA verification page, designed as part of a phishing attack or malicious script execution.
+
+![Screenshot From 2025-02-14 17-52-49](https://github.com/user-attachments/assets/3758dfcb-6725-4154-8466-03970b492afd)
+
+If you need know more about fake CAPTCHA: https://www.bleepingcomputer.com/news/security/malicious-ads-push-lumma-infostealer-via-fake-captcha-pages/
+
+Here’s what it does:
+
+1. Fake Verification Interface
+
+The page displays a message prompting the user to verify that they are not a robot.
+The design mimics a legitimate CAPTCHA verification page but is actually completely fake.
+
+2. Social Engineering Trick
+
+When the user clicks the checkbox ("I'm not a robot"), the verify() function in JavaScript is triggered.
+This function displays a popup instructing the user to execute specific commands in PowerShell.
+
+3. Execution of Malicious PowerShell Code
+
+The script automatically copies a PowerShell command to the clipboard.
+If the user follows the instructions and executes the code, it:
+Establishes a reverse shell connection to IP:PORT.
+Allows the attacker to remotely execute commands on the victim’s machine.
+Persists by adding itself to the Windows registry (Run Key), ensuring execution every time the system starts.

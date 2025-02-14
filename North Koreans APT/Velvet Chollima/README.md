@@ -19,11 +19,11 @@ https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-error
 
 
 
-1. social engineering: Create PDF file which will be sent spear-phishing.
+1. Social Engineering: Create PDF file which will be sent spear-phishing.
 
-2. ClickFix technique: (Fake-Captcha) to make the target run PowerShell as an administrator and paste attacker-provided code.
+2. ClickFix Technique: (Fake-Captcha) to make the target run PowerShell as an administrator and paste attacker-provided code.
 
-3. reverse shell: Make simple reverse shell (payload.ps1) to creates a TCP connection to a command and control (C2) server and listens for commands to execute on the target machine.
+3. Reverse Shell: Make simple reverse shell (payload.ps1) to creates a TCP connection to a command and control (C2) server and listens for commands to execute on the target machine.
 
 
 ## The first stage (delivery technique)
@@ -59,3 +59,5 @@ If the user follows the instructions and executes the code, it:
 Establishes a reverse shell connection to IP:PORT.
 Allows the attacker to remotely execute commands on the victim’s machine.
 Persists by adding itself to the Windows registry (Run Key), ensuring execution every time the system starts.
+
+## The third stage (Reverse shell by PowerShell)

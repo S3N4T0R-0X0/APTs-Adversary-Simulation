@@ -21,3 +21,8 @@ https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-error
 2. ClickFix technique: (Fake-Captcha) to make the target run PowerShell as an administrator and paste attacker-provided code.
 
 3. reverse shell: Make simple reverse shell (payload.ps1) to creates a TCP connection to a command and control (C2) server and listens for commands to execute on the target machine.
+
+
+## The first stage (delivery technique)
+
+First the attackers created PDF file includes a link that leads to a (Fake-Captcha) page.

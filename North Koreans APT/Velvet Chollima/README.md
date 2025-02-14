@@ -9,3 +9,8 @@ The attackers used a new tactic known as ClickFix, a social engineering techniqu
 ClickFix involves deceptive error messages or prompts that trick victims into executing malicious code themselves, often via PowerShell commands, ultimately leading to malware infections.
 
 According to Microsoft's Threat Intelligence team, the attackers masquerade as South Korean government officials, gradually building trust with their targets. Once a certain level of rapport is established, the attacker sends a spear-phishing email with a PDF attachment. However, when targets attempt to read the document, they are redirected to a fake device registration link that instructs them to run PowerShell as an administrator and execute attacker-provided code.
+
+https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-errors-push-infostealing-malware/
+
+![dialogs](https://github.com/user-attachments/assets/9d5a1b31-5479-4a67-826c-68195fb2c3a5)
+

@@ -57,7 +57,17 @@ This function displays a popup instructing the user to execute specific commands
 The script automatically copies a PowerShell command to the clipboard.
 If the user follows the instructions and executes the code, it:
 Establishes a reverse shell connection to IP:PORT.
+
+![Screenshot From 2025-02-14 18-05-33](https://github.com/user-attachments/assets/f386c2ef-3d96-474b-90ca-766f6d89a672)
+
+
 Allows the attacker to remotely execute commands on the victim’s machine.
 Persists by adding itself to the Windows registry (Run Key), ensuring execution every time the system starts.
 
 ## The third stage (Reverse shell by PowerShell)
+
+The final result of this fake CAPTCHA attack is that the attacker gains remote access to the victim's machine through a reverse shell connection. Once the victim unknowingly runs the copied PowerShell command, their system establishes a connection to the attacker's server, allowing remote command execution.
+
+This access enables the attacker to control the system, extract sensitive data, install additional malware, and potentially spread within a network if the victim is part of a corporate environment. To ensure persistence, the script modifies the Windows registry so that the malicious command runs every time the system starts. Even after a reboot, the attack remains active.
+
+Ultimately, the victim's device is fully compromised, and the attacker can manipulate it as they wish.

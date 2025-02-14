@@ -70,8 +70,5 @@ The final result of this fake CAPTCHA attack is that the attacker gains remote a
 
 This access enables the attacker to control the system, extract sensitive data, install additional malware, and potentially spread within a network if the victim is part of a corporate environment. To ensure persistence, the script modifies the Windows registry so that the malicious command runs every time the system starts. Even after a reboot, the attack remains active.
 
-Ultimately, the victim's device is fully compromised, and the attacker can manipulate it as they wish.
-
-
 ![Screenshot From 2025-02-14 18-22-11](https://github.com/user-attachments/assets/e5a74fee-7384-4f6c-9108-5b85f8227575)
 

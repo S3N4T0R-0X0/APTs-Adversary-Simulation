@@ -28,4 +28,6 @@ https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-error
 
 ## The first stage (delivery technique)
 
-First the attackers created PDF file includes a link that leads to a (Fake-Captcha) page.
+First the attackers created PDF file includes a Hyperlink that leads to a (Fake-Captcha) page, The advantage of the hyperlink is that it does not appear in texts, and this is exactly what the attackers wanted to exploit.
+
+![Screenshot From 2025-02-14 17-40-19](https://github.com/user-attachments/assets/ffcebb81-af32-4700-83ed-1a916b6db8a5)

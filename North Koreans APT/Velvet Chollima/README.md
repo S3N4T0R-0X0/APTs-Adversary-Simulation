@@ -14,3 +14,10 @@ https://www.bleepingcomputer.com/news/security/fake-google-meet-conference-error
 
 ![dialogs](https://github.com/user-attachments/assets/9d5a1b31-5479-4a67-826c-68195fb2c3a5)
 
+
+
+1. social engineering: Create PDF file which will be sent spear-phishing.
+
+2. ClickFix technique: (Fake-Captcha) to make the target run PowerShell as an administrator and paste attacker-provided code.
+
+3.reverse shell: Make simple reverse shell payload to creates a TCP connection to a command and control (C2) server.

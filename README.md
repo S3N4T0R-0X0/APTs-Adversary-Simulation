@@ -18,13 +18,13 @@ These are all the names of the APT groups, and I simulated one attack for each g
 
 
  ____________________________________________________________________________________________________________________
-| **Country**      |      `Russia` 🇷🇺      |        `China` 🇨🇳       |   `North Korea` 🇰🇵    |      `Iran` 🇮🇷        |
+| **Country**      |      `Russia` 🇷🇺      |        `China` 🇨🇳       |   `North Korea` 🇰🇵    |      `Iran` 🇮🇷         |
 |------------------|-----------------------|-------------------------|-----------------------|-----------------------|
-| **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅        | Labyrinth Chollima ✅| Helix Kitten           |
-|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ | Stardust Chollima    | Clever Kitten          |
+| **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅        | Labyrinth Chollima ✅ | Helix Kitten           |
+|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ | Velvet Chollima ✅    | Clever Kitten          |
 |                  | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
 |                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
-|                  | Gossamer Bear ✅      | Deep Panda              | Velvet Chollima ✅   | Nemesis Kitten         |
+|                  | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |
 |                  | Voodoo Bear (APT44) ✅| Samurai Panda           | Famous Chollima      | Spectral Kitten        |
 |                  | Ember Bear ✅         | Phantom Panda           |                      | Pioneer Kitten         |
 |                  | Venomous Bear ✅      | Sunrise Panda           |                      |                        |

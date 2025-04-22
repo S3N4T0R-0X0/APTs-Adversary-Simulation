@@ -17,18 +17,19 @@ The names of APT groups vary from one company to another, and in this simulation
 These are all the names of the APT groups, and I simulated one attack for each group.
 
 
- ____________________________________________________________________________________________________________________
-| **Country**      |      `Russia` 🇷🇺      |        `China` 🇨🇳       |   `North Korea` 🇰🇵    |      `Iran` 🇮🇷         |
-|------------------|-----------------------|-------------------------|-----------------------|-----------------------|
-| **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅        | Labyrinth Chollima ✅  | Helix Kitten           |
-|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ | Velvet Chollima ✅    | Clever Kitten          |
+ ___________________________________________________________________________________________________________________
+| **Country**      |      `Russia` 🇷🇺      |        `China` 🇨🇳       |   `North Korea` 🇰🇵    |      `Iran` 🇮🇷        |
+|------------------|-----------------------|-------------------------|----------------------|-----------------------|
+| **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅         | Labyrinth Chollima ✅ | Helix Kitten         |
+|                  | Voodoo Bear (APT44) ✅| Lotus Panda             | Velvet Chollima ✅   |  Pioneer Kitten        |
+|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ |  Famous Chollima     | Clever Kitten          |
 |                  | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
 |                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
 |                  | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |
-|                  | Voodoo Bear (APT44) ✅| Samurai Panda           | Famous Chollima      | Spectral Kitten        |
-|                  | Ember Bear ✅         | Phantom Panda           |                      | Pioneer Kitten         |
+|                  | Primitive Bear ✅     | Samurai Panda           |                      | Spectral Kitten        |
+|                  | Ember Bear ✅         | Phantom Panda           |                      |                        |
 |                  | Venomous Bear ✅      | Sunrise Panda           |                      |                        |
-|                  | Primitive Bear ✅     | Ethereal Panda          |                      |                        |
+|                  |                       | Ethereal Panda          |                      |                        |
  --------------------------------------------------------------------------------------------------------------------
 
 

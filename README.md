@@ -37,5 +37,6 @@ All of this adversary simulation is powered by Bear-C2.
 https://github.com/S3N4T0R-0X0/BEAR
 ![imageedit_4_5482104706](https://github.com/S3N4T0R-0X0/Bear/assets/121706460/a43fdb26-c4d6-4b3e-b494-baed4c4b137d)
 
-Disclaimer: This is for research, awareness, and educational purposes, I am not responsible if anyone uses this technique for illegal purposes.
+## Disclaimer ⚠️
+This is for research, awareness, and educational purposes, I am not responsible if anyone uses this technique for illegal purposes.
 

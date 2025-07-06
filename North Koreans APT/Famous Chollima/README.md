@@ -41,5 +41,16 @@ The attackers lure their victims by inviting them to job interviews. In other ca
 ![word-image-131292-13](https://github.com/user-attachments/assets/62200e9d-d953-4e9a-83d2-e5d244c4f4df)
 
 
+## The second stage (delivery technique)
+
+The attackers took advantage of the fact that their victims were part of the software development and IT community, possessing technical expertise and regularly working with GitHub. At the same time, using an open source project during a technical interview doesn’t seem unusual. Asking the victim to share their screen and test some code to assess their technical skills appeared to be a reasonable and clever tactic, especially when targeting victims from the IT field.
+
+
+However, in some of the repositories created by the attackers, they forgot to disable comments on the project. As a result, some users and security researchers discovered the malicious technique and left comments on the repository warning that it contained malware and should not be used. This mistake was not identified early enough. Additionally, there were other repositories where the attackers should have deleted the comments after uploading the malicious code.
+
+![word-image-131292-3](https://github.com/user-attachments/assets/9813a643-f29b-4969-b3ef-04772bcfe5ce)
+
+
+
 
 

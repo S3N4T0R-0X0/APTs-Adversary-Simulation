@@ -6,7 +6,7 @@ This is a simulation of attack by (Famous Chollima) APT group targeting job seek
 ![imageedit_4_8185813077](https://github.com/user-attachments/assets/cba7dd9b-d0e8-4b9c-b47a-7c413d8f91e5)
 
 
-This attack included several stages including During the interview, the threat actor convinces the victim to download and install an NPM-based package hosted on GitHub. The attackers likely presents the package to the victim as software to review or analyze, but it actually contains malicious JavaScript designed to infect the victim’s host with backdoor.
+This attack included several stages including During the interview, the attackers convinces the victim to download and install an NPM-based package hosted on GitHub. The attackers likely presents the package to the victim as software to review or analyze, but it actually contains malicious JavaScript designed to infect the victim’s host with backdoor.
 
 HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.html
 

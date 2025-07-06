@@ -14,10 +14,10 @@ HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.h
 1. Social Engineering Technique: The Attackers attempts to infect software developers with malware through a fictitious job interview.
 
 
-2. GitHub Abuse for Contagious Interview: Attackers exploited GitHub, a trusted platform used daily by developers, to deliver or distribute malicious packages, leveraging its legitimacy and widespread adoption.
+2. GitHub Abuse (Supply-Chain): The Attackers exploited GitHub, a trusted platform used daily by developers, to deliver or distribute malicious packages, leveraging its legitimacy and widespread adoption. When developers clone and run the project, the malware executes in their environment.
 
 
-3. NPM-based package hosted on GitHub: Create JavaScript-based payload hidden inside Node Package Manager (NPM) packages. InvisibleFerret is a simple but Python-based backdoor. Both are cross-platform malware that can run on Windows, Linux and macOS.
+3. NPM-based package hosted on GitHub: Create JavaScript-based payload hidden inside Node Package Manager (NPM) packages. InvisibleFerret is a simple but Python-based backdoor. Both are cross-platform malware that can run on Windows, Linux and macOS, and attackers use obfuscated JavaScript or hidden dependencies to avoid detection. 
 
 
 4. Python backdoor: The component for InvisibleFerret deploys remote control and information stealing capabilities. Once executed, it prepares the environment by installing the  Python packages, if they are not already present on the system.
@@ -31,10 +31,14 @@ HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.h
 
 ## The first stage (Social Engineering Technique)
 
-The attackers lure their victims by inviting them to job interviews. In other cases, the attackers themselves apply for jobs using fake identities. They exploit the idea that people are in need of work or are seeking better opportunities, impersonating individuals applying for a position at a company. This is a clever tactic, as exploiting resources is far more valuable than just simply using them.
+The attackers lure their victims by inviting them to job interviews. In other cases, the attackers themselves apply for jobs using fake identities. They exploit the idea that people are in need of work or are seeking better opportunities, impersonating individuals applying for a position at a company.
 
 ![20250706_092112-Picsart-AiImageEnhancer](https://github.com/user-attachments/assets/d6088760-f8ba-4b34-99f9-634b35cbc98c)
 
+This is a clever tactic, as exploiting resources is far more valuable than just simply using them.
+
+
+![word-image-131292-13](https://github.com/user-attachments/assets/62200e9d-d953-4e9a-83d2-e5d244c4f4df)
 
 
 

@@ -84,6 +84,9 @@ The attackers created a simple payload that performs two main tasks:
 
 This Python payload creates a reverse TCP shell that connects to a command-and-control (C2) server.
 
+![word-image-131292-7](https://github.com/user-attachments/assets/0d304f34-350b-4d1a-bda5-6f5b0badf3c5)
+
+
 1. The script imports libraries for socket communication, subprocess execution, base64 encoding, and web browser interaction.
 
 2. It defines XOR encryption/decryption functions to secure data exchange with a hardcoded key.

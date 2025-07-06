@@ -4,3 +4,17 @@ This is a simulation of attack by (Famous Chollima) APT group targeting job seek
 
 
 ![imageedit_4_8185813077](https://github.com/user-attachments/assets/cba7dd9b-d0e8-4b9c-b47a-7c413d8f91e5)
+
+
+This attack included several stages including During the interview, the threat actor convinces the victim to download and install an NPM-based package hosted on GitHub. The attackers likely presents the package to the victim as software to review or analyze, but it actually contains malicious JavaScript designed to infect the victim’s host with backdoor.
+
+1. Social Engineering Technique: The Attackers attempts to infect software developers with malware through a fictitious job interview.
+
+
+2. GitHub Abuse for Contagious Interview: Attackers exploited GitHub, a trusted platform used daily by developers, to deliver or distribute malicious packages, leveraging its legitimacy and widespread adoption.
+
+
+3. NPM-based package hosted on GitHub: Create JavaScript-based payload hidden inside Node Package Manager (NPM) packages. InvisibleFerret is a simple but Python-based backdoor. Both are cross-platform malware that can run on Windows, Linux and macOS.
+
+
+4. TCP-C2 Server with XOR key: The C2 server returns JSON data instructing the backdoor with the next actions to take. The JSON response contains the same XOR key.  

@@ -31,11 +31,11 @@ HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.h
 
 ## The first stage (Social Engineering Technique)
 
-The attackers lure their victims by inviting them to job interviews. In other cases, the attackers themselves apply for jobs using fake identities. They exploit the idea that people are in need of work or are seeking better opportunities, impersonating individuals applying for a position at a company.
+The attackers lure their victims by inviting them to job interviews. In other cases, the attackers themselves apply for jobs using fake identities. They exploit the idea that people are in need of work or are seeking better opportunities, impersonating individuals applying for a position at a company. This is a clever tactic, as exploiting resources is far more valuable than just simply using them.
+
 
 ![20250706_092112-Picsart-AiImageEnhancer](https://github.com/user-attachments/assets/d6088760-f8ba-4b34-99f9-634b35cbc98c)
 
-This is a clever tactic, as exploiting resources is far more valuable than just simply using them.
 
 
 ![word-image-131292-13](https://github.com/user-attachments/assets/62200e9d-d953-4e9a-83d2-e5d244c4f4df)

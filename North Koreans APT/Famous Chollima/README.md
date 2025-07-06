@@ -8,6 +8,8 @@ This is a simulation of attack by (Famous Chollima) APT group targeting job seek
 
 This attack included several stages including During the interview, the threat actor convinces the victim to download and install an NPM-based package hosted on GitHub. The attackers likely presents the package to the victim as software to review or analyze, but it actually contains malicious JavaScript designed to infect the victim’s host with backdoor.
 
+HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.html
+
 
 1. Social Engineering Technique: The Attackers attempts to infect software developers with malware through a fictitious job interview.
 

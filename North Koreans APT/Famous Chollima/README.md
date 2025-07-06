@@ -70,4 +70,18 @@ Now i will create the JavaScript file using the command `touch payload.js`. Then
 ![Screenshot From 2025-07-06 05-42-21](https://github.com/user-attachments/assets/c0904b9f-2bc2-4718-8499-4e52280aeae9)
 
 ## The fourth stage (Python Backdoor)
- 
+
+The attackers created a simple payload that performs two main tasks:
+
+![Screenshot From 2025-07-06 05-53-52](https://github.com/user-attachments/assets/97bf917c-b59d-48ef-843d-b991096c2997)
+
+
+1.The first task is establishing a connection to a C2 server over TCP with XOR encryption.
+
+2.The second task is stealing credentials from the victim's browser.
+
+![Screenshot From 2025-07-06 06-00-57](https://github.com/user-attachments/assets/556f4607-9445-4c33-8f89-34a14dce1fa1)
+
+
+
+

@@ -65,9 +65,9 @@ npm init -y
 ```
 ![Screenshot From 2025-07-06 05-14-44](https://github.com/user-attachments/assets/750f5360-e40c-4cec-b86c-8d03b388efb8)
 
-Now i will create the JavaScript file using the command `touch payload.js`. Then, i paste the following code inside it, which contains only the `whoami` command just to test that everything is working correctly before adding the main payload.
+Now i will create the JavaScript file using the command `touch payload.js`. Then, i paste the following code inside it, which contains only the `whoami` command just to test that everything is working correctly before adding the main payload and obfuscate Java Script code.
 
 ![Screenshot From 2025-07-06 05-42-21](https://github.com/user-attachments/assets/c0904b9f-2bc2-4718-8499-4e52280aeae9)
 
-
+## The fourth stage (Python Backdoor)
  

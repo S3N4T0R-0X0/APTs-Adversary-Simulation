@@ -94,6 +94,14 @@ This Python payload creates a reverse TCP shell that connects to a command-and-c
 
 ![Screenshot From 2025-07-06 10-07-50](https://github.com/user-attachments/assets/ae59d553-e8bd-4ce9-bd6c-be382d471c99)
 
+The question here is: Why do attackers choose Python, even though it is not a built-in language in
+Windows like PowerShell scripts or CMD, meaning it cannot run without installing the necessary
+packages?
+
+The answer lies in the target itself mainly software engineers. These individuals already have all the
+required packages installed, as Python is one of the most commonly used programming languages.
+Additionally, Python offers another advantage: scripts can be as short as just two lines, making
+modifications to any script hosted on GitHub nearly undetectable.
 
 ## The fifth stage (execution technique with obfuscated JavaScript-based payload hidden inside NPM)
 

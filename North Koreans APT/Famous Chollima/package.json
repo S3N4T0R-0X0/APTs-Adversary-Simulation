@@ -1,0 +1,12 @@
+{
+  "name": "my-malicious-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node payload.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

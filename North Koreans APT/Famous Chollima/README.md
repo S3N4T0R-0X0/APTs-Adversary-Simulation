@@ -105,6 +105,14 @@ Now I will open the obfuscation tool included in BEAR-C2, select the JavaScript 
 
 ![Screenshot From 2025-07-06 10-24-57](https://github.com/user-attachments/assets/8dee00be-5d26-4852-8560-d01c7b5def27)
 
+The JavaScript file is now obfuscated using the built-in obfuscation tool provided by BEAR-C2.
+
+![Pasted image](https://github.com/user-attachments/assets/e6074066-3e1a-4557-aba2-877e1452f5a7)
+
+It's important to ensure that the payload file has the same name as defined inside the NPM package before uploading it to GitHub.
+
+![IMG_20250706_113049_180](https://github.com/user-attachments/assets/1f89cf15-055d-4e82-93aa-0e267874ca81)
+
 
 
 

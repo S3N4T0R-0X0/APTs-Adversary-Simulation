@@ -53,6 +53,7 @@ However, in some of the repositories created by the attackers, they forgot to di
 
 ![word-image-131292-3](https://github.com/user-attachments/assets/9813a643-f29b-4969-b3ef-04772bcfe5ce)
 
+## The third stage (implanting technique)
 
 
 

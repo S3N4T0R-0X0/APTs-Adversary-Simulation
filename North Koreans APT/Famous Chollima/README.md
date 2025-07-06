@@ -86,12 +86,25 @@ This Python payload creates a reverse TCP shell that connects to a command-and-c
 
 1. The script imports libraries for socket communication, subprocess execution, base64 encoding, and web browser interaction.
 
-2. It defines XOR encryption/decryption functions to secure data exchange with a hardcoded key (22).
+2. It defines XOR encryption/decryption functions to secure data exchange with a hardcoded key.
 
 3. Upon execution, it opens url in a web browser and establishes a TCP connection to a specified C2 server (ip:port).
 
 4. The script authenticates with the server, receives encrypted commands, executes them locally, and sends back encrypted results.
 
 ![Screenshot From 2025-07-06 10-07-50](https://github.com/user-attachments/assets/ae59d553-e8bd-4ce9-bd6c-be382d471c99)
+
+
+## The fifth stage (execution technique with obfuscated JavaScript-based payload hidden inside NPM)
+
+Now i will replace the whoami command with the actual payload inside the JavaScript file and obfuscate it using BEAR-C2.
+
+![Screenshot From 2025-07-06 10-15-16](https://github.com/user-attachments/assets/4c68e039-ba60-4daf-b818-6efd64b3934a)
+
+Now I will open the obfuscation tool included in BEAR-C2, select the JavaScript file to obfuscate it, then upload the payload to GitHub and begin the Command and Control operation.
+
+![Screenshot From 2025-07-06 10-24-57](https://github.com/user-attachments/assets/8dee00be-5d26-4852-8560-d01c7b5def27)
+
+
 
 

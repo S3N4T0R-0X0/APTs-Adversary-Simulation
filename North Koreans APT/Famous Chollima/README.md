@@ -17,7 +17,7 @@ HackerNews: https://thehackernews.com/2023/11/north-korean-hackers-pose-as-job.h
 2. GitHub Abuse (Supply-Chain): The Attackers exploited GitHub, a trusted platform used daily by developers, to deliver or distribute malicious packages, leveraging its legitimacy and widespread adoption. When developers clone and run the project, the malware executes in their environment.
 
 
-3. NPM-based package hosted on GitHub: Create JavaScript-based payload hidden inside Node Package Manager (NPM) packages. InvisibleFerret is a simple but Python-based backdoor. Both are cross-platform malware that can run on Windows, Linux and macOS, and attackers use obfuscated JavaScript or hidden dependencies to avoid detection. 
+3. NPM-based package hosted on GitHub: Create obfuscated JavaScript-based payload hidden inside Node Package Manager (NPM) packages. InvisibleFerret is a simple but Python-based backdoor. Both are cross-platform malware that can run on Windows, Linux and macOS. 
 
 
 4. Python backdoor: The component for InvisibleFerret deploys remote control and information stealing capabilities. Once executed, it prepares the environment by installing the  Python packages, if they are not already present on the system.

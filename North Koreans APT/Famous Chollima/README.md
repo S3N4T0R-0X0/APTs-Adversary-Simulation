@@ -99,7 +99,8 @@ This Python payload creates a reverse TCP shell that connects to a command-and-c
 
 Now i will replace the whoami command with the actual payload inside the JavaScript file and obfuscate it using BEAR-C2.
 
-![Screenshot From 2025-07-06 10-15-16](https://github.com/user-attachments/assets/4c68e039-ba60-4daf-b818-6efd64b3934a)
+![Screenshot From 2025-07-06 10-37-49](https://github.com/user-attachments/assets/6ce771c3-1637-43bb-8486-aabf5bcc55a2)
+
 
 Now I will open the obfuscation tool included in BEAR-C2, select the JavaScript file to obfuscate it, then upload the payload to GitHub and begin the Command and Control operation.
 

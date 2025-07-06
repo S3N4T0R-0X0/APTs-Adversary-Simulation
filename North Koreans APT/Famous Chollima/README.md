@@ -41,7 +41,7 @@ The attackers lure their victims by inviting them to job interviews. In other ca
 ![word-image-131292-13](https://github.com/user-attachments/assets/62200e9d-d953-4e9a-83d2-e5d244c4f4df)
 
 
-## The second stage (delivery technique)
+## The second stage (delivery technique GitHub-Abuse)
 
 The attackers took advantage of the fact that their victims were part of the software development and IT community, possessing technical expertise and regularly working with GitHub. At the same time, using an open source project during a technical interview doesn’t seem unusual. Asking the victim to share their screen and test some code to assess their technical skills appeared to be a reasonable and clever tactic, especially when targeting victims from the IT field.
 
@@ -51,7 +51,7 @@ However, in some of the repositories created by the attackers, they forgot to di
 
 ![word-image-131292-3](https://github.com/user-attachments/assets/9813a643-f29b-4969-b3ef-04772bcfe5ce)
 
-## The third stage (implanting technique)
+## The third stage (implanting technique NPM-package)
 
 The attackers created an NPM package that, in turn, executes obfuscated JavaScript code, `You can use these commands to create the NPM package.json file`.
 

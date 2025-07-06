@@ -44,7 +44,7 @@ command line to make payload base64 to then put it in the HTML smuggling file:
 ![Screenshot from 2024-03-01 19-39-42](https://github.com/S3N4T0R-0X0/APT29-Adversary-Simulation/assets/121706460/8e76572b-5d72-4d87-9cf9-4c7bf002c801)
 
 
-## The Second stage (implanting technique)
+## The second stage (implanting technique)
 
 We now need to create a PNG image that contains images of the BMW car, but in the background when the image is opened, the malware is running in the background,
 at this stage i used the WinRAR program to make the image open with Command Line execution via CMD when opening the image and I used an image in icon format.

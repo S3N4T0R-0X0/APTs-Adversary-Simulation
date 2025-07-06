@@ -47,8 +47,6 @@ The attackers took advantage of the fact that their victims were part of the sof
 
 ![Screenshot From 2025-07-06 04-26-33](https://github.com/user-attachments/assets/95ddb76e-6a1c-4369-a3f2-89a2fe8c4ae2)
 
-
-
 However, in some of the repositories created by the attackers, they forgot to disable comments on the project. As a result, some users and security researchers discovered the malicious technique and left comments on the repository warning that it contained malware and should not be used. This mistake was not identified early enough. Additionally, there were other repositories where the attackers should have deleted the comments after uploading the malicious code.
 
 ![word-image-131292-3](https://github.com/user-attachments/assets/9813a643-f29b-4969-b3ef-04772bcfe5ce)

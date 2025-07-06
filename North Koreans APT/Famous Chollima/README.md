@@ -53,7 +53,7 @@ However, in some of the repositories created by the attackers, they forgot to di
 
 ## The third stage (implanting technique)
 
-The attackers created an NPM package that, in turn, executes obfuscated JavaScript code, You can use these commands to create the NPM package.json file.
+The attackers created an NPM package that, in turn, executes obfuscated JavaScript code, `You can use these commands to create the NPM package.json file`.
 
 ```
 sudo apt-get install npm

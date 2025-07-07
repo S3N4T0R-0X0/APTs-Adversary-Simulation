@@ -36,7 +36,9 @@ The attackers lure their victims by inviting them to job interviews. In other ca
 
 ![20250706_092112-Picsart-AiImageEnhancer](https://github.com/user-attachments/assets/d6088760-f8ba-4b34-99f9-634b35cbc98c)
 
+The logic behind this type of attack lies in the idea that instead of launching a direct attack on a company, an attacker can target an individual such as someone who was recently laid off and is actively seeking job opportunities. This person might still have access credentials to their former company’s email or possess sensitive company information. By compromising them, the attacker can gain indirect access to the organization.
 
+Additionally, even without these specific circumstances, the second part of the logic is that many individuals in the IT and software development community commonly look for freelance work alongside their main job. This is a perfectly normal behavior, making it a natural and less suspicious entry point for attackers to exploit.
 
 ![word-image-131292-13](https://github.com/user-attachments/assets/62200e9d-d953-4e9a-83d2-e5d244c4f4df)
 

@@ -19,7 +19,7 @@ This all the names of the APTs was simulated one attack for each group
 |------------------|-----------------------|-------------------------|----------------------|-----------------------|
 | **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅         | Labyrinth Chollima ✅ | Helix Kitten         |
 |                  | Voodoo Bear (APT44) ✅| Lotus Panda             | Velvet Chollima ✅   |  Pioneer Kitten        |
-|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ |  Famous Chollima     | Clever Kitten          |
+|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ |  Famous Chollima ✅  | Clever Kitten          |
 |                  | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
 |                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
 |                  | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |

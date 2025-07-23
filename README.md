@@ -24,7 +24,7 @@ This all the names of the APTs was simulated one attack for each group
 |                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
 |                  | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |
 |                  | Primitive Bear ✅     | Samurai Panda           |                      | Spectral Kitten        |
-|                  | Ember Bear ✅         | Phantom Panda           |                      |                        |
+|                  | Ember Bear ✅         | Phantom Panda           |                      | Charming Kitten        |
 |                  | Venomous Bear ✅      | Sunrise Panda           |                      |                        |
 |                  |                       | Ethereal Panda          |                      |                        |
  --------------------------------------------------------------------------------------------------------------------

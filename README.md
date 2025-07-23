@@ -9,25 +9,25 @@ This repository is a compilation of all Russian, Chinese, Iranian and North Kore
 
 ---
 
-The names of APT groups vary from one company to another, and in this simulations I have followed the names approved by CrowdStrike.
+`The names of APT groups vary from one company to another, and in this simulations I have followed the names approved by CrowdStrike.`
 
 ![photo_2024-12-30_02-13-54](https://github.com/user-attachments/assets/a3305839-89c9-4b26-ac74-047166cf4479)
 ---
 This all the names of the APTs was simulated one attack for each group                           
- -------------------------------------------------------------------------------------------------------------------
-| **Country**      |      `Russia` 🇷🇺      |        `China` 🇨🇳       |   `North Korea` 🇰🇵    |      `Iran` 🇮🇷        |
-|------------------|-----------------------|-------------------------|----------------------|-----------------------|
-| **APT Groups**   | Cozy Bear (APT29) ✅  | Mustang Panda ✅         | Labyrinth Chollima ✅ | Helix Kitten         |
-|                  | Voodoo Bear (APT44) ✅| Lotus Panda             | Velvet Chollima ✅   |  Pioneer Kitten        |
-|                  | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ |  Famous Chollima ✅  | Clever Kitten          |
-|                  | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
-|                  | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
-|                  | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |
-|                  | Primitive Bear ✅     | Samurai Panda           |                      | Spectral Kitten        |
-|                  | Ember Bear ✅         | Phantom Panda           |                      | Charming Kitten        |
-|                  | Venomous Bear ✅      | Sunrise Panda           |                      |                        |
-|                  |                       | Ethereal Panda          |                      |                        |
- --------------------------------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------------------------
+| **COUNTRY OF ORIGIN 🌐**|      `Russia 🇷🇺`      |        `China 🇨🇳`        |   `North Korea 🇰🇵`    |      `Iran 🇮🇷`       |
+|------------------------|-----------------------|--------------------------|----------------------|----------------------|
+|                        | Cozy Bear (APT29) ✅  | Mustang Panda ✅         | Labyrinth Chollima ✅ | Helix Kitten         |
+|                        | Voodoo Bear (APT44) ✅| Lotus Panda             | Velvet Chollima ✅   |  Pioneer Kitten        |
+|                        | Fancy Bear (APT28) ✅ | Wicked Panda (APT41) ✅ |  Famous Chollima ✅  | Clever Kitten          |
+|                        | Energetic Bear ✅     | Goblin Panda            | Silent Chollima      | Static Kitten          |
+|                        | Berserk Bear ✅       | Anchor Panda            | Ricochet Chollima    | Tracer Kitten          |
+|                        | Gossamer Bear ✅      | Deep Panda              | Stardust Chollima    | Nemesis Kitten         |
+|                        | Primitive Bear ✅     | Samurai Panda           |                      | Spectral Kitten        |
+|                        | Ember Bear ✅         | Phantom Panda           |                      | Charming Kitten        |
+|                        | Venomous Bear ✅      | Sunrise Panda           |                      |                        |
+|                        |                       | Ethereal Panda          |                      |                        |
+ --------------------------------------------------------------------------------------------------------------------------
 
 
 All of this adversary simulation is powered by Bear-C2.

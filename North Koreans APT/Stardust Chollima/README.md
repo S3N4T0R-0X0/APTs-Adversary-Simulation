@@ -36,6 +36,11 @@ persistence by setting an autostart .
 4. C&C server on HTTPS: When a command is received, it is executed using the PowerShell command in Windows.
 The output of the command is captured and sent back to the C2 server.
 
+<img width="640" height="486" alt="NK_PIRsV2" src="https://github.com/user-attachments/assets/719f42c1-320f-44b8-ab40-376f4a886fae" />
+
+
+
+
 ## The first stage (social engineering technique)
 
 

@@ -68,3 +68,8 @@ recruiter, the attacker used a lure of job offer to attract the attention and co
 This Stager is a graphical user interface (GUI) designed to look like a registration form for a fake company called "Global
 Processing Center, LTD." However, in reality, it contains malicious code that executes a hidden PowerShell script when run.
 The dropper downloads and executes PowerRatankba in the background by useing (Base64).
+
+<img width="1366" height="768" alt="Screenshot From 2025-07-27 17-47-46" src="https://github.com/user-attachments/assets/17140d6d-76f0-43eb-8594-6b7390d68960" />
+
+
+

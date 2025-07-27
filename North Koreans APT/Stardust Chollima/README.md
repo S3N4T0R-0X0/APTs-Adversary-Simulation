@@ -55,12 +55,13 @@ The attackers delivered the malware, according to Flashpoint a trusted Redbanc I
 opening found on social media.The person that published the job opening then contacted the employee via linkedin
 Skype, etc for an interview and tricked him into installing the malicious code.
 
-<img width="638" height="640" alt="ss" src="https://github.com/user-attachments/assets/70dd60a3-934a-4c28-8f3d-2c4c9b9b994c" />
+<img width="801" height="450" alt="Screenshot From 2025-07-27 18-18-16" src="https://github.com/user-attachments/assets/5dcadbac-ef2c-4cff-afed-6f980f749a7a" />
+
+
 
 The group addressed several employees of the company through LinkedIn's messaging. Passing himself as a Meta
 recruiter, the attacker used a lure of job offer to attract the attention and confidence of the target
 
-<img width="417" height="455" alt="pp" src="https://github.com/user-attachments/assets/03cde7e3-389b-4300-b3ad-f3918fc1df1d" />
 
 
 ## The second stage (Fake job application - Backdoor Downloader by base64)

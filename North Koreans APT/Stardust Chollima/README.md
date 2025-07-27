@@ -71,5 +71,19 @@ The dropper downloads and executes PowerRatankba in the background by useing (Ba
 
 <img width="1366" height="768" alt="Screenshot From 2025-07-27 17-47-46" src="https://github.com/user-attachments/assets/17140d6d-76f0-43eb-8594-6b7390d68960" />
 
+Breakdown of the Malicious Code Execution:
 
+1. Automatic Execution: When the program starts, it automatically calls the function ExecuteBase64Script(), which is responsible for decoding
+   and executing the malicious payload.
+
+2. Base64-Encoded PowerShell Script: The program contains Base64-encoded data, which is often used to hide malicious commands from antivirus and
+   security software.
+
+3. Execution with Unrestricted Policy: The PowerShell script is executed with bypassed execution policy (-ExecutionPolicy Bypass), meaning it ignores any
+   security restrictions on running scripts.
+
+   This is a known technique used by attackers to execute unauthorized PowerShell commands without user consent.
+
+4. Decoding and Writing to File: The Base64 string is decoded and saved as a PowerShell script file named "PowerRatankba.ps1"
+   which is then used as the attack payload.
 

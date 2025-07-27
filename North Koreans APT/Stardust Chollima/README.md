@@ -69,7 +69,8 @@ This Stager is a graphical user interface (GUI) designed to look like a registra
 Processing Center, LTD." However, in reality, it contains malicious code that executes a hidden PowerShell script when run.
 The dropper downloads and executes PowerRatankba in the background by useing (Base64).
 
-<img width="1366" height="768" alt="Screenshot From 2025-07-27 17-47-46" src="https://github.com/user-attachments/assets/17140d6d-76f0-43eb-8594-6b7390d68960" />
+<img width="1366" height="700" alt="Screenshot From 2025-07-27 17-47-46" src="https://github.com/user-attachments/assets/f77597d6-40fc-4576-9a1c-513feb62adc1" />
+
 
 Breakdown of the Malicious Code Execution:
 
@@ -86,4 +87,25 @@ Breakdown of the Malicious Code Execution:
 
 4. Decoding and Writing to File: The Base64 string is decoded and saved as a PowerShell script file named "PowerRatankba.ps1"
    which is then used as the attack payload.
+
+
+## The third stage (PowerRatankba.ps1 - Backdoor)
+
+This PowerShell script is a reverse shell with persistence, meaning it allows an attacker to gain remote access to the
+infected machine and ensures it runs every time the system starts.
+
+<img width="1268" height="707" alt="Screenshot From 2025-07-27 18-12-05" src="https://github.com/user-attachments/assets/774f987e-56ce-4f03-8282-f283eb8014b8" />
+
+Once connected:
+
+1. waits for commands from the attacker.
+   
+3. executes the commands on the victim’s machine.
+
+4. sends the command output back to the attacker.
+
+   
+Persistence (Runs at Startup): The script modifies the Windows Registry (Run key) to automatically start on reboot.
+Every time the user logs in, the malicious script executes again, ensuring the attacker regains control.   
+
 

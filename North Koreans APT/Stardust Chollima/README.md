@@ -9,10 +9,13 @@ I relied on Security Affairs to figure out the details to make this: https://sec
 
 <img width="640" height="360" alt="imageedit_2_7042384654" src="https://github.com/user-attachments/assets/d984834c-babb-4eeb-8f46-49aa62fa7817" />
 
+
 The dropper used to deliver the malware is related to the PowerRatankba, a Microsoft Visual C#/ Basic .NET
 compiled executable associated with Stardust Chollima APT. The dropper was used to download a PowerRatankba
 PowerShell reconnaissance tool, the dropper displays a fake job application form while downloads and executes
 PowerRatankba in the background by useing (Base64).
+
+Zdnet resources: https://www.zdnet.com/article/north-korean-hackers-infiltrate-chiles-atm-network-after-skype-job-interview/
 
 The PowerRatankba sample used in the Chilean interbank attack, differently from other variants, communicates to
 the C&C server on HTTPS, This latter code is registered as a service through the “sc create” command as,
@@ -36,11 +39,15 @@ persistence by setting an autostart .
 4. C&C server on HTTPS: When a command is received, it is executed using the PowerShell command in Windows.
 The output of the command is captured and sent back to the C2 server.
 
+
 <img width="640" height="486" alt="NK_PIRsV2" src="https://github.com/user-attachments/assets/719f42c1-320f-44b8-ab40-376f4a886fae" />
-
-
 
 
 ## The first stage (social engineering technique)
 
+The attackers delivered the malware, according to Flashpoint a trusted Redbanc IT professional clicked to apply to a job
+opening found on social media.The person that published the job opening then contacted the employee via linkedin
+Skype, etc for an interview and tricked him into installing the malicious code.
+
+<img width="638" height="640" alt="ss" src="https://github.com/user-attachments/assets/70dd60a3-934a-4c28-8f3d-2c4c9b9b994c" />
 

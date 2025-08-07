@@ -95,7 +95,8 @@ Breakdown of the Malicious Code Execution:
 This PowerShell script is a reverse shell with persistence, meaning it allows an attacker to gain remote access to the
 infected machine and ensures it runs every time the system starts.
 
-<img width="1268" height="707" alt="Screenshot From 2025-07-27 18-12-05" src="https://github.com/user-attachments/assets/774f987e-56ce-4f03-8282-f283eb8014b8" />
+<img width="1366" height="715" alt="Screenshot From 2025-08-07 13-37-55" src="https://github.com/user-attachments/assets/f8be090b-1ac3-4154-b02a-02ed73f5d88e" />
+
 
 Once connected:
 
@@ -108,6 +109,7 @@ Once connected:
    
 Persistence (Runs at Startup): The script modifies the Windows Registry (Run key) to automatically start on reboot.
 Every time the user logs in, the malicious script executes again, ensuring the attacker regains control.   
+
 
 
 

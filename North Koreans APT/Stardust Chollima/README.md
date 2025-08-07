@@ -63,6 +63,18 @@ The group addressed several employees of the company through LinkedIn's messagin
 recruiter, the attacker used a lure of job offer to attract the attention and confidence of the target
 
 
+This attack is based on a scenario that seems very natural and realistic.
+The attackers conduct job interviews in a completely normal way, and then inform the victim that they’ve been accepted for the position. Naturally, when someone gets accepted for a job, it’s expected that they will receive access to a company email or be asked to install certain programs required to start their tasks.
+
+The scenario appears completely logical  they might add you to the company’s Slack server, or ask you to download specialized tools or software. In some cases, they even ask you to start learning a new language like Spanish, and they tell you that they’ve already purchased a chair for you. All you need to do is install a certain application and enter your personal information into it.
+
+But in reality, that application runs in the background and silently downloads a backdoor, giving the attackers unauthorized access to your device.
+
+And the real objective of the attack is not the job itself, but the information on your personal device.
+Many people still keep sensitive data from their previous jobs on their laptops  such as documents, projects, or login credentials. So, the attacker is indirectly targeting the company the victim previously worked at, or even the one they’re currently working for, by using the victim’s personal machine.
+
+Instead of launching a direct attack on the company, they exploit normal human behavior  like the desire to find a better job  and target individuals who already have access or sensitive knowledge. This gives the attacker a hidden entry point to breach organizations without raising suspicion.
+
 
 ## The second stage (Fake job application - Backdoor Downloader by base64)
 
@@ -119,6 +131,7 @@ The output of the command is captured and sent back to the C2 server.
 
 
 https://github.com/user-attachments/assets/a86c474f-2291-4447-adaf-f4f875b23475
+
 
 
 

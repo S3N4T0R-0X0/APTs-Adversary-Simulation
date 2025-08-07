@@ -110,6 +110,10 @@ Once connected:
 Persistence (Runs at Startup): The script modifies the Windows Registry (Run key) to automatically start on reboot.
 Every time the user logs in, the malicious script executes again, ensuring the attacker regains control.   
 
+## The fourth stage (payload connect to HTTPS-C2 Server)
+
+C&C server on HTTPS: When a command is received, it is executed using the PowerShell command in Windows.
+The output of the command is captured and sent back to the C2 server.
 
 
 

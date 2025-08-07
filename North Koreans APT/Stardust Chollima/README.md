@@ -21,7 +21,7 @@ PowerRatankba in the background by useing (Base64).
 Zdnet resources: https://www.zdnet.com/article/north-korean-hackers-infiltrate-chiles-atm-network-after-skype-job-interview/
 
 The PowerRatankba sample used in the Chilean interbank attack, differently from other variants, communicates to
-the C&C server on TCP, This latter code is registered as a service through the “sc create” command as,
+the C&C server on HTTPS, This latter code is registered as a service through the “sc create” command as,
 the malware gain persistence by setting an autostart.
 
 
@@ -40,7 +40,7 @@ PowerRatankba in the background by useing (Base64).
 control via C2 server and latter code is registered as a service through the “sc create” command as,“ the malware gain
 persistence by setting an autostart .
 
-4. C&C server on TCP: When a command is received, it is executed using the PowerShell command in Windows.
+4. C&C server on HTTPS: When a command is received, it is executed using the PowerShell command in Windows.
 The output of the command is captured and sent back to the C2 server.
 
 
@@ -108,5 +108,6 @@ Once connected:
    
 Persistence (Runs at Startup): The script modifies the Windows Registry (Run key) to automatically start on reboot.
 Every time the user logs in, the malicious script executes again, ensuring the attacker regains control.   
+
 
 

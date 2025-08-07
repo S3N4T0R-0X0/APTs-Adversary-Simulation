@@ -127,11 +127,11 @@ It's important to ensure that the payload file has the same name as defined insi
 
 ![IMG_20250706_113049_180](https://github.com/user-attachments/assets/1f89cf15-055d-4e82-93aa-0e267874ca81)
 
-## The sixth stage (payload connect to TCP-C2 Server with XOR key)
 
 The final result is the successful establishment of a Command and Control channel. This is achieved by delivering a phishing link that mimics Microsoft login pages using BEAR-C2’s phishing module combined with an obfuscated JavaScript payload. Once executed, the payload initiates a reverse TCP connection to the attacker’s server, encrypted with XOR, allowing secure data exfiltration and remote command execution.
 
 https://github.com/user-attachments/assets/29d59e74-cdf5-464a-bd0d-8a151a9d762e
+
 
 
 

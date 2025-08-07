@@ -117,3 +117,8 @@ The output of the command is captured and sent back to the C2 server.
 
 
 
+
+https://github.com/user-attachments/assets/a86c474f-2291-4447-adaf-f4f875b23475
+
+
+

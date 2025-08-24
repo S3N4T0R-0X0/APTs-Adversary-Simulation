@@ -12,14 +12,21 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 
 <img width="702" height="354" alt="imageedit_3_2570117683" src="https://github.com/user-attachments/assets/cf10354c-b377-4baf-b217-76f01b353f15" />
 
-1. Social Engineering Technique: Create document file  masquerading as information on North Korean troops deployed to Russia.
+1. Social Delivery Technique: Create document file  masquerading as information on North Korean troops deployed to Russia.
 
 
-2. malicious shortcut: make single shortcut (LNK) file. This LNK file executes malicious code and shares the same name as the ZIP archive, with only the file extension being different.
 
-3. PowerShell commands: The shortcut (LNK) file is configured to run via PowerShell commands embedded arguments.
+2. Malicious shortcut: make single shortcut (LNK) file. This LNK file executes malicious code and shares the same name as the ZIP     archive, with only the file extension being different.
 
-4. toy.bat: When the PowerShell command in “toy03.bat” file is executed, it loads “toy02.dat” file created in temporary folder, functioning as a loader.
 
-5. 
+3. PowerShell Commands: The shortcut (LNK) file is configured to run via PowerShell commands embedded arguments.
+
+
+4. Toy.Bat: When the PowerShell command in “toy03.bat” file is executed, it loads “toy02.dat” file created in temporary folder,       functioning as a loader.
+
+
+5. shellcode injection: As a result the shellcode is loaded into memory and the memory area becomes executable.
+
+
+6. Dropbox C2: Get Command and Control through payload uses the Dropbox API to upload data including command output to Dropbox.
 

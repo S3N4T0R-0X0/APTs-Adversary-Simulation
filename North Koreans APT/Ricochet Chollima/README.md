@@ -12,7 +12,7 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 
 
 
-1. Social Delivery Technique: Create document file  masquerading as information on North Korean troops deployed to Russia.
+1. Delivery Technique: Create document file  masquerading as information on North Korean troops deployed to Russia.
 
 
 

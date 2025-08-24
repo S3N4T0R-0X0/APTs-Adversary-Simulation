@@ -17,3 +17,9 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 
 2. malicious shortcut: make single shortcut (LNK) file. This LNK file executes malicious code and shares the same name as the ZIP archive, with only the file extension being different.
 
+3. PowerShell commands: The shortcut (LNK) file is configured to run via PowerShell commands embedded arguments.
+
+4. toy.bat: When the PowerShell command in “toy03.bat” file is executed, it loads “toy02.dat” file created in temporary folder, functioning as a loader.
+
+5. 
+

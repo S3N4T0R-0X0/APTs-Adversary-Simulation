@@ -8,3 +8,4 @@ This simulation is based on research from Genians: https://www.genians.co.kr/en/
 
 
 
+<img width="640" height="360" alt="imageedit_2_8051213650" src="https://github.com/user-attachments/assets/894f133b-1b99-41a4-bc80-19a8ce8a2260" />

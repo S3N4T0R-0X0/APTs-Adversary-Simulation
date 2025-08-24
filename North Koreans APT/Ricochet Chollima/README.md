@@ -10,7 +10,7 @@ Based on the characteristics of the threat, Genians Security Center (GSC) named 
 
 The attacker impersonated a North Korea-focused expert based in South Korea, and the email used the subject line “러시아 전장에 투입된 인민군 장병들에게.hwp” (To North Korean People’s Army Soldiers Deployed to the Russian Battlefield.hwp) with the attachment carrying the same file name, the attachment mimicked a Hangul (HWP) document by displaying the HWP icon image used by Naver Mail, and the attacker leveraged this icon to make the attachment appear as a legitimate file link, however the actual download link redirected to Dropbox, which led to a ZIP archive named “러시아 전장에 투입된 인민군 장병들에게.zip” (To North Korean People’s Army Soldiers Deployed to the Russian Battlefield.zip).
 
-<img width="702" height="354" alt="imageedit_3_2570117683" src="https://github.com/user-attachments/assets/cf10354c-b377-4baf-b217-76f01b353f15" />
+
 
 1. Social Delivery Technique: Create document file  masquerading as information on North Korean troops deployed to Russia.
 
@@ -30,3 +30,4 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 
 6. Dropbox C2: Get Command and Control through payload uses the Dropbox API to upload data including command output to Dropbox.
 
+<img width="702" height="354" alt="imageedit_3_2570117683" src="https://github.com/user-attachments/assets/cf10354c-b377-4baf-b217-76f01b353f15" />

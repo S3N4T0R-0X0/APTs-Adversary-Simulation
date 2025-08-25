@@ -42,3 +42,12 @@ The decoy HWP document contains a letter addressed to North Korean soldiers depl
 
 <img width="586" height="714" alt="imageedit_2_7840143710" src="https://github.com/user-attachments/assets/928315fd-596a-4906-9024-4a2b1017e974" />
 
+
+## The second stage (Malicious shortcut)
+
+The archive named “관련 포스터.zip” (Related Poster.zip) contained a benign JPG image alongside a malicious LNK shortcut. Upon execution of the LNK file, a hidden PowerShell command embedded within the shortcut was triggered, initiating the malicious activity. 
+
+
+
+
+

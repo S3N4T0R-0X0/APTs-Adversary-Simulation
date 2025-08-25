@@ -62,9 +62,12 @@ After using WinRAR to compress the file, I will create a shortcut to this file a
 
 Because I put the command line in the setup (Run after extraction) menu in the Advanced SFX options of the WinRAR program, now when the victim opens the ZIP file to view the images, they also see an HWP document containing a letter addressed to North Korean soldiers deployed to Russia.
 
-https://github.com/user-attachments/assets/ccf40af9-5412-43cb-9691-b6e87054b4e4
 
 
+
+
+
+https://github.com/user-attachments/assets/45420912-5110-49eb-b64a-531410459f94
 
 
 

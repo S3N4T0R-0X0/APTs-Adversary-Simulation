@@ -47,12 +47,13 @@ The decoy HWP document contains a letter addressed to North Korean soldiers depl
 
 The archive named “관련 포스터.zip” (Related Poster.zip) contained a benign JPG image alongside a malicious LNK shortcut. Upon execution of the LNK file, a hidden PowerShell command embedded within the shortcut was triggered, initiating the malicious activity. 
 
-Now I need to create a JPG image that looks like a normal picture, but in the background when the image is opened the malware starts running silently. At this stage I used WinRAR to bind the JPG with a command line execution via CMD so that when the image is opened it triggers the hidden activity, and I also used an icon format to make the file appear legitimate.
+Now I need to create a JPG image that looks like a normal picture, but in the background when the image is opened the PowerShell command starts running silently. At this stage I used WinRAR to bind the JPG with a command line execution via CMD so that when the image is opened it triggers the hidden activity, and I also used an icon format to make the file appear legitimate.
 
+<img width="1022" height="342" alt="Screenshot From 2025-08-25 17-44-29" src="https://github.com/user-attachments/assets/c6c2d433-a7ac-4a88-b791-7ed684717224" />
 
--------------
 
 After using WinRAR to compress the file, I will create a shortcut to this file and place it in another folder together with the actual images, then convert the folder into a ZIP file using standard ZIP compression.
 
+![photo_2025-08-25_18-06-34](https://github.com/user-attachments/assets/3c8ffecd-29d5-4bea-8d2f-b90655c818e9)
 
 

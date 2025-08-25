@@ -38,10 +38,6 @@ The attacker impersonated a North Korea-focused expert based in South Korea. The
 
 <img width="620" height="449" alt="imageedit_1_7438116774" src="https://github.com/user-attachments/assets/39b0c384-16af-4405-9281-6c73642ba74b" />
 
-The decoy HWP document contains a letter addressed to North Korean soldiers deployed to Russia.
-
-<img width="586" height="714" alt="imageedit_2_7840143710" src="https://github.com/user-attachments/assets/928315fd-596a-4906-9024-4a2b1017e974" />
-
 
 ## The second stage (Malicious shortcut)
 
@@ -55,8 +51,23 @@ Now I need to create a JPG image that looks like a normal picture, but in the ba
 ![photo_2025-08-25_18-06-34](https://github.com/user-attachments/assets/3c8ffecd-29d5-4bea-8d2f-b90655c818e9)
 
 
+
 After using WinRAR to compress the file, I will create a shortcut to this file and place it in another folder together with the actual images, then convert the folder into a ZIP file using standard ZIP compression.
 
 <img width="971" height="264" alt="Screenshot From 2025-08-25 18-23-37" src="https://github.com/user-attachments/assets/3f75e16f-5010-450c-84f1-99b945263922" />
+
+
+
+## The third stage (execution technique)
+
+Because I put the command line in the setup (Run after extraction) menu in the Advanced SFX options of the WinRAR program, now when the victim opens the ZIP file to view the images, they also see an HWP document containing a letter addressed to North Korean soldiers deployed to Russia.
+
+https://github.com/user-attachments/assets/ccf40af9-5412-43cb-9691-b6e87054b4e4
+
+
+
+
+
+
 
 

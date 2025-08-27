@@ -63,13 +63,11 @@ After using WinRAR to compress the file, I will create a shortcut to this file a
 Because I put the command line in the setup (Run after extraction) menu in the Advanced SFX options of the WinRAR program, now when the victim opens the ZIP file to view the images, they also see an HWP document containing a letter addressed to North Korean soldiers deployed to Russia.
 
 
-
-
-
-
 https://github.com/user-attachments/assets/45420912-5110-49eb-b64a-531410459f94
 
+## The fourth stage (Toy.bat - shellcode)
 
+When the PowerShell command in “toy03.bat” executes, it loads the “toy02.dat” file created in the temporary folder to function as a loader; the embedded PowerShell within “toy02.dat” then runs and loads “toy01.dat” from the same folder, during which XOR transformed data is decoded and mapped into memory and a new thread is spawned; as a result, the shellcode is placed in memory and the region is made executable, after which another thread is created to run the memory-resident code constituting a fileless technique for dynamic code execution and runtime malware injection.
 
 
 

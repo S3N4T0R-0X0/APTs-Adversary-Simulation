@@ -1,5 +1,5 @@
 # APT Attack Simulation 
-This repository is a compilation of all Russian, Chinese, Iranian and North Koreans APT simulations that target many vital sectors,both private and governmental. The simulation includes develop custom tools, C2 servers, backdoors, exploitation techniques, stagers, bootloaders, and many other tools that attackers might have used in actual attacks. These tools and TTPs  are simulated here. I relied on PaloAlto Unit42, Kaspersky, Microsoft, Cisco, Trellix, CrowdStrike and WithSecure to figure out the details to make this simulations.
+This repository is a compilation of all `Russian, Chinese, Iranian and North Koreans` APT simulations that target many vital sectors,both private and governmental. The simulation includes develop custom tools, C2 servers, backdoors, exploitation techniques, stagers, bootloaders, and many other tools that attackers might have used in actual attacks. These tools and TTPs  are simulated here. I relied on PaloAlto Unit42, Kaspersky, Microsoft, Cisco, Trellix, CrowdStrike and WithSecure to figure out the details to make this simulations.
 
 ![photo_2024-09-07_20-05-46](https://github.com/user-attachments/assets/361596c1-5fdc-4f58-b91f-80507feccfd3)
 

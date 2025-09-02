@@ -42,7 +42,7 @@ All adversary simulations are powered by **Bear-C2**, a custom command and contr
 
 ## 📫 Contact
 
-If you have any questions, issues, or suggestions, feel free to write in our Telegram group, you're welcome to join!
+If you have any questions, issues, or suggestions, feel free to join our Telegram channel, you're welcome to join!
 
 <p align="center"> <strong>🚨 Always Remember: <em>"Be The Threat To Defeat It"</em></strong> </p>
 

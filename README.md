@@ -1,4 +1,4 @@
-# APT Attack Simulation Framework
+# APT Attack Simulation
 
 ![APT Simulation Banner](https://github.com/user-attachments/assets/361596c1-5fdc-4f58-b91f-80507feccfd3)
 

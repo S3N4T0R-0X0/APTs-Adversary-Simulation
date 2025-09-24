@@ -2,7 +2,7 @@
 
 ![APT Simulation Banner](https://github.com/user-attachments/assets/361596c1-5fdc-4f58-b91f-80507feccfd3)
 
-A comprehensive collection of simulated Advanced Persistent Threat (APT) attacks based on real-world tactics, techniques, and procedures (TTPs) used by state-sponsored threat actors from `Russia, China, Iran, and North Korea`.
+A comprehensive collection of simulated Advanced Persistent Threat (APT) attacks based on real-world tactics, techniques, and procedures (TTPs) used by state-sponsored APT Groups from `Russia, China, Iran, and North Korea`.
 
 ## 🧠 Overview
 
@@ -14,7 +14,7 @@ This repository contains detailed simulations of APT campaigns targeting various
 
 ## 🎯 Simulated APT Groups
 
-The naming convention for APT groups follows CrowdStrike's taxonomy. Below is the complete list of simulated threat actors:
+The naming convention for APT groups follows CrowdStrike's taxonomy. Below is the complete list of simulated APT Groups:
 
 | **Country of Origin** | Russia 🇷🇺            | China 🇨🇳               | North Korea 🇰🇵        | Iran 🇮🇷              |
 |-----------------------|-----------------------|-------------------------|------------------------|----------------------|

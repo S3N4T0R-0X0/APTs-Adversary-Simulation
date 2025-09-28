@@ -19,14 +19,14 @@ The naming convention for APT groups follows CrowdStrike's taxonomy. Below is th
 | **Country of Origin** | Russia 🇷🇺            | China 🇨🇳               | North Korea 🇰🇵        | Iran 🇮🇷              |
 |-----------------------|-----------------------|-------------------------|------------------------|----------------------|
 | **APT Groups**        | Cozy Bear ✅          | Mustang Panda ✅        | Labyrinth Chollima ✅  | Helix Kitten         |
-|                       | Voodoo Bear ✅        | Glacial Panda           | Velvet Chollima ✅     | Pioneer Kitten       |
+|                       | Voodoo Bear ✅        | Glacial Panda           | Velvet Chollima ✅    | Pioneer Kitten       |
 |                       | Fancy Bear ✅         | Wicked Panda ✅         | Famous Chollima ✅    | Clever Kitten        |
 |                       | Energetic Bear ✅    | Goblin Panda            | Stardust Chollima ✅  | Static Kitten        |
 |                       | Berserk Bear ✅      | Anchor Panda            | Ricochet Chollima     | Tracer Kitten        |
 |                       | Gossamer Bear ✅     | Deep Panda              | Silent Chollima       | Nemesis Kitten       |
 |                       | Primitive Bear ✅    | Samurai Panda           |                       | Spectral Kitten      |
 |                       | Ember Bear ✅        | Phantom Panda           |                       | Charming Kitten      |
-|                       | Venomous Bear ✅     | Sunrise Panda           |                       |                      |
+|                       | Venomous Bear ✅     | Sunrise Panda           |                       | Pulsar Kitten        |
 |                       |                      | Ethereal Panda          |                       |                      |
 
 ## 🛠️ Technical Framework

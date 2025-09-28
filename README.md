@@ -27,7 +27,7 @@ The naming convention for APT groups follows CrowdStrike's taxonomy. Below is th
 |                       | Primitive Bear ✅    | Samurai Panda           |                       | Spectral Kitten      |
 |                       | Ember Bear ✅        | Phantom Panda           |                       | Charming Kitten      |
 |                       | Venomous Bear ✅     | Sunrise Panda           |                       | Pulsar Kitten        |
-|                       |                      | Ethereal Panda          |                       |                      |
+|                       |                      | Ethereal Panda          |                       | Remix Kitten        |
 
 ## 🛠️ Technical Framework
 

@@ -67,9 +67,13 @@ https://github.com/user-attachments/assets/45420912-5110-49eb-b64a-531410459f94
 
 ## The fourth stage (Toy.bat - shellcode)
 
-When the PowerShell command in “toy03.bat” executes, it loads the “toy02.dat” file created in the temporary folder to function as a loader; the embedded PowerShell within “toy02.dat” then runs and loads “toy01.dat” from the same folder, during which XOR transformed data is decoded and mapped into memory and a new thread is spawned; as a result, the shellcode is placed in memory and the region is made executable, after which another thread is created to run the memory-resident code constituting a fileless technique for dynamic code execution and runtime malware injection.
+When the PowerShell command in “toy03.bat” executes, it loads the “toy02.dat” file created in the temporary folder to function as a loader; the embedded PowerShell within “toy02.dat” then runs and loads “toy01.dat” from the same folder, during which XOR transformed data is decoded and mapped into memory and a new thread is spawned; as a result, the shellcode is placed in memory and the region is made executable.
 
 <img width="1021" height="484" alt="Screenshot From 2025-10-09 12-00-21" src="https://github.com/user-attachments/assets/dbf95c8c-b85d-4d40-bc8d-43d2cb796e14" />
 
+After which another thread is created to run the memory-resident code constituting a fileless technique for dynamic code execution and runtime malware injection.
 
+As a result, the shellcode is loaded into memory and the memory area becomes executable.
+
+<img width="1321" height="563" alt="Screenshot From 2025-10-09 12-06-39" src="https://github.com/user-attachments/assets/1be791ba-35dd-41b8-931d-755a8d36f8e8" />
 

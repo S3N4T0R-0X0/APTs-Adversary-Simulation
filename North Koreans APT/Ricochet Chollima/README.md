@@ -25,10 +25,7 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 4. Toy.Bat: When the PowerShell command in “toy03.bat” file is executed, it loads “toy02.dat” file created in temporary folder,       functioning as a loader.
 
 
-5. shellcode injection: As a result the shellcode is loaded into memory and the memory area becomes executable.
-
-
-6. Dropbox C2: Get Command and Control through payload uses the Dropbox API to upload data including command output to Dropbox.
+5. Dropbox C2: Get Command and Control through payload uses the Dropbox API to upload data including command output to Dropbox.
 
 <img width="702" height="354" alt="imageedit_3_2570117683" src="https://github.com/user-attachments/assets/cf10354c-b377-4baf-b217-76f01b353f15" />
 
@@ -76,4 +73,18 @@ After which another thread is created to run the memory-resident code constituti
 As a result, the shellcode is loaded into memory and the memory area becomes executable.
 
 <img width="1321" height="563" alt="Screenshot From 2025-10-09 12-06-39" src="https://github.com/user-attachments/assets/1be791ba-35dd-41b8-931d-755a8d36f8e8" />
+
+## The fifth stage (Data Exfiltration) over Dropbox API C2 Channe
+
+The attackers used the Dropbox C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server. By using Dropbox as a C2 server, attackers can hide their malicious activities among the legitimate traffic to Dropbox, making it harder for security teams to detect the threat.
+
+<img width="814" height="146" alt="Screenshot From 2025-10-10 16-46-21" src="https://github.com/user-attachments/assets/8f5e2984-5319-469f-bfc2-556273bd5c9c" />
+
+First, I need to create a Dropbox account and activate its permissions, as shown in the following figure.
+
+<img width="1185" height="543" alt="316279637-518a643a-f8bc-455c-acdd-a6ed6fe8735a" src="https://github.com/user-attachments/assets/55b283b5-a36e-4e29-81c4-875c19f0b3d7" />
+
+After that, I will go to the settings menu to generate the access token for the Dropbox account, and this is what we will use in Dropbox C2.
+
+![316279662-00e41c7e-b2ac-4805-b1a9-77d00671ebf8](https://github.com/user-attachments/assets/5f26bbbe-9fe3-491b-b540-7d736d41feb0)
 

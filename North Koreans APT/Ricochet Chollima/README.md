@@ -92,7 +92,7 @@ After that, I will go to the settings menu to generate the access token for the 
 
 ## The sixth stage (payload with injected Shellcode)
 
-This C++ program implements a client-side payload that establishes a TCP connection to a remote server for command execution. It uses AES encryption in CBC mode to secure communication, with a 128-bit key for encrypting and decrypting data. The client authenticates with a predefined ID and executes commands received from the server, supporting both CMD and PowerShell commands. Output from executed commands is encrypted and sent back to the server. The program includes a Dropbox API function for file upload and employs Base64 encoding for data handling.
+This payload that establishes a TCP connection to a remote server for command execution. It uses AES encryption in CBC mode to secure communication, with a 128-bit key for encrypting and decrypting data. The client authenticates with a predefined ID and executes commands received from the server, supporting both CMD and PowerShell commands. Output from executed commands is encrypted and sent back to the server. The program includes a Dropbox API function for file upload and employs Base64 encoding for data handling.
 
 <img width="845" height="486" alt="Screenshot From 2025-10-10 17-37-25" src="https://github.com/user-attachments/assets/cf572eed-7a2a-4d12-8d69-ea972ba9e7d5" />
 
@@ -100,6 +100,18 @@ This C++ program implements a client-side payload that establishes a TCP connect
 This payload uses the Dropbox API to upload data, including command output to Dropbox. By leveraging the Dropbox API and providing an access token the payload hides its traffic within the legitimate traffic of the Dropbox.
 
 <img width="804" height="334" alt="Screenshot From 2025-10-10 17-38-55" src="https://github.com/user-attachments/assets/fd841abf-47bc-45de-bbfe-8f1374bfc4d7" />
+
+Now I will upload the file to BearC2's host-file, use the start command with the URL, convert it to shellcode, and place it in the main payload.
+
+<img width="1366" height="749" alt="Screenshot From 2025-10-10 19-04-13" src="https://github.com/user-attachments/assets/99235f5d-8af1-4e4d-b97a-ed4907db6e0c" />
+
+
+## Final result: payload connect to Dropbox C2 server
+
+The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both Dropbox API-based C2 server.
+
+![photo_2025-10-10_19-26-33](https://github.com/user-attachments/assets/1832828a-3ed1-4d79-b2da-947793eee5ab)
+
 
 
 

@@ -88,3 +88,17 @@ After that, I will go to the settings menu to generate the access token for the 
 
 ![316279662-00e41c7e-b2ac-4805-b1a9-77d00671ebf8](https://github.com/user-attachments/assets/5f26bbbe-9fe3-491b-b540-7d736d41feb0)
 
+## The sixth stage (payload with injected Shellcode)
+
+This C++ program implements a client-side payload that establishes a TCP connection to a remote server for command execution. It uses AES encryption in CBC mode to secure communication, with a 128-bit key for encrypting and decrypting data. The client authenticates with a predefined ID and executes commands received from the server, supporting both CMD and PowerShell commands. Output from executed commands is encrypted and sent back to the server. The program includes a Dropbox API function for file upload and employs Base64 encoding for data handling.
+
+<img width="845" height="486" alt="Screenshot From 2025-10-10 17-37-25" src="https://github.com/user-attachments/assets/cf572eed-7a2a-4d12-8d69-ea972ba9e7d5" />
+
+
+This payload uses the Dropbox API to upload data, including command output to Dropbox. By leveraging the Dropbox API and providing an access token the payload hides its traffic within the legitimate traffic of the Dropbox.
+
+<img width="804" height="334" alt="Screenshot From 2025-10-10 17-38-55" src="https://github.com/user-attachments/assets/fd841abf-47bc-45de-bbfe-8f1374bfc4d7" />
+
+
+
+

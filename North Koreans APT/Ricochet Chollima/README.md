@@ -74,6 +74,8 @@ As a result, the shellcode is loaded into memory and the memory area becomes exe
 
 <img width="1321" height="563" alt="Screenshot From 2025-10-09 12-06-39" src="https://github.com/user-attachments/assets/1be791ba-35dd-41b8-931d-755a8d36f8e8" />
 
+I used shellcode to execute calc.exe for testing but later after compiling the base payload I will use the host-file program included in BearC2 to upload the payload and obtain a masked URL. As shown in the server header for Dropbox in the figure, opening that link causes the payload to download automatically without any interaction from the victim. I will then use the (start) command, insert the URL that carries the payload convert it to shellcode and place it in the shellcode slot instead of the calc.exe shellcode.
+
 ## The fifth stage (Data Exfiltration) over Dropbox API C2 Channe
 
 The attackers used the Dropbox C2 (Command and Control) API as a means to establish a communication channel between their payload and the attacker's server. By using Dropbox as a C2 server, attackers can hide their malicious activities among the legitimate traffic to Dropbox, making it harder for security teams to detect the threat.

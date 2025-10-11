@@ -21,19 +21,19 @@ This repository contains detailed adversary simulation APT campaigns targeting v
 
 The naming convention for APT groups follows CrowdStrike's taxonomy. Below is the complete list of simulated APT Groups:
 
-| **Country of Origin** | Russia 🇷🇺            | China 🇨🇳               | North Korea 🇰🇵        | Iran 🇮🇷              |
-|-----------------------|-----------------------|-------------------------|------------------------|----------------------|
-| **APT Groups**        | Cozy Bear ✅          | Mustang Panda ✅        | Labyrinth Chollima ✅  | Helix Kitten         |
-|                       | Voodoo Bear ✅        | Glacial Panda           | Velvet Chollima ✅    | Pioneer Kitten       |
-|                       | Fancy Bear ✅         | Wicked Panda ✅         | Famous Chollima ✅    | Clever Kitten        |
-|                       | Energetic Bear ✅    | Goblin Panda            | Stardust Chollima ✅  | Static Kitten        |
-|                       | Berserk Bear ✅      | Anchor Panda            | Ricochet Chollima     | Tracer Kitten        |
-|                       | Gossamer Bear ✅     | Deep Panda              | Silent Chollima       | Nemesis Kitten       |
-|                       | Primitive Bear ✅    | Samurai Panda           |                       | Spectral Kitten      |
-|                       | Ember Bear ✅        | Phantom Panda           |                       | Charming Kitten      |
-|                       | Venomous Bear ✅     | Sunrise Panda           |                       | Pulsar Kitten        |
-|                       |                      | Ethereal Panda          |                       | Remix Kitten         |
-|                       |                      |                         |                       | Pioneer kitten       |
+| **Country of Origin** | Russia 🇷🇺              | China 🇨🇳               | North Korea 🇰🇵        | Iran 🇮🇷              |
+|-----------------------|-----------------------|------------------------|-----------------------|----------------------|
+| **APT Groups**        | Cozy Bear ✅          | Mustang Panda ✅       | Labyrinth Chollima ✅  | Helix Kitten         |
+|                       | Voodoo Bear ✅        | Glacial Panda          | Velvet Chollima ✅    | Pioneer Kitten        |
+|                       | Fancy Bear ✅         | Wicked Panda ✅        | Famous Chollima ✅    | Clever Kitten         |
+|                       | Energetic Bear ✅    | Goblin Panda            | Stardust Chollima ✅  | Static Kitten         |
+|                       | Berserk Bear ✅      | Anchor Panda            | Ricochet Chollima  ✅ | Tracer Kitten         |
+|                       | Gossamer Bear ✅     | Deep Panda              | Silent Chollima       | Nemesis Kitten        |
+|                       | Primitive Bear ✅    | Samurai Panda           |                       | Spectral Kitten       |
+|                       | Ember Bear ✅        | Phantom Panda           |                       | Charming Kitten       |
+|                       | Venomous Bear ✅     | Sunrise Panda           |                       | Pulsar Kitten         |
+|                       |                      | Ethereal Panda          |                       | Remix Kitten          |
+|                       |                      |                         |                       | Pioneer kitten        |
 
 ## 🛠️ Technical Framework
 

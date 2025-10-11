@@ -27,6 +27,9 @@ The attacker impersonated a North Korea-focused expert based in South Korea, and
 
 5. Dropbox C2: Get Command and Control through payload uses the Dropbox API to upload data including command output to Dropbox.
 
+
+6.  TCP payload: This payload that establishes a TCP connection to a remote server for command execution.
+
 <img width="702" height="354" alt="imageedit_3_2570117683" src="https://github.com/user-attachments/assets/cf10354c-b377-4baf-b217-76f01b353f15" />
 
 ## The first stage (delivery technique)
@@ -106,7 +109,7 @@ Now I will upload the file to BearC2's host-file, use the start command with the
 <img width="1366" height="749" alt="Screenshot From 2025-10-10 19-04-13" src="https://github.com/user-attachments/assets/99235f5d-8af1-4e4d-b97a-ed4907db6e0c" />
 
 
-## Final result: payload connect to Dropbox C2 server
+## Final result: payload connect to BEAR-C2 server
 
 The final step in this process involves the execution of the final payload. After being decrypted and loaded into the current process, the final payload is designed to beacon out to both Dropbox API-based C2 server.
 

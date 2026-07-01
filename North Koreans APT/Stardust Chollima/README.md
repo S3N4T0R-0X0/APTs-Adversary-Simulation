@@ -27,8 +27,8 @@ the malware gain persistence by setting an autostart.
 
 BushidoToken Threat Intel: https://blog.bushidotoken.net/2021/08/the-lazarus-heist-where-are-they-now.html
 
+<img width="1280" height="374" alt="photo_2026-07-01_04-06-54" src="https://github.com/user-attachments/assets/ef618f9c-a566-436d-a435-d2f2b2e86b95" />
 
-<img width="640" height="486" alt="NK_PIRsV2" src="https://github.com/user-attachments/assets/719f42c1-320f-44b8-ab40-376f4a886fae" />
 
 1. Social engineering technique: The attackers delivered the malware, according toFlashpoint a trusted Redbanc IT
 professional clicked to apply to a job opening found on social media.

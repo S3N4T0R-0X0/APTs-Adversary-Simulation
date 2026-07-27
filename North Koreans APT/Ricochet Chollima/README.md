@@ -118,4 +118,17 @@ The final step in this process involves the execution of the final payload. Afte
 
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.002** | Phishing: Spearphishing Link | Delivers a phishing email containing a Dropbox link disguised as a Hangul (HWP) document. |
+| **T1204.001** | User Execution: Malicious Link | Requires the victim to open the Dropbox link and extract the downloaded archive. |
+| **T1204.002** | User Execution: Malicious File | Executes a malicious Windows Shortcut (`.LNK`) file contained in the ZIP archive. |
+| **T1036** | Masquerading | Impersonates a legitimate HWP document using a Hangul icon and deceptive filenames. |
+| **T1105** | Ingress Tool Transfer | Downloads or stages the next payload after the LNK file is executed. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to execute the next-stage payload and system commands. |
+| **T1027** | Obfuscated Files or Information | Obfuscates the payload and execution chain to hinder static analysis. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTP/HTTPS for Command and Control communications. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized or sandboxed environments before executing the payload. |

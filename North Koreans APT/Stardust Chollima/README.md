@@ -133,5 +133,18 @@ The output of the command is captured and sent back to the C2 server.
 https://github.com/user-attachments/assets/a86c474f-2291-4447-adaf-f4f875b23475
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.002** | Phishing: Spearphishing Link | Delivers a malicious job opportunity through social media (LinkedIn) to lure the victim into downloading the malware. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to execute the downloaded PowerRatankba dropper. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Executes attacker-issued PowerShell commands on the compromised host. |
+| **T1105** | Ingress Tool Transfer | Downloads the next-stage payload from the attacker-controlled infrastructure. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence by creating a Windows Registry Run key executed at user logon. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS. |
+| **T1027** | Obfuscated Files or Information | Uses obfuscation techniques to hinder static analysis of the dropper and payload. |
+| **T1082** | System Information Discovery | Collects basic host information before processing attacker commands. |
+| **T1036** | Masquerading | Uses legitimate-looking filenames and application metadata to reduce suspicion. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects analysis environments before continuing execution. |
 

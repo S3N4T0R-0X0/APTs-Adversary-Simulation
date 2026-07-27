@@ -235,3 +235,19 @@ The campaign analysed in this report shares significant overlap with another rep
 
 
 
+
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | `Cybersecurity.doc` delivered via a compromised telecom domain. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Executes C2 commands using PowerShell. |
+| **T1059.005** | Command and Scripting Interpreter: VBA | Obfuscated `AutoOpen` VBA macro used to execute the initial payload. |
+| **T1027** | Obfuscated Files or Information | Uses hexadecimal encoding, string concatenation, and hidden `UserForm` payloads to evade analysis. |
+| **T1574.002** | Hijack Execution Flow: DLL Side-Loading | Loads a malicious DLL while disguised as a legitimate `.ini` file. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through `HKLM`/`HKCU` Run keys disguised as Windows Update entries. |
+| **T1055.001** | Process Injection: Remote Thread | Injects shellcode into `explorer.exe` using `CreateRemoteThread`. |
+| **T1132** | Data Encoding | Encodes C2 traffic using Base64 combined with XOR encryption. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTP using the Rust `reqwest` library. |
+| **T1036** | Masquerading | Disguises the payload as `reddit.exe` with a fake Cloudflare icon and spoofed file metadata. |
+| **T1497** | Virtualization/Sandbox Evasion | Implements an 8-layer anti-analysis and sandbox evasion system. |

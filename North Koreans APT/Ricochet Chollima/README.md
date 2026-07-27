@@ -129,6 +129,6 @@ The final step in this process involves the execution of the final payload. Afte
 | **T1105** | Ingress Tool Transfer | Downloads or stages the next payload after the LNK file is executed. |
 | **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to execute the next-stage payload and system commands. |
 | **T1027** | Obfuscated Files or Information | Obfuscates the payload and execution chain to hinder static analysis. |
-| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTP/HTTPS for Command and Control communications. |
+| **T1095** | Non-Application Layer Protocol | Establishes a Reverse TCP channel for Command and Control communications. |
 | **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
 | **T1497** | Virtualization/Sandbox Evasion | Detects virtualized or sandboxed environments before executing the payload. |

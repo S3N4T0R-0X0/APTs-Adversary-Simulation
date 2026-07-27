@@ -135,7 +135,20 @@ https://github.com/user-attachments/assets/29d59e74-cdf5-464a-bd0d-8a151a9d762e
 
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.002** | Phishing: Spearphishing Link | Delivers a phishing link that impersonates a Microsoft login page to target job seekers. |
+| **T1583.001** | Acquire Infrastructure: Domains | Uses attacker-controlled phishing domains to host the interview lure. |
+| **T1195.001** | Supply Chain Compromise | Distributes a malicious NPM package hosted on GitHub as interview software. |
+| **T1059.007** | Command and Scripting Interpreter: JavaScript | Executes an obfuscated JavaScript payload embedded inside the NPM package. |
+| **T1027** | Obfuscated Files or Information | JavaScript payload is obfuscated using the built-in BEAR C2 obfuscation engine. |
+| **T1105** | Ingress Tool Transfer | Downloads the secondary payload from GitHub after the JavaScript executes. |
+| **T1573.001** | Encrypted Channel: Symmetric Cryptography | Protects C2 communications using XOR encryption. |
+| **T1095** | Non-Application Layer Protocol | Establishes a Reverse TCP channel for command and control. |
+| **T1071** | Application Layer Protocol | Uses GitHub as the payload delivery platform during the initial infection stage. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Leverages GitHub as a trusted web service for payload hosting and retrieval. |
 
 
 

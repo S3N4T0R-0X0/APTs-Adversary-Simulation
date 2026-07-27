@@ -84,3 +84,21 @@ This file is a modified version of a legitimate DLL file used by the SumatraPDF.
 The BURNBOOK  includes a network connectivity check that prevents the trojanized reader from displaying the decrypted PDF lure if it cannot reach google[.]com. 
 
 ![Screenshot from 2024-09-21 12-53-34](https://github.com/user-attachments/assets/517c7639-dcb9-4ac9-9491-e96163742c14)
+
+
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Office document to initiate the attack chain. |
+| **T1204.002** | User Execution: Malicious File | Relies on the victim opening the malicious document and enabling macro execution. |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic | Uses an obfuscated VBA macro to execute the initial payload. |
+| **T1027** | Obfuscated Files or Information | Hides malicious logic using VBA obfuscation, encoded strings, and macro evasion techniques. |
+| **T1105** | Ingress Tool Transfer | Downloads the next-stage payload from the attacker-controlled infrastructure. |
+| **T1055.001** | Process Injection: Dynamic-link Library Injection | Injects the payload into a legitimate process to evade detection. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTP/HTTPS for Command and Control communications. |
+| **T1132** | Data Encoding | Protects C2 traffic using Base64 and TLS. |
+| **T1036** | Masquerading | Disguises payloads as legitimate Windows components using trusted filenames and metadata. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized and sandboxed environments before executing the payload. |
+| **T1082** | System Information Discovery | Collects host information to profile the victim before continuing execution. |

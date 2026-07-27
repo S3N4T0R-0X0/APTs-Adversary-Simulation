@@ -49,4 +49,18 @@ C&C server on HTTPS (port 465): The implant communicates exclusively over encryp
 
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Office document to the target. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the document and enable macro execution. |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic | Executes an obfuscated VBA macro to initiate the attack chain. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to download and execute the next-stage payload. |
+| **T1027** | Obfuscated Files or Information | Uses VBA obfuscation, encoded strings, and hidden macro logic to evade static analysis. |
+| **T1105** | Ingress Tool Transfer | Downloads the second-stage payload from the attacker-controlled C2 server. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS. |
+| **T1036** | Masquerading | Disguises payloads using trusted filenames and legitimate-looking metadata. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized and sandboxed environments before executing the payload. |
+| **T1082** | System Information Discovery | Collects basic host information before continuing execution. |

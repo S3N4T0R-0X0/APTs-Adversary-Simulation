@@ -75,3 +75,18 @@ This access enables the attacker to control the system, extract sensitive data, 
 
 ![Screenshot From 2025-02-14 18-22-11](https://github.com/user-attachments/assets/e5a74fee-7384-4f6c-9108-5b85f8227575)
 
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Office document targeting South Korean government officials. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the malicious document and enable macro execution. |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic | Executes an obfuscated VBA macro to initiate the infection chain. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to download and execute the next-stage payload. |
+| **T1027** | Obfuscated Files or Information | Uses VBA obfuscation, encoded strings, and hidden macro logic to evade static analysis. |
+| **T1105** | Ingress Tool Transfer | Downloads the payload from the attacker-controlled infrastructure. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence using Windows Registry Run keys. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS. |
+| **T1036** | Masquerading | Uses legitimate-looking filenames and metadata to disguise the payload. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized or sandboxed environments before executing the payload. |
+| **T1082** | System Information Discovery | Collects basic host information before processing attacker commands. |

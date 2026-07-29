@@ -47,6 +47,39 @@ These operations demonstrate the group’s continued reliance on social engineer
 
 <img width="822" height="322" alt="Screenshot 2026-05-11 at 15-30-46 Boggy Serpens Threat Assessment" src="https://github.com/user-attachments/assets/bedf84ba-db09-4ab1-9a69-99dc353dc02f" />
 
+## The second stage (Malicious VBA Macro with Conditional Download and Execution)
+
+**Sub `love_me_____()`:**
+Acts as the primary controller for the entire macro, coordinating the payload workflow from start to finish. The routine begins by decoding an obfuscated file path from a hexadecimal string, concealing the actual location until runtime to reduce static detection. It then checks whether the target payload already exists on the system. If the file is found, the macro immediately transfers execution to the execution routine. If the file is not present, it invokes the download routine to retrieve the payload before executing it. This conditional logic allows the macro to support both first-time infections and subsequent executions without downloading the payload multiple times.
+
+<img width="1366" height="768" alt="Screenshot From 2026-07-29 06-57-50" src="https://github.com/user-attachments/assets/a45fd121-8a27-4a51-b858-1873db6b8454" />
+
+**Sub `DownloadAndRun`:**
+Responsible for retrieving the payload when it is not already available on the system. The function decodes a hexadecimal-encoded URL at runtime and uses the Windows HTTP API (`WinHttp.WinHttpRequest`) to request the remote file. If the download succeeds, the response is written to disk in binary format at the previously decoded file path. Once the file has been successfully saved, the function immediately invokes the execution routine, allowing the newly downloaded payload to run without requiring additional user interaction.
+
+
+<img width="1366" height="768" alt="Screenshot From 2026-07-29 06-58-52" src="https://github.com/user-attachments/assets/22d58511-7be2-495b-a238-b6efa81f6c58" />
+
+
+**Function `DecodeHex`:**
+Provides the string deobfuscation mechanism used throughout the macro. Rather than storing sensitive strings such as file paths or network locations in plain text, the macro represents them as hexadecimal data and reconstructs them only when needed. This technique is commonly used to obscure static indicators and reduce the visibility of embedded strings during basic inspection.
+
+
+<img width="1366" height="768" alt="Screenshot From 2026-07-29 06-59-52" src="https://github.com/user-attachments/assets/d73ae561-541d-43cc-9343-8c151d1d499f" />
+
+
+
+**Sub `ExecuteFile`:**
+Serves as the execution component of the macro. After receiving the target file path, it attempts to launch the payload using multiple execution methods. The routine first executes the file through the VBA `Shell` function with a hidden window and then invokes a secondary execution method through Windows Script Host, providing an alternative launch mechanism. Using more than one execution technique increases execution reliability if one method encounters an error.
+
+<img width="1366" height="768" alt="Screenshot From 2026-07-29 07-00-51" src="https://github.com/user-attachments/assets/e01c1101-90e9-4730-9e63-e7dd9b103b6f" />
+
+**Sub `AutoOpen`:**
+Acts as the automatic entry point for the macro. When the Office document is opened and macros are enabled, this procedure is triggered automatically and immediately calls `love_me_____()`, initiating the complete workflow without requiring any further interaction from the user.
+
+https://github.com/user-attachments/assets/ac4ea6ce-da0f-4e0a-a20f-fcc6c13e3eab
+
+
 
 
 

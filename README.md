@@ -99,8 +99,9 @@ The naming convention for APT groups follows CrowdStrike's taxonomy.
 
 All adversary simulations are powered by [**BEAR-C2**](https://github.com/S3N4T0R-0X0/BEAR) a custom command and control framework designed for realistic threat simulation.
 
+<img width="1735" height="906" alt="606624432-9e6be27f-d213-4d1d-bab4-d205a95a8808" src="https://github.com/user-attachments/assets/46d855cf-7357-439b-8843-414958c55045" />
 
-![Bear-C2 Framework](https://github.com/user-attachments/assets/b160db34-0355-4554-8990-e540c1afba5e)
+
 
 <p align="center"><strong>Always Remember: <em>"Be The Threat To Defeat It"</em></strong></p>
 

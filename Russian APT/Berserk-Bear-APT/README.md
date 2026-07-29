@@ -60,5 +60,15 @@ https://github.com/S3N4T0R-0X0/Berserk-Bear-APT/assets/121706460/ac654ad4-45d8-4
 
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized DOCX resume via spearphishing email targeting energy and SCADA organizations. |
+| **T1221** | Template Injection | Injects a remote template into the DOCX document to trigger retrieval from an attacker-controlled server. |
+| **T1187** | Forced Authentication | Forces the victim to authenticate to an attacker-controlled SMB server, exposing NTLM credentials. |
+| **T1557** | Adversary-in-the-Middle | Uses SMB authentication to intercept and harvest user credentials during document opening. |
+| **T1003** | OS Credential Dumping | Simulates credential theft by capturing NTLM authentication material from the victim. |
+| **T1204.001** | User Execution: Malicious Link | Requires the victim to open the weaponized Office document, triggering the remote template retrieval. |
+| **T1036** | Masquerading | Disguises the phishing document as a legitimate CV to increase user trust. |
 

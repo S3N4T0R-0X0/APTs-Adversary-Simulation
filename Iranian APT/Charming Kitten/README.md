@@ -49,6 +49,9 @@ These operations demonstrate the group’s continued reliance on social engineer
 
 ## The second stage (Malicious VBA Macro with Conditional Download and Execution)
 
+
+A special thanks to **[Mohamed Montaser](https://www.linkedin.com/in/m-montaser?utm_source=share_via&utm_content=profile&utm_medium=member_android)** for his valuable contribution to this adversary simulation project. He was responsible for developing and refining the VBA macro components used throughout this simulation. His expertise and contributions played an important role in making this project possible.
+
 **Sub `love_me_____()`:**
 Acts as the primary controller for the entire macro, coordinating the payload workflow from start to finish. The routine begins by decoding an obfuscated file path from a hexadecimal string, concealing the actual location until runtime to reduce static detection. It then checks whether the target payload already exists on the system. If the file is found, the macro immediately transfers execution to the execution routine. If the file is not present, it invokes the download routine to retrieve the payload before executing it. This conditional logic allows the macro to support both first-time infections and subsequent executions without downloading the payload multiple times.
 

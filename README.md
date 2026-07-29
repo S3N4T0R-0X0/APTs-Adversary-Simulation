@@ -102,9 +102,6 @@ All adversary simulations are powered by [**BEAR-C2**](https://github.com/S3N4T0
 <img width="1735" height="906" alt="606624432-9e6be27f-d213-4d1d-bab4-d205a95a8808" src="https://github.com/user-attachments/assets/46d855cf-7357-439b-8843-414958c55045" />
 
 
-
-<p align="center"><strong>Always Remember: <em>"Be The Threat To Defeat It"</em></strong></p>
-
 ## 📫 Contact
 
 <table align="center">

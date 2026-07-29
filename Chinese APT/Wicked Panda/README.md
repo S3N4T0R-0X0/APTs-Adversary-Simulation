@@ -154,5 +154,18 @@ The final step in this process involves the execution of the final payload. Afte
 https://github.com/user-attachments/assets/1c910c85-1ef5-4752-b8f9-0e06a64d3a0c
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1620** | Reflective Code Loading | Uses DodgeBox to reflectively load the MoonWalk backdoor directly into memory without writing it to disk. |
+| **T1055** | Process Injection | Executes the MoonWalk backdoor from memory to evade traditional detection mechanisms. |
+| **T1106** | Native API | Uses native Windows APIs to load and execute embedded plugins. |
+| **T1027** | Obfuscated Files or Information | Encrypts and obfuscates the embedded MoonWalk plugins prior to execution. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTPS for communication with the command-and-control infrastructure. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses Google Drive as a trusted cloud service for Command and Control communications. |
+| **T1573** | Encrypted Channel | Encrypts communications between the MoonWalk backdoor and the C2 infrastructure. |
+| **T1105** | Ingress Tool Transfer | Downloads additional modules or tasking from the C2 infrastructure as needed. |
+| **T1082** | System Information Discovery | Collects host information before establishing command-and-control communications. |
+| **T1041** | Exfiltration Over C2 Channel | Returns collected data and task results through the encrypted Google Drive C2 channel. |
 

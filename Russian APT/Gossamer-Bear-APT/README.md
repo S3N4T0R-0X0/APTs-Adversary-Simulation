@@ -101,6 +101,20 @@ https://github.com/S3N4T0R-0X0/Gossamer-Bear-APT/assets/121706460/a4c96a49-7ab6-
 
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Office document through a spearphishing email. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the malicious document to initiate execution. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to execute the payload and attacker-issued commands. |
+| **T1105** | Ingress Tool Transfer | Downloads additional payloads from attacker-controlled infrastructure. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses the Google Drive API as a trusted web service for Command and Control. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS using the Google Drive API. |
+| **T1567.002** | Exfiltration to Cloud Storage | Exfiltrates collected files through Google Drive cloud storage. |
+| **T1027** | Obfuscated Files or Information | Obfuscates payload components to evade static analysis and detection. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized and sandboxed environments before executing the payload. |
+| **T1082** | System Information Discovery | Collects host information before establishing C2 communications. |
 
 

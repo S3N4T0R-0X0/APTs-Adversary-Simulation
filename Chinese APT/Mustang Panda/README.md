@@ -140,3 +140,18 @@ Example: Upload a file to Dropbox
 After this I uploaded the Mimikatz.exe to  dump for lsass credentials
 
 ![Screenshot from 2024-09-12 10-34-37](https://github.com/user-attachments/assets/77cee2bf-3577-4b95-9b6e-9863bcf78800)
+
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1204.002** | User Execution: Malicious File | Requires the victim to execute the portable Visual Studio Code binary to initiate the attack chain. |
+| **T1059** | Command and Scripting Interpreter | Executes attacker-issued commands through the established reverse shell. |
+| **T1219** | Remote Access Software | Abuses Visual Studio Code Remote Tunnel as legitimate remote access software for persistence and remote administration. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTPS to communicate with the Visual Studio Code tunnel infrastructure. |
+| **T1105** | Ingress Tool Transfer | Downloads additional payloads and tools from attacker-controlled infrastructure after initial access. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses GitHub authentication and Microsoft-hosted VS Code services to blend C2 traffic with legitimate cloud services. |
+| **T1027** | Obfuscated Files or Information | Obfuscates payload components to reduce detection by static analysis. |
+| **T1082** | System Information Discovery | Collects basic host information before establishing the remote session. |
+| **T1057** | Process Discovery | Enumerates running processes to gather situational awareness on the compromised host. |
+| **T1041** | Exfiltration Over C2 Channel | Returns command output and collected data through the established encrypted tunnel. |

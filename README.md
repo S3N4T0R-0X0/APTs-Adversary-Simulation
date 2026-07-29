@@ -43,7 +43,7 @@ The naming convention for APT groups follows CrowdStrike's taxonomy.
 
 [**Cozy Bear ✅**](https://github.com/S3N4T0R-0X0/APT29-Adversary-Simulation.git)<br>
 [**Voodoo Bear ✅**](https://github.com/S3N4T0R-0X0/Voodoo-Bear-APT.git)<br>
-[**Fancy Bear ✅**](https://github.com/S3N4T0R-0X0/APT28-Adversary-Simulation.git)<br>
+[**Fancy Bear ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation)<br>
 [**Energetic Bear ✅**](https://github.com/S3N4T0R-0X0/Energetic-Bear-APT.git)<br>
 [**Berserk Bear ✅**](https://github.com/S3N4T0R-0X0/Berserk-Bear-APT.git)<br>
 [**Gossamer Bear ✅**](https://github.com/S3N4T0R-0X0/Gossamer-Bear-APT.git)<br>

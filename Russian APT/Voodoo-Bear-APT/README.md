@@ -94,3 +94,18 @@ In total, the backdoor launches four main threads:
 manual compile:`x86_64-w64-mingw32-g++ -shared -o kapeka_backdoor.dll kapeka_backdoor.cpp -lws2_32`
 
 Run the DLL:`rundll32.exe kapeka_backdoor.dll,ExportedFunction -d`
+
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1204.002** | User Execution: Malicious File | Requires the victim to execute the dropper to install and launch the Kapeka backdoor. |
+| **T1105** | Ingress Tool Transfer | Deploys the Kapeka DLL backdoor onto the compromised system. |
+| **T1574.001** | Hijack Execution Flow: DLL Search Order Hijacking | Executes the backdoor as a DLL using `rundll32.exe`. |
+| **T1055** | Process Injection | Simulates loading the backdoor DLL into memory for execution. |
+| **T1082** | System Information Discovery | Collects system and host fingerprinting information before contacting the C2 server. |
+| **T1033** | System Owner/User Discovery | Enumerates the current user as part of host fingerprinting. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTPS for command-and-control communications. |
+| **T1573.002** | Encrypted Channel: Asymmetric Cryptography | Protects C2 tasking and responses using RSA encryption. |
+| **T1059** | Command and Scripting Interpreter | Receives and executes operator-issued tasks from the C2 server. |
+| **T1041** | Exfiltration Over C2 Channel | Returns task execution results to the C2 over the established encrypted channel. |

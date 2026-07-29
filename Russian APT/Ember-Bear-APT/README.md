@@ -123,3 +123,20 @@ OutSteel is a file uploader and document stealer developed with the scripting la
 
 ![Screenshot from 2024-07-04 15-37-31](https://github.com/S3N4T0R-0X0/Ember-Bear-APT/assets/121706460/85849f48-7608-4db2-b6c1-c8b924e36d39)
 
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Word document through a spearphishing email. |
+| **T1203** | Exploitation for Client Execution | Exploits **CVE-2017-11882 (Microsoft Office Equation Editor)** to execute code without requiring macros. :contentReference[oaicite:0]{index=0} |
+| **T1059.007** | Command and Scripting Interpreter: JavaScript | Executes the embedded JavaScript downloader (SaintBot). |
+| **T1105** | Ingress Tool Transfer | SaintBot downloads and executes the next-stage payload from attacker-controlled infrastructure. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence through Windows Registry Run keys. |
+| **T1005** | Data from Local System | OutSteel collects documents from the local system based on targeted file extensions. |
+| **T1039** | Data from Network Shared Drive | Searches accessible network shares for documents of interest. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses Discord as a legitimate web service for C2 and data transfer through `Discord-C2.py`. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with Discord over HTTPS. |
+| **T1567.001** | Exfiltration Over Web Service | Exfiltrates collected documents through Discord using the Discord API. |
+| **T1027** | Obfuscated Files or Information | Uses obfuscation techniques to hinder static analysis of scripts and payloads. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects virtualized or sandboxed environments before continuing execution. |
+| **T1082** | System Information Discovery | Collects basic host information before executing follow-on actions. |

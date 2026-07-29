@@ -199,4 +199,18 @@ NOTE: If you choose to fetch commands from a URL it will prompt you to enter the
 
 https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/27186732-723b-4b6c-b233-0da479ea5b7a
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a malicious XDP (XML Data Package) document through a spearphishing email. |
+| **T1203** | Exploitation for Client Execution | Exploits **CVE-2011-0611 (Adobe Flash Player)** embedded within the XDP/PDF document to execute code. |
+| **T1027** | Obfuscated Files or Information | Stores the malicious DLL and JAR in encrypted form within the XDP container using XOR obfuscation. |
+| **T1574.001** | Hijack Execution Flow: DLL Search Order Hijacking | Executes the malicious DLL dropped by the exploit chain. |
+| **T1059.003** | Command and Scripting Interpreter: Windows Command Shell | Uses `cmd.exe` to launch the extracted components and continue execution. |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic | Uses the embedded exploit document to initiate the execution chain. |
+| **T1105** | Ingress Tool Transfer | Retrieves additional payloads from attacker-controlled infrastructure. |
+| **T1132** | Data Encoding | Encrypts C2 commands and responses using XOR before transmission. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the PHP C2 server over HTTP. |
+| **T1497** | Virtualization/Sandbox Evasion | Uses anti-analysis techniques before executing the payload. |
+| **T1082** | System Information Discovery | Collects host information prior to establishing command-and-control. |

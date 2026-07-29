@@ -118,3 +118,19 @@ the final payload is designed to beacon out to both Dropbox API-based  C2 server
 
 https://github.com/S3N4T0R-0X0/APT29-Adversary-Simulation/assets/121706460/c5b7b826-72a1-459e-9f19-6e34bd79aeab
 
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a malicious Word document (`BMW 5 for sale in Kyiv - 2023.docx`) via spearphishing email. |
+| **T1027.006** | HTML Smuggling | Uses HTML smuggling to deliver the malicious ISO image while bypassing email security controls. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the downloaded LNK file to initiate execution. |
+| **T1574.001** | Hijack Execution Flow: DLL Search Order Hijacking | Loads a malicious DLL alongside a legitimate executable. |
+| **T1055.001** | Process Injection: Dynamic-link Library Injection | Injects and executes shellcode within the target process through the malicious DLL. |
+| **T1620** | Reflective Code Loading | Loads and executes shellcode directly from memory without writing the final payload to disk. |
+| **T1105** | Ingress Tool Transfer | Retrieves the next-stage payload during the execution chain. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses the Dropbox API as a trusted web service for C2 communications. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS using the Dropbox API. |
+| **T1567.002** | Exfiltration to Cloud Storage | Uploads command output and collected data to Dropbox cloud storage. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects analysis environments before continuing execution. |
+| **T1082** | System Information Discovery | Collects host information before establishing C2 communications. |

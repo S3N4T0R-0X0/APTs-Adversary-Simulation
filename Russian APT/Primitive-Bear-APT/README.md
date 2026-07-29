@@ -87,3 +87,18 @@ https://github.com/S3N4T0R-0X0/Primitive-Bear-APT/assets/121706460/e226ac70-42de
 
 
 
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a malicious Microsoft Office document through a spearphishing email to initiate the attack chain. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the malicious Office document to trigger the embedded payload. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to execute the next-stage payload and perform remote command execution. |
+| **T1105** | Ingress Tool Transfer | Downloads the second-stage payload from attacker-controlled infrastructure. |
+| **T1547.001** | Registry Run Keys / Startup Folder | Establishes persistence by creating a Windows Registry Run key. |
+| **T1027** | Obfuscated Files or Information | Obfuscates the payload and execution logic to evade static analysis and detection. |
+| **T1082** | System Information Discovery | Collects basic host information before contacting the command-and-control server. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTP/HTTPS for command-and-control communications. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Retrieves commands from a trusted web service to blend with legitimate network traffic. |
+| **T1041** | Exfiltration Over C2 Channel | Sends collected data back to the operator through the established C2 channel. |
+| **T1497** | Virtualization/Sandbox Evasion | Checks for virtualized or sandbox environments before executing malicious actions. |

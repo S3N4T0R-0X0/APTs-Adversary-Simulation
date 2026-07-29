@@ -97,3 +97,18 @@ Accumulates the data into the output variable.
 
 ![Screenshot from 2024-06-09 10-44-07](https://github.com/S3N4T0R-0X0/Venomous-Bear-APT/assets/121706460/41bfa80d-a18a-4bd3-ad6d-f243bd29bece)
 
+## MITRE ATT&CK Techniques
+
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1059.003** | Command and Scripting Interpreter: Windows Command Shell | Uses a BAT script to install and configure the backdoor on the target system. |
+| **T1543.003** | Create or Modify System Process: Windows Service | Installs the backdoor as a Windows service disguised as **Windows Time Service**. |
+| **T1574.011** | Hijack Execution Flow: Services Registry Permissions Weakness | Loads the malicious service DLL through the Windows Service Control Manager. |
+| **T1573** | Encrypted Channel | Encrypts Command and Control communications over HTTPS. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses HTTPS for periodic communication with the C2 server. |
+| **T1105** | Ingress Tool Transfer | Supports downloading additional files or payloads from the C2 server. |
+| **T1105** | Ingress Tool Transfer | Supports uploading files from the infected host to the operator. |
+| **T1112** | Modify Registry | Reads and stores configuration values in the Windows Registry. |
+| **T1082** | System Information Discovery | Collects host configuration before entering the command-processing loop. |
+| **T1106** | Native API | Interacts with the Windows Service Control Manager through native Windows APIs. |
+| **T1041** | Exfiltration Over C2 Channel | Exfiltrates files through the established HTTPS command-and-control channel. |

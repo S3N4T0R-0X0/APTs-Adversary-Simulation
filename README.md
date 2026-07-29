@@ -31,7 +31,7 @@ The naming convention for APT groups follows CrowdStrike's taxonomy.
 
 <table>
   <tr>
-    <th align="center"><strong>Country of Origin</strong></th>
+<th align="center"><strong>Country<br>of Origin</br></strong></th>
     <th align="center">Russia 🇷🇺</th>
     <th align="center">China 🇨🇳</th>
     <th align="center">North Korea 🇰🇵</th>

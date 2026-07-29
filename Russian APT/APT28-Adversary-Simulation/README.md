@@ -106,6 +106,21 @@ the final step in this process involves the execution of the final payload. Afte
 
 https://github.com/S3N4T0R-0X0/APT28-Adversary-Simulation/assets/121706460/becef683-c49b-40d5-9047-d8e8c6303eaa
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers a weaponized Microsoft Excel document via spearphishing email. |
+| **T1203** | Exploitation for Client Execution | Exploits **CVE-2021-40444 (MSHTML)** to execute malicious code. |
+| **T1218.011** | System Binary Proxy Execution: Rundll32 | Executes the malicious DLL through `rundll32.exe`. |
+| **T1059.001** | Command and Scripting Interpreter: PowerShell | Uses PowerShell to execute the loader and retrieve the next-stage payload. |
+| **T1574.001** | Hijack Execution Flow: DLL Search Order Hijacking | Loads a malicious DLL during the exploitation chain. |
+| **T1027** | Obfuscated Files or Information | Obfuscates the payload to evade static analysis and detection. |
+| **T1105** | Ingress Tool Transfer | Downloads the final payload from attacker-controlled infrastructure. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Uses the OneDrive API as a trusted web service for payload retrieval and C2. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTPS using the OneDrive API. |
+| **T1567.002** | Exfiltration to Cloud Storage | Exfiltrates collected data through OneDrive cloud storage. |
+| **T1497** | Virtualization/Sandbox Evasion | Detects analysis environments before executing the payload. |
+| **T1082** | System Information Discovery | Collects host information before establishing C2 communications. |
 
 

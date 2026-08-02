@@ -12,7 +12,7 @@ A comprehensive collection of simulated Advanced Persistent Threat (APT) attacks
 
 ## 🧠 Overview
 
-This repository contains detailed adversary simulation APT campaigns targeting various critical sectors. Each simulation includes custom tools, command and control (C2) servers, backdoors, exploitation techniques, stagers, bootloaders, and other malicious artifacts that mirror those used in real world attacks. The simulations are based on extensive research from leading cybersecurity firms, including Palo Alto Unit 42, Kaspersky, Microsoft, Cisco, Trellix, CrowdStrike, and WithSecure.
+This repository contains detailed adversary simulation APT campaigns targeting various critical sectors. Each simulation includes custom tools, command and control (C2) servers, backdoors, exploitation techniques, stagers, bootloaders, and other malicious artifacts that mirror those used in real world attacks. The simulations are based on extensive research from leading cybersecurity firms, including PaloAlto Unit42, Kaspersky, Microsoft, Cisco, Trellix, CrowdStrike, and WithSecure.
 
 **Learn More About the Importance and Outcomes of the Experience:**
 - [**Why Adversary Simulation?**](https://medium.com/@S3N4T0R/why-adversary-simulation-a1c69e8bd93a) - Understanding the strategic value of simulating advanced threats

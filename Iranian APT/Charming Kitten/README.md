@@ -214,4 +214,20 @@ More importantly, the Telegram integration extends beyond basic command relay. O
 https://github.com/user-attachments/assets/4a9c562e-e9ff-44f0-b6a1-4ddcac94cf38
 
 
+## MITRE ATT&CK Techniques
 
+| Technique ID | Technique | Implementation |
+|---------------|-----------|----------------|
+| **T1566.001** | Phishing: Spearphishing Attachment | Delivers malicious Word and Excel documents through targeted spear-phishing campaigns using trusted and compromised email accounts. |
+| **T1199** | Trusted Relationship | Uses compromised government and corporate email accounts to distribute phishing documents and bypass email security controls. |
+| **T1204.002** | User Execution: Malicious File | Requires the victim to open the Office document and enable macros to initiate the infection chain. |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic | Executes an obfuscated VBA macro that controls the complete payload workflow. |
+| **T1027** | Obfuscated Files or Information | Hides URLs and file paths as hexadecimal strings and reconstructs them only at runtime. |
+| **T1140** | Deobfuscate/Decode Files or Information | Decodes hexadecimal-encoded strings before downloading and executing the payload. |
+| **T1105** | Ingress Tool Transfer | Downloads the payload from a remote HTTPS hosting service if it is not already present on the system. |
+| **T1071.001** | Application Layer Protocol: Web Protocols | Uses WinHTTP over HTTPS to download payloads and communicate with the Telegram Bot API. |
+| **T1102.001** | Web Service: Dead Drop Resolver | Leverages the Telegram Bot API as a legitimate cloud service for command and control communications. |
+| **T1132.001** | Data Encoding: Standard Encoding | Encodes commands, files, and responses using Base64 for transmission through the Telegram communication channel. |
+| **T1059.003** | Command and Scripting Interpreter: Windows Command Shell | Executes operator-supplied commands through hidden child processes on the compromised host. |
+| **T1083** | File and Directory Discovery | Enumerates remote directory contents and returns structured results to the operator. |
+| **T1106** | Native API | Uses native Windows APIs including WinHTTP and Windows Script Host to download and execute the payload. |

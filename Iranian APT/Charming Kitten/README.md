@@ -198,4 +198,20 @@ The generated download URL is then integrated into the VBA macro by replacing th
 
 When the document is opened and the macro is executed, it checks whether the payload already exists on the target system. If the file is not present, the macro silently downloads it from the configured hosting URL in the background, stores it in the predefined location, and immediately launches it. The entire process is performed without requiring additional user interaction, providing a seamless delivery workflow that closely resembles the staged payload delivery techniques commonly demonstrated in adversary simulation scenarios.
 
+## BEAR C2 – Telegram Command and Control
+
+The final result of this enhancement is a fully integrated **Telegram Command-and-Control (C2) channel** within **BEAR C2**. Rather than serving as a standalone proof of concept, Telegram becomes a native communication channel that allows operators to manage active sessions directly from the BEAR C2 interface. The integration is powered by the **Telethon** library, enabling seamless interaction with the Telegram platform while abstracting the underlying communication from the operator.
+
+Authentication and secure communication are handled through **Telegram's MTProto protocol**, which provides encrypted communication between BEAR C2 and the Telegram infrastructure. Operators simply configure their **API ID**, **API Hash**, **phone number**, and **bot username** within the Authentication settings, after which BEAR C2 establishes the connection and manages all Telegram-based communications automatically.
+
+Once the integration is enabled, operators can issue commands, receive execution results, and monitor active sessions through the Telegram C2 channel without interacting directly with the Telegram Bot API. Command outputs are automatically collected and returned to the BEAR C2 interface, providing a centralized operational experience while leveraging Telegram as the underlying transport layer.
+
+Telegram is one of several communication channels supported by **BEAR C2**. The framework is designed with a multi-channel C2 architecture that also supports other communication methods, such as **Discord**, allowing operators to choose the most appropriate transport for their adversary simulation scenarios.
+
+More importantly, the Telegram integration extends beyond basic command relay. Once a session is established, operators gain access to the full capabilities of **BEAR C2**, including its **Arsenal** of post-exploitation tools and automation features. This enables operators to execute integrated tools, perform post-exploitation activities, manage sessions, and coordinate complex adversary simulation workflows from a single interface, providing a complete command-and-control experience rather than a simple proof-of-concept communication channel.
+
+
+https://github.com/user-attachments/assets/4a9c562e-e9ff-44f0-b6a1-4ddcac94cf38
+
+
 

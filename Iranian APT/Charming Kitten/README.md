@@ -86,9 +86,12 @@ https://github.com/user-attachments/assets/ac4ea6ce-da0f-4e0a-a20f-fcc6c13e3eab
 
 ## Third Stage (Telegram-based Agent)
 
-The initial objective of this stage is to enhance the realism of the adversary simulation by replacing the traditional direct command-and-control communication channel with a Telegram-based communication layer. Instead of requiring operators to interact with the payload through a dedicated control server, commands are exchanged through a Telegram bot, allowing the simulation to emulate an alternative communication workflow commonly observed in modern threat campaigns.
+The initial objective of this stage is to enhance the realism of the adversary simulation by replacing the traditional direct command and control communication channel with a Telegram-based communication layer. Instead of requiring operators to interact with the payload through a dedicated control server, commands are exchanged through a Telegram bot, allowing the simulation to emulate an alternative communication workflow commonly observed in modern threat campaigns.
 
-This phase focuses on demonstrating how a trusted cloud messaging platform can serve as an intermediary communication channel between the operator and the simulated implant. By leveraging Telegram as the transport layer, the simulation highlights how legitimate online services may be used to blend command-and-control traffic with normal network activity while maintaining reliable bidirectional communication.
+This phase focuses on demonstrating how a trusted cloud messaging platform can serve as an intermediary communication channel between the operator and the simulated implant. By leveraging Telegram as the transport layer, the simulation highlights how legitimate online services may be used to blend command and control traffic with normal network activity while maintaining reliable bidirectional communication.
+
+<img width="1366" height="518" alt="Screenshot From 2026-08-02 04-42-05" src="https://github.com/user-attachments/assets/4daf915f-b729-4619-b3e2-a53e877ceab8" />
+
 
 The operator communicates with the Telegram bot by sending commands through a private Telegram chat. The bot acts as the communication gateway, relaying operator instructions to the simulated implant and returning execution results through the same encrypted channel. From the operator's perspective, Telegram becomes the primary interface for tasking the implant, while the underlying communication remains transparent to the simulation workflow.
 

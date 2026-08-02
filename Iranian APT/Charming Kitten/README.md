@@ -95,7 +95,7 @@ This phase focuses on demonstrating how a trusted cloud messaging platform can s
 
 The operator communicates with the Telegram bot by sending commands through a private Telegram chat. The bot acts as the communication gateway, relaying operator instructions to the simulated implant and returning execution results through the same encrypted channel. From the operator's perspective, Telegram becomes the primary interface for tasking the implant, while the underlying communication remains transparent to the simulation workflow.
 
-This enhancement demonstrates an alternative command-and-control architecture that relies on widely used cloud messaging infrastructure instead of dedicated C2 servers, enabling defenders to better understand, analyze, and detect communication patterns associated with cloud-based adversary simulations.
+This enhancement demonstrates an alternative command and control architecture that relies on widely used cloud messaging infrastructure instead of dedicated C2 servers, enabling defenders to better understand, analyze, and detect communication patterns associated with cloud-based adversary simulations.
 
 <img width="968" height="172" alt="Screenshot From 2026-08-02 04-50-00" src="https://github.com/user-attachments/assets/8fc7216b-3efe-4be0-bd01-0af313fac92c" />
 

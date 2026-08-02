@@ -84,7 +84,7 @@ https://github.com/user-attachments/assets/ac4ea6ce-da0f-4e0a-a20f-fcc6c13e3eab
 
 
 
-## Third Stage (Telegram-based Agent)
+## The Third Stage (Telegram-based Agent)
 
 The initial objective of this stage is to enhance the realism of the adversary simulation by replacing the traditional direct command and control communication channel with a Telegram-based communication layer. Instead of requiring operators to interact with the payload through a dedicated control server, commands are exchanged through a Telegram bot, allowing the simulation to emulate an alternative communication workflow commonly observed in modern threat campaigns.
 
@@ -185,4 +185,17 @@ Acts as the outbound communication component of the agent. It formats execution 
 
 
 <img width="1246" height="529" alt="Screenshot From 2026-08-02 04-11-00" src="https://github.com/user-attachments/assets/4401869e-41e1-4dc2-a576-e33cb47612e4" />
+
+
+##  The fourth stage (Payload Hosting and VBA Integration)
+
+After completing the Telegram communication component, the next stage is to compile the payload, producing the final executable that will be delivered during the simulation. Once the build process is complete, the generated executable is uploaded to a file hosting service, which provides a direct download URL that can be accessed over HTTPS.
+
+The generated download URL is then integrated into the VBA macro by replacing the placeholder URL with the actual hosting link. This allows the macro to retrieve the latest payload dynamically instead of embedding it directly inside the Office document, making the simulation more modular and allowing payload updates without modifying the macro itself.
+
+<img width="1366" height="741" alt="Screenshot From 2026-08-02 07-46-33" src="https://github.com/user-attachments/assets/0599e688-ed44-42ef-9549-5c68ae53a61a" />
+
+
+When the document is opened and the macro is executed, it checks whether the payload already exists on the target system. If the file is not present, the macro silently downloads it from the configured hosting URL in the background, stores it in the predefined location, and immediately launches it. The entire process is performed without requiring additional user interaction, providing a seamless delivery workflow that closely resembles the staged payload delivery techniques commonly demonstrated in adversary simulation scenarios.
+
 

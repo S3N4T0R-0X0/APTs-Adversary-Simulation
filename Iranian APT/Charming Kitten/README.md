@@ -84,5 +84,72 @@ https://github.com/user-attachments/assets/ac4ea6ce-da0f-4e0a-a20f-fcc6c13e3eab
 
 
 
+## Third Stage (Telegram-based Agent)
 
+The initial objective of this stage is to enhance the realism of the adversary simulation by replacing the traditional direct command-and-control communication channel with a Telegram-based communication layer. Instead of requiring operators to interact with the payload through a dedicated control server, commands are exchanged through a Telegram bot, allowing the simulation to emulate an alternative communication workflow commonly observed in modern threat campaigns.
+
+This phase focuses on demonstrating how a trusted cloud messaging platform can serve as an intermediary communication channel between the operator and the simulated implant. By leveraging Telegram as the transport layer, the simulation highlights how legitimate online services may be used to blend command-and-control traffic with normal network activity while maintaining reliable bidirectional communication.
+
+The operator communicates with the Telegram bot by sending commands through a private Telegram chat. The bot acts as the communication gateway, relaying operator instructions to the simulated implant and returning execution results through the same encrypted channel. From the operator's perspective, Telegram becomes the primary interface for tasking the implant, while the underlying communication remains transparent to the simulation workflow.
+
+This enhancement demonstrates an alternative command-and-control architecture that relies on widely used cloud messaging infrastructure instead of dedicated C2 servers, enabling defenders to better understand, analyze, and detect communication patterns associated with cloud-based adversary simulations.
+
+
+**`main()`:**
+Serves as the entry point of the payload and initializes the entire agent. After startup, it continuously communicates with the configured Telegram bot, periodically checking for new operator messages. Every incoming command is processed through the command dispatcher, while responses are returned back to the operator through the same communication channel. This continuous polling mechanism allows the agent to remain responsive throughout its execution.
+
+<img width="1365" height="534" alt="Screenshot From 2026-08-02 03-58-13" src="https://github.com/user-attachments/assets/c8d0f5fe-12eb-4492-9fc1-745bba50c6ca" />
+
+
+**`get_updates`:**
+Acts as the communication receiver for the agent. It establishes secure HTTPS connections using the Windows WinHTTP API and continuously polls the Telegram Bot API for new messages. Each received update is parsed from JSON format before being forwarded to the message processing routine, allowing the payload to receive operator instructions remotely.
+
+<img width="1365" height="577" alt="Screenshot From 2026-08-02 03-59-31" src="https://github.com/user-attachments/assets/c48d3675-b0b4-4089-ae9e-5fe4a388f229" />
+
+
+**`process_message`:**
+Functions as the command processor responsible for handling operator requests. It reconstructs multi-part messages, processes encoded commands when required, and forwards completed commands to the execution engine. Once execution is complete, large outputs are automatically divided into smaller chunks before being transmitted back to the operator, allowing lengthy responses to be delivered reliably through Telegram.
+
+<img width="1365" height="577" alt="Screenshot From 2026-08-02 04-00-36" src="https://github.com/user-attachments/assets/83ab16a7-89db-49f0-84d9-ad7ccc252b7d" />
+
+**`execute_command`:**
+Serves as the central dispatcher for all incoming tasks. It determines which internal functionality should be used based on the received instruction and routes the request to the appropriate component. Depending on the command type, it can invoke built-in file management capabilities, directory browsing routines, or the command execution engine before returning the collected results to the communication layer.
+
+<img width="1365" height="577" alt="Screenshot From 2026-08-02 04-02-08" src="https://github.com/user-attachments/assets/24164556-9087-4b96-abdc-93729ca3f258" />
+
+
+**`run_command`:**
+Acts as the local command execution engine. It creates hidden child processes, captures their standard output, and returns the generated results to the agent. The collected output is then passed back through the communication channel, allowing the operator to receive execution results remotely.
+
+<img width="1366" height="517" alt="Screenshot From 2026-08-02 04-04-19" src="https://github.com/user-attachments/assets/8ff8e5b7-88d7-4062-aa13-29b6e1fa4933" />
+
+
+**`browse_directory`:**
+Provides remote directory enumeration capabilities by traversing the requested folder and collecting information about its contents. The gathered information is organized into structured JSON data before being returned to the communication layer, allowing the operator to remotely inspect directory structures.
+
+
+
+<img width="1241" height="133" alt="Screenshot From 2026-08-02 04-06-11" src="https://github.com/user-attachments/assets/7fcf02f5-fcc7-40f2-9a94-ead6109ecc7e" />
+
+
+**`download_file`, `upload_file`, `delete_file`, and `rename_file`:**
+Together these routines provide the agent's file management capabilities. They are responsible for handling file transfer operations, filesystem modifications, and basic file management tasks. Data exchanged during file transfers is encoded to ensure it can be transmitted safely through the communication channel before being reconstructed on the receiving side.
+
+<img width="1340" height="576" alt="Screenshot From 2026-08-02 04-07-54" src="https://github.com/user-attachments/assets/61cab43d-3762-4e01-891f-061f23921a5a" />
+
+
+
+**`base64_encode`, `base64_decode`, and `decode_base64_command`:**
+These helper functions provide the encoding and decoding mechanisms used by the agent. They convert data between its original binary representation and Base64 format, allowing commands, files, and structured data to be safely transmitted through the messaging channel while supporting message reconstruction for larger payloads.
+
+
+<img width="1340" height="526" alt="Screenshot From 2026-08-02 04-10-13" src="https://github.com/user-attachments/assets/d09db77e-eb61-4c79-907c-b5a382a3c65e" />
+
+
+**`send_telegram_message`:**
+Acts as the outbound communication component of the agent. It formats execution results, prepares outgoing messages, and sends them back to the configured Telegram chat using HTTPS requests through the Telegram Bot API. Large outputs generated by the payload are transmitted in multiple parts to accommodate Telegram message size limitations.
+
+
+
+<img width="1246" height="529" alt="Screenshot From 2026-08-02 04-11-00" src="https://github.com/user-attachments/assets/4401869e-41e1-4dc2-a576-e33cb47612e4" />
 

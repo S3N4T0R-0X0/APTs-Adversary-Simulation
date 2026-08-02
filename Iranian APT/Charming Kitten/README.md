@@ -97,6 +97,9 @@ The operator communicates with the Telegram bot by sending commands through a pr
 
 This enhancement demonstrates an alternative command-and-control architecture that relies on widely used cloud messaging infrastructure instead of dedicated C2 servers, enabling defenders to better understand, analyze, and detect communication patterns associated with cloud-based adversary simulations.
 
+<img width="968" height="172" alt="Screenshot From 2026-08-02 04-50-00" src="https://github.com/user-attachments/assets/8fc7216b-3efe-4be0-bd01-0af313fac92c" />
+
+
 
 **`main()`:**
 Serves as the entry point of the payload and initializes the entire agent. After startup, it continuously communicates with the configured Telegram bot, periodically checking for new operator messages. Every incoming command is processed through the command dispatcher, while responses are returned back to the operator through the same communication channel. This continuous polling mechanism allows the agent to remain responsive throughout its execution.

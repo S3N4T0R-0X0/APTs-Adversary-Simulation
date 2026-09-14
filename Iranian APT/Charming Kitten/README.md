@@ -1,7 +1,7 @@
-# Charming Kitten APT Adversary Simulation
+# Muddy Water APT Adversary Simulation
 
 
-This is a simulation of an attack by the APT group **Charming Kitten**, targeting multiple sectors including government, military, and critical infrastructure across the Middle East. The group’s targeting has expanded beyond government entities to include the maritime, aviation, and financial sectors, reflecting a growing interest in regional logistics and critical economic infrastructure.
+This is a simulation of an attack by the APT group **Muddy Water**, targeting multiple sectors including government, military, and critical infrastructure across the Middle East. The group’s targeting has expanded beyond government entities to include the maritime, aviation, and financial sectors, reflecting a growing interest in regional logistics and critical economic infrastructure.
 
 <img width="696" height="433" alt="imageedit_6_4923792703" src="https://github.com/user-attachments/assets/cc8c6472-7ea5-455b-9303-29b84ad3fab7" />
 
@@ -36,7 +36,7 @@ The infected document included specific references to “Engineering, Constructi
 
 • Exploiting Trusted Relationships for Payload Delivery
 
-Throughout the past year, Charming Kitten systematically abused trusted relationships by hijacking official government and corporate email accounts to bypass traditional email security controls and filtering mechanisms. This technique was observed in more than 15 targeted operations conducted across multiple regions worldwide.
+Throughout the past year, Muddy Water systematically abused trusted relationships by hijacking official government and corporate email accounts to bypass traditional email security controls and filtering mechanisms. This technique was observed in more than 15 targeted operations conducted across multiple regions worldwide.
 
 In August 2025, the group leveraged a compromised mailbox belonging to the Omani Ministry of Foreign Affairs to distribute malicious documents to foreign ministries and diplomatic entities in several countries. The delivered files were disguised as legitimate diplomatic communications and official government correspondence, increasing the likelihood of recipient interaction and trust.
 

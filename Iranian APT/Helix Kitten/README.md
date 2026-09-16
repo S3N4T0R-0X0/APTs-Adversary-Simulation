@@ -11,6 +11,10 @@ Trendmicro: https://www.trendmicro.com/en_us/research/23/i/apt34-deploys-phishin
 
 Throughout, the macro itself is heavily obfuscated to dodge static detection, and the overall chain emphasizes low-noise execution with anti-sandbox tricks built into the Trojan. This progression — phishing email → malicious doc → base64-encoded dropper → SideTwist variant — shows Helix Kitten's shift toward more resilient modular tooling in recent campaigns targeting Middle East sectors.
 
+
+<img width="1024" height="718" alt="Attack-Process-1024x718" src="https://github.com/user-attachments/assets/f88193d7-8afc-430f-8a40-a35408cc5460" />
+
+
 1. Delivery Technique: Create a document file named GGMS_Overview.doc which is used in the next stage to embed and execute a VBA macro loader that extracts and drops the subsequent payload.
 
 2. Malicious VBA macro: The malicious VBA macro embedded in the document is heavily obfuscated, extracting a base64-encoded payload hidden within the document structure, decoding it, and writing it to disk.

@@ -29,6 +29,9 @@ Throughout, the macro itself is heavily obfuscated to dodge static detection, an
 
 The attack kicks off with a spear-phishing email disguised as a legitimate marketing services company. The decoy file is called "GGMS Overview.doc", and the document's body shows an introduction to a so-called "Ganjavi Global Marketing Services" company. The introduction claimed that the company was able to provide worldwide marketing services. Apparently, it targets enterprises. There are twice upload records, located in the United States, demonstrating that APT34 was actually targeted at United States businesses.
 
+<img width="1024" height="637" alt="Decoy-doc-used-by-APT34-1024x637" src="https://github.com/user-attachments/assets/7e8f5e4c-5cab-4b0a-ae39-bc5c8c6201fa" />
+
+
 The email carries an attachment named GGMS_Overview.doc which acts as the initial payload. When the recipient opens the document and enables macros (as prompted), an obfuscated VBA macro runs. This macro extracts a base64-encoded blob hidden in the document's structure, cleans it up, converts it to binary, and drops it as SystemFailureReporter.exe in the %LOCALAPPDATA%\SystemFailureReporter\ directory. It also creates a text file named update.xml under the same directory, acting as the start switch of the Trojan program.
 
 ---

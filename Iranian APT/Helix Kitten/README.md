@@ -132,24 +132,3 @@ The campaign analysed in this report shares significant overlap with another rep
 
 ---
 
-## IoC
-
-| Type | Value |
-|------|-------|
-| SHA256 | `056378877c488af7894c8f6559550708` |
-| SHA256 | `5e0b8bf38ad0d8c91310c7d6d8d7ad64` |
-| URL | `http[:]//11.0.188[.]38:443/` |
-
-### File System Artifacts
-
-| Path | Description |
-|------|-------------|
-| `%LOCALAPPDATA%\SystemFailureReporter\` | SystemFailureReporter directory |
-| `%LOCALAPPDATA%\SystemFailureReporter\SystemFailureReporter.exe` | SideTwist Trojan variant |
-| `%LOCALAPPDATA%\SystemFailureReporter\update.xml` | Anti-sandbox marker / start switch |
-
-### Scheduled Tasks
-
-| Task Name | Variant |
-|-----------|---------|
-| `SystemFailureReporter` | Runs every 5 minutes |

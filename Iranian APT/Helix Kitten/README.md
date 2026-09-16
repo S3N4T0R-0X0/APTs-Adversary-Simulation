@@ -2,6 +2,9 @@
 
 This is a simulation of attack by (Helix Kitten / APT34 / OilRig) APT group targeting multiple sectors across the Middle East including finance, government, energy, chemical industry, and telecommunications entities. The campaign uses a fake marketing services company called "GGMS" (Ganjavi Global Marketing Services) and malicious Word documents to deliver "SystemFailureReporter" - a GCC-compiled variant of the SideTwist Trojan. The attack campaign was active as early as August 2023. The attackers have relied on base64-encoded payloads and scheduled tasks for initial access and persistence. The introduction of GCC-compiled variants represents a notable tooling evolution toward more portable and low-noise backdoor capabilities. I relied on NSFOCUS to figure out the details to make this simulation: https://nsfocusglobal.com/apt34-unleashes-new-wave-of-phishing-attack-with-variant-of-sidetwist-trojan/
 
+<img width="696" height="433" alt="imageedit_3_7254732259" src="https://github.com/user-attachments/assets/ae4d2ed1-2da6-407f-94ee-c602d4df8c82" />
+
+
 Throughout, the macro itself is heavily obfuscated to dodge static detection, and the overall chain emphasizes low-noise execution with anti-sandbox tricks built into the Trojan. This progression — phishing email → malicious doc → base64-encoded dropper → SideTwist variant — shows Helix Kitten's shift toward more resilient modular tooling in recent campaigns targeting Middle East sectors.
 
 1. Delivery Technique: Create a document file named GGMS_Overview.doc which is used in the next stage to embed and execute a VBA macro loader that extracts and drops the subsequent payload.

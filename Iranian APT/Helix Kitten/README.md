@@ -85,31 +85,31 @@ The final and most sophisticated capability is C2 communication over HTTP, allow
 
 SystemFailureReporter.exe implements a classic but effective C2 communication technique:
 
-- **Process Discovery:** The Trojan attempts to establish communication with the CnC and obtain return information using the generated victim ID.
-- **Instruction Extraction:** If the CnC path is online, the Trojan will extract and parse specific contents in the HTML code returned by CnC into CnC instructions. These specific contents are hidden between `<script>/*` and `*/<script>` tags of the HTML code.
-- **Decryption:** The CnC instruction is stored in base64 encoding and decrypted as a multi-byte XOR key with the string "notmersenne".
-- **Execution:** The decrypted CnC instruction is divided into three segments, namely CnC number, CnC instruction code and operating parameters, which are separated by the symbol "|".
+- **Process Discovery:** The Trojan attempts to establish communication with the C2 and obtain return information using the generated victim ID.
+- **Instruction Extraction:** If the C2 path is online, the Trojan will extract and parse specific contents in the HTML code returned by C2 into C2 instructions. These specific contents are hidden between `<script>/*` and `*/<script>` tags of the HTML code.
+- **Decryption:** The C2 instruction is stored in base64 encoding and decrypted as a multi-byte XOR key with the string "notmersenne".
+- **Execution:** The decrypted C2 instruction is divided into three segments, namely C2 number, C2 instruction code and operating parameters, which are separated by the symbol "|".
 
 This technique allows the attackers to hide their malicious instructions inside seemingly benign HTML responses, making detection significantly more difficult for security solutions.
 
-**CnC Instruction Codes:**
+**C2 Instruction Codes:**
 
-| CnC Instruction Code | Function |
+| C2 Instruction Code | Function |
 |----------------------|----------|
-| 101 | Run the shell command issued by CnC, and the command line is specified by operation parameter 1. |
-| 102 | Download the specified file on the CnC server. The file save path and remote file name are respectively specified by operating parameters 1 and 2. |
-| 103 | Upload a local file to the CnC server. The file path is specified by operation parameter 1. |
-| 104 | Execute the shell command issued by CnC, and the command line is specified by operation parameter 1 (the same as instruction code 101). |
+| 101 | Run the shell command issued by C2, and the command line is specified by operation parameter 1. |
+| 102 | Download the specified file on the C2 server. The file save path and remote file name are respectively specified by operating parameters 1 and 2. |
+| 103 | Upload a local file to the C2 server. The file path is specified by operation parameter 1. |
+| 104 | Execute the shell command issued by C2, and the command line is specified by operation parameter 1 (the same as instruction code 101). |
 
-**Important:** The 102 instruction code of this Trojan will trigger a subsequent CnC communication behavior. The Trojan program will initiate an HTTP GET request according to the remote file name in the CnC instruction parameters, obtain and decrypt the files in the remote location "/getFile/[file name]". The decryption method is also base64 transcoding and multi-byte XOR.
+**Important:** The 102 instruction code of this Trojan will trigger a subsequent C2 communication behavior. The Trojan program will initiate an HTTP GET request according to the remote file name in the C2 instruction parameters, obtain and decrypt the files in the remote location "/getFile/[file name]". The decryption method is also base64 transcoding and multi-byte XOR.
 
-After all the above CnC instructions are completed, the Trojan will reply an HTTP POST request to the CnC to report the instruction execution result. The POST request body contains information in the following format:
+After all the above C2 instructions are completed, the Trojan will reply an HTTP POST request to the C2 to report the instruction execution result. The POST request body contains information in the following format:
 
 ```
-{"[CnC number]":"[CnC instruction execution result]"}
+{"[C2 number]":"[C2 instruction execution result]"}
 ```
 
-Unlike common Trojan programs, this Trojan does not have a cyclic or sleep mechanism and will automatically exit after a CnC communication, waiting for the scheduled task to invoke the Trojan again 5 minutes later.
+Unlike common Trojan programs, this Trojan does not have a cyclic or sleep mechanism and will automatically exit after a C2 communication, waiting for the scheduled task to invoke the Trojan again 5 minutes later.
 
 ---
 

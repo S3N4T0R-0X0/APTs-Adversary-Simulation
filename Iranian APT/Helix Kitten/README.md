@@ -37,7 +37,7 @@ The email carries an attachment named GGMS_Overview.doc which acts as the initia
 A special thanks to **[Mahmoud Mohamed](https://www.linkedin.com/in/m4v3x/)** for his valuable contribution to this adversary simulation project. He was responsible for developing and refining the VBA macro components used throughout this simulation. His expertise and contributions played an important role in making this project possible.
 
 
-## Sub AutoOpen()
+### 1. Sub AutoOpen()
 
 <img width="1366" height="701" alt="1" src="https://github.com/user-attachments/assets/44f5afad-e21d-4984-862e-d2c718e032bb" />
 
@@ -51,6 +51,21 @@ It executes the code automatically when the document is opened. Then the followi
 3. Creates an empty `update.xml` file as a decoy.
 
 4. Runs a hidden `schtasks` command that registers a task named `SystemFailureReporter` to launch the EXE every 5 minutes. No window pops up.
+
+
+### 2. REGISTRY PERSISTENCE
+
+Once the anti-analysis checks pass, SystemFailureReporter.exe establishes robust persistence via a scheduled task to ensure it survives system reboots:
+
+<img width="1128" height="354" alt="REGISTRY PERSISTENCE" src="https://github.com/user-attachments/assets/f281a606-52b3-4e0a-a48b-8b515ea6e4f3" />
+
+The implant cleverly disguises itself as a legitimate Windows component (SystemFailureReporter), making it less suspicious to casual observers. The persistence mechanism includes:
+
+- Scheduled task named "SystemFailureReporter" that runs every 5 minutes
+- Path validation to ensure the executable exists at the specified location
+- Startup verification to confirm the scheduled task was successfully created
+
+This ensures that every time the scheduled task is triggered, SystemFailureReporter.exe automatically executes.
 
 
 https://github.com/user-attachments/assets/01303a92-f480-488f-92f0-df2c464e11b8
@@ -78,22 +93,7 @@ The Trojan will then collect the user name, computer name and local domain name 
 <img width="1119" height="286" alt="ANTI-ANALYSIS" src="https://github.com/user-attachments/assets/fa1c67a1-8be2-4275-8d49-1078ba0593db" />
 
 
-### 2. REGISTRY PERSISTENCE
-
-Once the anti-analysis checks pass, SystemFailureReporter.exe establishes robust persistence via a scheduled task to ensure it survives system reboots:
-
-The implant cleverly disguises itself as a legitimate Windows component (SystemFailureReporter), making it less suspicious to casual observers. The persistence mechanism includes:
-
-- Scheduled task named "SystemFailureReporter" that runs every 5 minutes
-- Path validation to ensure the executable exists at the specified location
-- Startup verification to confirm the scheduled task was successfully created
-
-This ensures that every time the scheduled task is triggered, SystemFailureReporter.exe automatically executes.
-
-<img width="1128" height="354" alt="REGISTRY PERSISTENCE" src="https://github.com/user-attachments/assets/f281a606-52b3-4e0a-a48b-8b515ea6e4f3" />
-
-
-### 3. C2 COMMUNICATION
+### 2. C2 COMMUNICATION
 
 The final and most sophisticated capability is C2 communication over HTTP, allowing the implant to receive commands and exfiltrate data.
 

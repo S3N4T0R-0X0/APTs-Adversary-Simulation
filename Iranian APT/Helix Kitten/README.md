@@ -97,12 +97,25 @@ The Trojan will then collect the user name, computer name and local domain name 
 
 The final and most sophisticated capability is C2 communication over HTTP, allowing the implant to receive commands and exfiltrate data.
 
+<img width="1126" height="526" alt="C2 Communication" src="https://github.com/user-attachments/assets/b223f7ba-d341-458f-934a-b44475335b7b" />
+
+
 SystemFailureReporter.exe implements a classic but effective C2 communication technique:
 
 - **Process Discovery:** The Trojan attempts to establish communication with the C2 and obtain return information using the generated victim ID.
+
+<img width="1126" height="315" alt="1" src="https://github.com/user-attachments/assets/59db2e39-60dd-47ff-9f38-23c2ff94feb0" />
+
+
 - **Instruction Extraction:** If the C2 path is online, the Trojan will extract and parse specific contents in the HTML code returned by C2 into C2 instructions. These specific contents are hidden between `<script>/*` and `*/<script>` tags of the HTML code.
 - **Decryption:** The C2 instruction is stored in base64 encoding and decrypted as a multi-byte XOR key with the string "notmersenne".
+
+<img width="1126" height="408" alt="3 " src="https://github.com/user-attachments/assets/0fc92b23-970c-4ca6-8ca3-6853d032a625" />
+
 - **Execution:** The decrypted C2 instruction is divided into three segments, namely C2 number, C2 instruction code and operating parameters, which are separated by the symbol "|".
+
+<img width="1126" height="602" alt="4" src="https://github.com/user-attachments/assets/bb00f1a3-7e34-459d-8148-3f28161333ed" />
+
 
 This technique allows the attackers to hide their malicious instructions inside seemingly benign HTML responses, making detection significantly more difficult for security solutions.
 

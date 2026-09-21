@@ -151,7 +151,6 @@ The campaign analysed in this report shares significant overlap with another rep
 | **T1059.005** | Command and Scripting Interpreter: VBA | Obfuscated `AutoOpen` VBA macro used to execute the initial payload. |
 | **T1027** | Obfuscated Files or Information | Uses base64 encoding and hidden payloads to evade analysis. |
 | **T1547.001** | Scheduled Task/Job: Scheduled Task | Establishes persistence through `SystemFailureReporter` scheduled task running every 5 minutes. |
-| **T1055** | Process Injection | Injects shellcode into `explorer.exe` using `CreateRemoteThread`. |
 | **T1132** | Data Encoding | Encodes C2 traffic using Base64 combined with XOR encryption. |
 | **T1071.001** | Application Layer Protocol: Web Protocols | Communicates with the C2 server over HTTP. |
 | **T1036** | Masquerading | Disguises the payload as `SystemFailureReporter.exe` and the document as a legitimate marketing overview. |

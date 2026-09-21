@@ -125,6 +125,30 @@ After all the above C2 instructions are completed, the Trojan will reply an HTTP
 
 Unlike common Trojan programs, this Trojan does not have a cyclic or sleep mechanism and will automatically exit after a C2 communication, waiting for the scheduled task to invoke the Trojan again 5 minutes later.
 
+Open BEAR C2, go to Reapr Node. In the Prepend field put `<script>/*`, and in the Append field put `*/<script>`
+
+### Example
+
+**Prepend:**
+
+```<html>
+  <body>
+    <h1>Welcome</h1>
+    <script>/*
+    
+```
+
+**Append:**
+
+```    */<script>
+    <p>Some normal content</p>
+  </body>
+</html>
+```
+
+<img width="1356" height="684" alt="Screenshot From 2026-09-21 13-58-01" src="https://github.com/user-attachments/assets/41c53a52-ab4a-425f-b9b8-32ec440736a6" />
+
+
 ---
 
 ## Final result: (Actual payload connect to BEAR-C2 server)

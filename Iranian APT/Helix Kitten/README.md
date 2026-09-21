@@ -168,6 +168,9 @@ Open [BEAR-C2](https://github.com/S3N4T0R-0X0/BEAR-C2), go to Reapr Node. In the
 
 This payload establishes an HTTP connection to a remote server for command execution. It communicates using custom-formatted messages, with all data encrypted using XOR key "notmersenne".
 
+<img width="1366" height="740" alt="Screenshot From 2026-09-21 16-00-18" src="https://github.com/user-attachments/assets/e12baa61-22f5-4559-ac9d-25a08f062b43" />
+
+
 The client authenticates with a predefined victim ID and executes commands received from the server supporting both CMD and PowerShell commands. Output from executed commands is XOR encrypted and sent back to the server in HTML format. Data is also Base64 encoded for safe transmission.
 
 ---

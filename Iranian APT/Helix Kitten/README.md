@@ -34,15 +34,26 @@ The email carries an attachment named GGMS_Overview.doc which acts as the initia
 
 ## The second stage (Malicious VBA macro and Base64-encoded)
 
-**Sub AutoOpen():** It executes the code automatically when the document is opened.
+A special thanks to **[Mahmoud Mohamed](https://www.linkedin.com/in/m4v3x/)** for his valuable contribution to this adversary simulation project. He was responsible for developing and refining the VBA macro components used throughout this simulation. His expertise and contributions played an important role in making this project possible.
 
-**Sub DeployPayload():** This subroutine serves as the main controller of the macro managing the entire payload workflow from start to finish. It begins by extracting a base64-encoded string hidden within the document. Once decoded, the payload file is written to the target directory. Based on this check it makes a strategic decision: if the file is present it executes it immediately if not it calls the download function to fetch the payload from a remote server before running it. This two pronged approach ensures the payload can operate whether the file is already on the system or needs to be delivered.
 
-**Sub WriteHexToFile:** This function writes the decoded payload to disk as SystemFailureReporter.exe in %LOCALAPPDATA%\SystemFailureReporter\.
+## Sub AutoOpen()
 
-**Sub CreatePersistence():** Creates a scheduled task called "SystemFailureReporter" that calls up the Trojan every 5 minutes, through which it runs repeatedly.
+<img width="1366" height="701" alt="1" src="https://github.com/user-attachments/assets/44f5afad-e21d-4984-862e-d2c718e032bb" />
 
-**Sub ExecuteFile:** Is the execution engine that ensures the payload file runs on the system. It employs multiple methods to launch the file first using the Shell command with hidden window settings then falling back to Windows Script Host for redundancy. Both approaches run silently in the background leaving no visual indicators for the victim to notice.
+
+It executes the code automatically when the document is opened. Then the following actions run automatically:
+
+1. Asks Windows for the `%LOCALAPPDATA%` path → gets `C:\Users\<User>\AppData\Local`, then adds `\SystemFailureReporter\` to it. This spot is hidden and needs no admin rights. It then checks if that folder exists — if not, it creates it.
+
+2. Takes the Base64 string (the payload) and decodes it back into raw EXE bytes using `Base64Decode()`, then writes those bytes to disk as `SystemFailureReporter.exe` inside the folder.
+
+3. Creates an empty `update.xml` file as a decoy.
+
+4. Runs a hidden `schtasks` command that registers a task named `SystemFailureReporter` to launch the EXE every 5 minutes. No window pops up.
+
+
+https://github.com/user-attachments/assets/01303a92-f480-488f-92f0-df2c464e11b8
 
 ---
 
@@ -55,6 +66,7 @@ SystemFailureReporter is a GCC-compiled executable (SystemFailureReporter.exe) k
 
 SystemFailureReporter.exe implements an anti-analysis system that actively probes the execution environment for signs of monitoring or sandboxing. Each layer acts as a filter ensuring the payload only detonates on a genuine target.
 
+
 **Layer 1: update.xml Check**
 
 After the Trojan runs, it will first check whether there is a file named update.xml in the same directory. If not, output a line of prompt text through the debugging port and exit. This is a typical anti-sandbox operation.
@@ -62,6 +74,9 @@ After the Trojan runs, it will first check whether there is a file named update.
 **Layer 2: Victim Fingerprinting**
 
 The Trojan will then collect the user name, computer name and local domain name of the victim's host, assemble and calculate a 4-byte hash as the unique ID of the victim.
+
+<img width="1119" height="286" alt="ANTI-ANALYSIS" src="https://github.com/user-attachments/assets/fa1c67a1-8be2-4275-8d49-1078ba0593db" />
+
 
 ### 2. REGISTRY PERSISTENCE
 
@@ -74,6 +89,9 @@ The implant cleverly disguises itself as a legitimate Windows component (SystemF
 - Startup verification to confirm the scheduled task was successfully created
 
 This ensures that every time the scheduled task is triggered, SystemFailureReporter.exe automatically executes.
+
+<img width="1128" height="354" alt="REGISTRY PERSISTENCE" src="https://github.com/user-attachments/assets/f281a606-52b3-4e0a-a48b-8b515ea6e4f3" />
+
 
 ### 3. C2 COMMUNICATION
 

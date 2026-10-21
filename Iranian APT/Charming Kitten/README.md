@@ -61,13 +61,6 @@ The malware communicates with C2 domains like `xboxapicenter[.]com` and `xboxpla
 
 ![C2 Retrieval from GitHub](https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf)
 
-## Infrastructure Analysis
-
-- **Domain:** `careers2find[.]com` (created 4 months prior, hidden under Cloudflare, previously resolved to `185.186.244.130` - Webzilla B.V.)
-- **C2 Domains:** `xboxapicenter[.]com`, `xboxplayservice[.]com`
-- **C2 IPs:** `89.221.225[.]249`, and 20+ other IPs in the `89.221.225.0/24` range (AS44477 - STARK-INDUSTRIES)
-- **GitHub Account:** `msdndegsupport`
-- **SSL Certificate:** Common name `localhost`, Issuer `localhost`, SHA1: `21b0327e7ccb36d9ba00359e078acaa9a2320c83`
 
 ## Pivoting technique
 

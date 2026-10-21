@@ -29,7 +29,7 @@ The attack kicks off with a spear-phishing campaign via LinkedIn. The threat act
 
 The fake website `careers2find[.]com` is created, hiding its real IP under Cloudflare. The site contains a legitimate-looking job posting. When the victim engages, they are directed to download a PDF instruction file and a ZIP archive named `SignedConnection[.]zip`. The PDF provides step-by-step instructions on how to "safely" access the site, ensuring infection by guiding the user to extract the ZIP and run the `SignedConnection.exe` application.
 
-![Fake Job Posting](https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf)
+<img width="1347" height="609" alt="Screenshot From 2026-10-21 08-19-25" src="https://github.com/user-attachments/assets/c4ece425-f4af-430c-87c2-ec337d7e6061" />
 
 ## The second stage (Malicious ZIP and DLL Side-Loading)
 

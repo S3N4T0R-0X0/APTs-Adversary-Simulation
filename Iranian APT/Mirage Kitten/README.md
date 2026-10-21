@@ -2,6 +2,10 @@
 
 This is a simulation of attack by (Charming Kitten / APT35 / TA455 / Smoke Sandstorm) APT group targeting the aerospace, aviation, and defense industries across the Middle East, specifically Israel and the UAE, as well as possibly Turkey, India, and Albania. The campaign uses a fake job recruiting website called "Careers 2 Find" and a "Dream Job" social engineering lure to deliver "SnailResin" malware. The attack campaign has been active since at least September 2023 and was analyzed in late 2024. The attackers have relied on LinkedIn spoofing, ZIP archive delivery, and DLL Side-Loading for initial access and execution. The introduction of the SnailResin malware via a fake recruitment site represents a notable evolution toward high-level obfuscation, leveraging trusted platforms, and blending into legitimate cloud traffic. I relied on ClearSky Cyber Security to figure out the details to make this simulation: https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf
 
+
+<img width="1280" height="796" alt="photo_2026-10-21_07-19-16" src="https://github.com/user-attachments/assets/ec640010-fd3b-448b-a63e-a38163c223bd" />
+
+
 Throughout, the malware hides behind legitimate applications and cloud services to dodge static and dynamic detection, and the overall chain emphasizes low-noise execution with strong anti-analysis tricks built into the payload. This progression — LinkedIn recruiter lure → fake job website (careers2find[.]com) → malicious ZIP (SignedConnection[.]zip) → DLL Side-Loading (secur32.dll) → SnailResin malware → cloud-based C2 — shows Charming Kitten's shift toward more resilient, custom-built modular tooling and deliberate misattribution (mimicking North Korean Lazarus) in recent campaigns targeting aerospace and defense sectors.
 
 ![imageedit_3_7338603847](https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf)

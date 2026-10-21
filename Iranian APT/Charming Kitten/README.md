@@ -24,7 +24,7 @@ Throughout, the malware hides behind legitimate applications and cloud services 
 
 The attack kicks off with a spear-phishing campaign via LinkedIn. The threat actor TA455 creates fake recruiter profiles (e.g., "Tess Visser," "Adira Johnson," "Manon Roux") associated with a fabricated company called "Careers 2 Find." These profiles approach targets in the aerospace and aviation industries with a seemingly legitimate job offer for roles like "Aircraft Systems Design Manager."
 
-<img width="804" height="421" alt="Screenshot From 2026-10-21 07-55-22" src="https://github.com/user-attachments/assets/8319437e-0925-48dd-a8e7-f9d275141070" />
+<img width="633" height="483" alt="Screenshot From 2026-10-21 08-32-22" src="https://github.com/user-attachments/assets/4256a832-bea9-4444-bebf-9e2d874139ff" />
 
 
 The fake website `careers2find[.]com` is created, hiding its real IP under Cloudflare. The site contains a legitimate-looking job posting. When the victim engages, they are directed to download a PDF instruction file and a ZIP archive named `SignedConnection[.]zip`. The PDF provides step-by-step instructions on how to "safely" access the site, ensuring infection by guiding the user to extract the ZIP and run the `SignedConnection.exe` application.

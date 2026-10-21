@@ -20,7 +20,7 @@ Throughout, the malware hides behind legitimate applications and cloud services 
 
 ---
 
-## The first stage Kill Chain (delivery technique)
+## The first stage  (social engineering technique)
 
 The attack kicks off with a spear-phishing campaign via LinkedIn. The threat actor TA455 creates fake recruiter profiles (e.g., "Tess Visser," "Adira Johnson," "Manon Roux") associated with a fabricated company called "Careers 2 Find." These profiles approach targets in the aerospace and aviation industries with a seemingly legitimate job offer for roles like "Aircraft Systems Design Manager."
 
@@ -35,12 +35,13 @@ The attack kicks off with a spear-phishing campaign via LinkedIn. The threat act
   </tr>
 </table>
 
+## The second stage Kill Chain (delivery technique)
 
 The fake website `careers2find[.]com` is created, hiding its real IP under Cloudflare. The site contains a legitimate-looking job posting. When the victim engages, they are directed to download a PDF instruction file and a ZIP archive named `SignedConnection[.]zip`. The PDF provides step-by-step instructions on how to "safely" access the site, ensuring infection by guiding the user to extract the ZIP and run the `SignedConnection.exe` application.
 
 <img width="1347" height="609" alt="Screenshot From 2026-10-21 08-19-25" src="https://github.com/user-attachments/assets/c4ece425-f4af-430c-87c2-ec337d7e6061" />
 
-## The second stage (Malicious ZIP and DLL Side-Loading)
+## The third stage (Malicious ZIP and DLL Side-Loading)
 
 **SignedConnection[.]zip Analysis:**
 The ZIP file contains a mix of legitimate and malicious files. The main executable is `SignedConnection.exe`, which acts as a front-end GUI displaying a "Careers2Find" login prompt. Alongside it are legitimate DLLs (`msvcp140.dll`, `vcruntime140.dll`, etc.) and a malicious `secur32.dll`.

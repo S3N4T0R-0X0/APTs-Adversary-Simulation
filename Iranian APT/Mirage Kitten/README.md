@@ -1,4 +1,4 @@
-# Charming Kitten (TA455) APT Adversary Simulation
+# Charming Kitten APT Adversary Simulation
 
 This is a simulation of attack by (Charming Kitten / APT35 / TA455 / Smoke Sandstorm) APT group targeting the aerospace, aviation, and defense industries across the Middle East, specifically Israel and the UAE, as well as possibly Turkey, India, and Albania. The campaign uses a fake job recruiting website called "Careers 2 Find" and a "Dream Job" social engineering lure to deliver "SnailResin" malware. The attack campaign has been active since at least September 2023 and was analyzed in late 2024. The attackers have relied on LinkedIn spoofing, ZIP archive delivery, and DLL Side-Loading for initial access and execution. The introduction of the SnailResin malware via a fake recruitment site represents a notable evolution toward high-level obfuscation, leveraging trusted platforms, and blending into legitimate cloud traffic. I relied on ClearSky Cyber Security to figure out the details to make this simulation: https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf
 
@@ -80,57 +80,3 @@ The malware communicates with C2 domains like `xboxapicenter[.]com` and `xboxpla
 | **T1036** | Masquerading | Fake recruiter profiles, fake job website, and legitimate-looking application GUI. |
 | **T1071.001** | Application Layer Protocol: Web Protocols | HTTP/HTTPS communication with C2 domains. |
 
-## IoC
-
-| Type | Value |
-|------|-------|
-| **SHA1** | `2a29ba7302024ec1255811abec2a532136d12fef` |
-| **SHA1** | `3a0b3426f4a2f85e0c82b2804aab7f5d5bb63fb7` |
-| **SHA1** | `1acd34fb6de5c645e03ded9875046979be7893c4` |
-| **SHA1** | `2e7fc6d63ce16075a3fe3584e03be24a9bc220e1` |
-| **SHA1** | `aa5fcea406edd406bd6e0a23e83beebe2b3582d1` |
-| **SHA1** | `c52beb64f7450fce923d15efaae1e5be4c0e43d2` |
-| **Domain** | `careers2find[.]com` |
-| **Domain** | `xboxapicenter[.]com` |
-| **Domain** | `xboxplayservice[.]com` |
-| **URL** | `hxxps://raw.githubusercontent.com/msdndegsupport/msdn/main/README.html` |
-| **IP** | `185.186.244.130` |
-| **IP** | `89.221.225.249` |
-| **IP** | `77.91.74.171` (low probability) |
-| **IP** | `77.91.74.186` (low probability) |
-| **IP** | `89.221.225.235` (low probability) |
-| **IP** | `89.221.225.246` (low probability) |
-| **IP** | `89.221.225.245` (low probability) |
-| **IP** | `89.221.225.234` (low probability) |
-| **IP** | `89.221.225.248` (low probability) |
-| **IP** | `89.221.225.237` (low probability) |
-| **IP** | `89.221.225.236` (low probability) |
-| **IP** | `89.221.225.247` (low probability) |
-| **IP** | `89.221.225.239` (low probability) |
-| **IP** | `89.221.225.238` (low probability) |
-| **IP** | `89.221.225.240` (low probability) |
-| **IP** | `89.221.225.242` (low probability) |
-| **IP** | `89.221.225.231` (low probability) |
-| **IP** | `89.221.225.230` (low probability) |
-| **IP** | `89.221.225.241` (low probability) |
-| **IP** | `89.221.225.244` (low probability) |
-| **IP** | `89.221.225.233` (low probability) |
-| **IP** | `89.221.225.232` (low probability) |
-| **IP** | `89.221.225.243` (low probability) |
-
-### File System Artifacts
-
-| Path | Description |
-|------|-------------|
-| `SignedConnection.zip` | Malicious ZIP archive |
-| `SignedConnection.exe` | Legitimate front-end executable |
-| `secur32.dll` | Malicious DLL (Side-Loading payload) |
-| `README.html` | ASCII-encoded C2 configuration on GitHub |
-
-### C2 Domains
-
-| Domain | Description |
-|--------|-------------|
-| `careers2find[.]com` | Fake job recruitment website |
-| `xboxapicenter[.]com` | C2 Domain (TA455) |
-| `xboxplayservice[.]com` | C2 Domain (TA455) |

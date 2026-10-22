@@ -41,6 +41,26 @@ The fake website `careers2find[.]com` is created, hiding its real IP under Cloud
 
 <img width="1347" height="609" alt="Screenshot From 2026-10-21 08-19-25" src="https://github.com/user-attachments/assets/c4ece425-f4af-430c-87c2-ec337d7e6061" />
 
+### Hosting the Phishing Page in BEAR-C2
+
+Once started, the BEAR-C2 interface will display the fake job recruitment page (Careers2Find.html) in the victim's browser. The victim will see the "Aircraft Systems Design Manager" job posting. When they click the "Apply Now" button, the BEAR-C2 server logs the hit in the Traffic Logs and triggers the download of the next stage (SignedConnection.zip).
+
+<img width="1366" height="665" alt="Screenshot From 2026-10-22 04-11-26" src="https://github.com/user-attachments/assets/7ced044f-5ad8-43dc-8b0f-a6f670750701" />
+
+
+The Careers2Find.html file is hosted directly inside the Spear Phishing module of BEAR-C2.
+
+To deploy it:
+
+  1. Click Choose File Html and select Careers2Find.html.
+
+  2. Set the URL Mask to careers2find (or a spoofed domain like careers2find[.]com).
+
+  3. Click Start Server and copy the generated Phishing URL.
+
+
+
+
 ## The third stage (Malicious ZIP and DLL Side-Loading)
 
 **SignedConnection[.]zip Analysis:**

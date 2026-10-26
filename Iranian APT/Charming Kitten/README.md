@@ -83,13 +83,31 @@ When the victim visits the phishing page and clicks **"Apply Now"**, the browser
 **SignedConnection[.]zip Analysis:**
 The ZIP file contains a mix of legitimate and malicious files. The main executable is `SignedConnection.exe`, which acts as a front-end GUI displaying a "Careers2Find" login prompt. Alongside it are legitimate DLLs (`msvcp140.dll`, `vcruntime140.dll`, etc.) and a malicious `secur32.dll`.
 
+<img width="1280" height="648" alt="photo_2026-10-26_07-09-25" src="https://github.com/user-attachments/assets/4a2b0c7c-9ee3-4fab-bd14-01e5eefbe7b1" />
+
 **Execution Flow:**
 1. The victim extracts the ZIP and runs `SignedConnection.exe`.
 2. The executable loads `secur32.dll` via DLL side-loading (search order hijacking).
 3. The legitimate `secur32.dll` is replaced with a malicious version.
 4. The malicious DLL executes the SnailResin malware in the context of the trusted `SignedConnection.exe` process.
 
-![Malicious ZIP Content](https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf)
+### Mimic the attackers infrastructure by BEAR-C2
+
+We initiated the BEAR C2 server and configured a new HTTPS listener named secur32. The listener was configured to use port 443, with the operator address set to the internal IP address 192.168.189.130. We reviewed the listener configuration, including the HTTP headers, user-agent, URI paths, and connection timing parameters, before starting the server.
+The listener configuration established the communication parameters required for the subsequent payload-generation and connectivity-testing stages.
+
+<img width="1280" height="586" alt="photo_2026-10-26_07-20-36" src="https://github.com/user-attachments/assets/5af128e3-a7a8-415d-a0f9-5e2ac435717d" />
+
+We executed the following command to expose the local HTTPS listener through a temporary Cloudflare Tunnel:
+cloudflared tunnel --url https://localhost:443 --no-tls-verify
+The command created a publicly accessible HTTPS tunnel URL that forwarded incoming traffic to the local service listening on port 443. The generated URL was then used as the externally reachable endpoint for the subsequent connectivity test.
+The terminal output confirmed that the quick tunnel was created. The --no-tls-verify option disabled certificate verification when cloudflared connected to the local HTTPS service, meaning the origin certificate was not validated.
+This configuration allowed us to test external reachability without configuring a permanent Cloudflare Tunnel or a dedicated public IP address.
+
+<img width="1354" height="409" alt="Screenshot From 2026-10-26 07-15-10" src="https://github.com/user-attachments/assets/50b6fce9-75f3-4c41-a323-1dddedfc5a4f" />
+
+
+
 
 ## The third stage (SnailResin malware and C2 retrieval)
 

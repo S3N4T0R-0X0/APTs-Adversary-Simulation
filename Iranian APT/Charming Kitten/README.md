@@ -115,6 +115,12 @@ The configuration referenced the externally reachable tunnel hostname, port 443,
 
 ## The third stage (Signed-Connection.exe malware)
 
+We created a Windows application made up of two main files: SignedConnection.exe and secur32.dll.
+The EXE shows a fake job-related login screen. The credentials given to the victim are part of the trick and are not needed for the behavior we are studying.
+The EXE checks a website before it continues running. If the check fails, it tries to load the DLL. The DLL is the main file we are studying because it is linked to the next stage of execution and C2 communication.
+
+<img width="1130" height="692" alt="Screenshot From 2026-10-26 07-45-37" src="https://github.com/user-attachments/assets/25b19b9e-ee51-4f34-8dff-2d533725a4a6" />
+
 
 
 ## Pivoting technique

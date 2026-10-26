@@ -157,7 +157,17 @@ Loading the DLL: The EXE uses the Windows LoadLibrary function to load secur32.d
 
 ## Pivoting technique
 
-**Misattribution & False Flags:** TA455 deliberately mimics the North Korean Lazarus Group. They use the "Dream Job" lure (first used by Lazarus in 2020), similar attack techniques, and even malware files that overlap with Lazarus's DLL side-loading attacks. This causes antivirus engines to misattribute the malware to Kimsuky/Lazarus, creating confusion and hindering accurate attribution. The low AV detection rate (5/68) further highlights their evasion capabilities.
+I simulated selected techniques associated with the North Korean Lazarus Group, focusing on the use of a fake Dream Job opportunity to trick victims into executing malicious software. The simulation follows a similar attack pattern to the one described in the original ClearSky analysis, including the use of DLL side-loading.
+
+These similarities demonstrate how different threat actors can use similar techniques and malware components, potentially leading security tools to attribute a sample to the wrong threat group. The ClearSky report noted that only 5 of 68 antivirus engines detected the analyzed archive as malicious, with some detections attributing it to Kimsuky or Lazarus.
+My simulation reproduces selected elements of this attack pattern for analysis. However, these similarities do not prove that the simulated sample belongs to Lazarus or TA455, or that either group used the same implementation in the original campaign.
+
+Reference: Lazarus Group — Adversary Simulation Repository (https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Lazarus)
+
+
+<img width="1366" height="700" alt="471262995-f77597d6-40fc-4576-9a1c-513feb62adc1" src="https://github.com/user-attachments/assets/eeeac940-a14a-411a-b8db-cb058a73d5ec" />
+
+
 
 ## MITRE ATT&CK Techniques
 

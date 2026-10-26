@@ -121,6 +121,38 @@ The EXE checks a website before it continues running. If the check fails, it tri
 
 <img width="1130" height="692" alt="Screenshot From 2026-10-26 07-45-37" src="https://github.com/user-attachments/assets/25b19b9e-ee51-4f34-8dff-2d533725a4a6" />
 
+### Application Startup
+The EXE acts as the main application and starts the DLL-loading process. When the program starts, it follows these steps:
+1. Checks if a configured website responds.
+2. Exits if the website check succeeds.
+3. Sets up the Windows Forms interface if the check fails.
+4. Tries to load secur32.dll.
+5. Opens the main application window.
+2.2 Website Connectivity Check
+The application sends an HTTP HEAD request to a configured domain. It uses a five-second timeout and a browser-like User-Agent value.
+
+The function returns true if the request gets an HTTP response with a status code below 400. If the request fails or an error occurs, it returns false.
+
+<img width="1264" height="514" alt="photo_2026-10-26_07-48-21" src="https://github.com/user-attachments/assets/b50e49d7-95ef-4d50-9f97-7ae13d4b8555" />
+
+
+The result controls what happens next.
+Result Application behavior
+The website responds with a status below 400 The program exits
+The request fails or times out The program continues
+An error occurs during the request The program continues
+
+This check controls the program's next step. It may be linked to anti-analysis behavior, but we need more evidence to confirm its exact purpose.
+
+
+### secur32.dll
+Purpose: secur32.dll is the main file we are studying. The EXE tries to load it after the website check allows the program to continue.
+The DLL is intended to handle the next stage of the program. We are focusing on its behavior and its role in C2 communication.
+
+Loading the DLL: The EXE uses the Windows LoadLibrary function to load secur32.dll into its process.
+
+
+<img width="1263" height="545" alt="photo_2026-10-26_07-52-11" src="https://github.com/user-attachments/assets/2ccd69c0-69b8-4e38-bb5c-73df14ae347d" />
 
 
 ## Pivoting technique

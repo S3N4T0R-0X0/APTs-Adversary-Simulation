@@ -93,10 +93,11 @@ The ZIP file contains a mix of legitimate and malicious files. The main executab
 
 ### Mimic the attackers infrastructure by BEAR-C2
 
-We initiated the BEAR C2 server and configured a new HTTPS listener named secur32. The listener was configured to use port 443, with the operator address set to the internal IP address 192.168.189.130. We reviewed the listener configuration, including the HTTP headers, user-agent, URI paths, and connection timing parameters, before starting the server.
+We initiated the BEAR-C2 server and configured a new HTTPS listener named secur32. The listener was configured to use port 443, with the operator address set to the internal IP address. We reviewed the listener configuration, including the HTTP headers, user-agent, URI paths, and connection timing parameters, before starting the server.
 The listener configuration established the communication parameters required for the subsequent payload-generation and connectivity-testing stages.
 
-<img width="1280" height="586" alt="photo_2026-10-26_07-20-36" src="https://github.com/user-attachments/assets/5af128e3-a7a8-415d-a0f9-5e2ac435717d" />
+<img width="1366" height="688" alt="Screenshot From 2026-10-26 07-37-42" src="https://github.com/user-attachments/assets/020276aa-5841-425b-8aba-e0c5b3de5738" />
+
 
 We executed the following command to expose the local HTTPS listener through a temporary Cloudflare Tunnel:
 cloudflared tunnel --url https://localhost:443 --no-tls-verify
@@ -106,25 +107,14 @@ This configuration allowed us to test external reachability without configuring 
 
 <img width="1354" height="409" alt="Screenshot From 2026-10-26 07-15-10" src="https://github.com/user-attachments/assets/50b6fce9-75f3-4c41-a323-1dddedfc5a4f" />
 
+After configuring the listener and establishing the Cloudflare Tunnel, we opened the BEAR-C2 Payload Generator and configured the payload parameters.
+The configuration referenced the externally reachable tunnel hostname, port 443, and the URI /support/troubleshoot. The payload was configured as a DLL file using the HTTPS network protocol and the previously generated Beacon Authentication ID.
+
+<img width="1366" height="734" alt="Screenshot From 2026-10-26 07-39-26" src="https://github.com/user-attachments/assets/0604e71c-1372-4f77-819b-36ee9da459cd" />
 
 
+## The third stage (Signed-Connection.exe malware)
 
-## The third stage (SnailResin malware and C2 retrieval)
-
-SnailResin represents the main payload and the backbone of the entire adversarial operation in the Charming Kitten (TA455) attacks.
-
-**1. ANTI-ANALYSIS & DISCOVERY**
-The malware implements IP address discovery to assess the victim's location, using the legitimate service `api[.]ipify[.]org`.
-
-**2. C2 CONFIGURATION RETRIEVAL**
-Instead of hardcoding the C2 server, SnailResin fetches its configuration from a compromised GitHub account (`msdndegsupport`). It accesses `https://raw.githubusercontent.com/msdndegsupport/msdn/main/README.html` to download ASCII-encoded information.
-
-The downloaded ASCII data (e.g., `120#98#111#120#97#112#105#99#101#110#116#101#114#46#99#111#109`) is decoded to reveal the C2 domain: `xboxapicenter[.]com`.
-
-**3. C2 COMMUNICATION**
-The malware communicates with C2 domains like `xboxapicenter[.]com` and `xboxplayservice[.]com`, resolving to IP addresses such as `89.221.225[.]249` (labeled "Stark Industries"). This blending with legitimate cloud traffic (Cloudflare, GitHub) allows the attackers to maintain a low profile.
-
-![C2 Retrieval from GitHub](https://www.clearskysec.com/wp-content/uploads/2024/11/Iranian-Dream-Job-ver1.pdf)
 
 
 ## Pivoting technique

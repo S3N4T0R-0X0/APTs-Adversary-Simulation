@@ -1,6 +1,6 @@
-# Stardust Chollima APT Adversary Simulation
+# Lazarus APT Adversary Simulation
 
-This is a simulation of attack by (Stardust Chollima) APT group targeting Chilean interbank network, The attack
+This is a simulation of attack by (Lazarus) APT group targeting Chilean interbank network, The attack
 campaign was active in December 2018, have used PowerRatankba, a PowerShell-based malware variant that
 closely resembles the original Ratankba implant. The Redbanc corporate network was infected with a version of
 the PowerRatankba that was not detected by anti-malware. The way attackers delivered the malware, according to
@@ -10,11 +10,11 @@ I relied on Security Affairs to figure out the details to make this: https://sec
 <img width="640" height="360" alt="imageedit_2_7042384654" src="https://github.com/user-attachments/assets/d984834c-babb-4eeb-8f46-49aa62fa7817" />
 
 
-Stardust Chollima Operations performed: https://apt.etda.or.th/cgi-bin/showcard.cgi?g=Subgroup%3A%20Bluenoroff%2C%20APT%2038%2C%20Stardust%20Chollima&n=1
+Lazarus Operations performed: https://apt.etda.or.th/cgi-bin/showcard.cgi?g=Subgroup%3A%20Bluenoroff%2C%20APT%2038%2C%20Stardust%20Chollima&n=1
 
 
 The dropper used to deliver the malware is related to the PowerRatankba, a Microsoft Visual C#/ Basic .NET
-compiled executable associated with Stardust Chollima APT. The dropper was used to download a PowerRatankba
+compiled executable associated with Lazarus APT. The dropper was used to download a PowerRatankba
 PowerShell reconnaissance tool, the dropper displays a fake job application form while downloads and executes
 PowerRatankba in the background by useing (Base64).
 

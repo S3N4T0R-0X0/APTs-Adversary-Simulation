@@ -14,9 +14,9 @@ Throughout, the malware hides behind legitimate applications and cloud services 
 
 **2. Malicious ZIP & DLL Side-Loading:** The ZIP file contains a legitimate application (`SignedConnection.exe`) alongside a malicious DLL (`secur32.dll`). When the executable is run, Windows DLL search order hijacking causes the malicious `secur32.dll` to be loaded instead of the legitimate one.
 
-**3. SnailResin Malware:** The loaded DLL executes the SnailResin malware, which performs IP address discovery (via `api[.]ipify[.]org`) and fetches encoded C2 server information from a compromised GitHub account (`msdndegsupport`), hiding its infrastructure within legitimate cloud traffic.
+**3. SignedConnection Malware:** The loaded DLL executes the SignedConnection malware, which performs IP address discovery (via `api[.]ipify[.]org`) and fetches encoded C2 server information from a compromised GitHub account (`msdndegsupport`), hiding its infrastructure within legitimate cloud traffic.
 
-**4. C2 infrastructure:** relies on GitHub (raw.githubusercontent.com) and Cloudflare to hide the real C2 servers. The malware uses ASCII-encoded data embedded in a README file to retrieve C2 configuration, communicating with domains like `xboxapicenter[.]com` and resolving to IPs like `89.221.225[.]249`.
+**4. C2 infrastructure:** Abuse (`Cloudflare`) to hide the real C2 servers. The malware uses ASCII-encoded data.
 
 ---
 
@@ -36,6 +36,8 @@ The attack kicks off with a spear-phishing campaign via LinkedIn. The threat act
 </table>
 
 ## The second stage Kill Chain (delivery technique)
+
+A special thanks to **[Mustafa Moselhy](https://www.linkedin.com/in/mustafa-moselhy?utm_source=share_via&utm_content=profile&utm_medium=member_android)** for his valuable contribution to this adversary simulation project. He was responsible for helping me develop the Signed Connection loader and the HTML phishing page.
 
 The fake website `careers2find[.]com` is created, hiding its real IP under Cloudflare. The site contains a legitimate-looking job posting. When the victim engages, they are directed to download a PDF instruction file and a ZIP archive named `SignedConnection[.]zip`. The PDF provides step-by-step instructions on how to "safely" access the site, ensuring infection by guiding the user to extract the ZIP and run the `SignedConnection.exe` application.
 
@@ -155,7 +157,7 @@ Loading the DLL: The EXE uses the Windows LoadLibrary function to load secur32.d
 <img width="1263" height="545" alt="photo_2026-10-26_07-52-11" src="https://github.com/user-attachments/assets/2ccd69c0-69b8-4e38-bb5c-73df14ae347d" />
 
 
-## Pivoting technique
+### Pivoting technique
 
 I simulated selected techniques associated with the North Korean Lazarus Group, focusing on the use of a fake Dream Job opportunity to trick victims into executing malicious software. The simulation follows a similar attack pattern to the one described in the original ClearSky analysis, including the use of DLL side-loading.
 
@@ -166,6 +168,13 @@ Reference: Lazarus Group — Adversary Simulation Repository (https://github.com
 
 
 <img width="1366" height="700" alt="471262995-f77597d6-40fc-4576-9a1c-513feb62adc1" src="https://github.com/user-attachments/assets/eeeac940-a14a-411a-b8db-cb058a73d5ec" />
+
+
+### C2 COMMUNICATION
+
+The final and most sophisticated capability is C2 communication over HTTPs, allowing the implant to receive commands and exfiltrate data.
+
+<img width="1280" height="561" alt="photo_2026-10-26_08-27-08" src="https://github.com/user-attachments/assets/e5df5869-3fe2-4ce1-ab0b-e23ab825d000" />
 
 
 

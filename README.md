@@ -32,7 +32,7 @@ This repository contains detailed adversary simulation APT campaigns targeting v
 <table>
   <tr>
 <th align="center"><strong>Country<br>of Origin</br></strong></th>
-    <th align="center">Russia 🇷🇺</th>
+    <th align="center">Russia 🇷🇺 </th>
     <th align="center">China 🇨🇳</th>
     <th align="center">North Korea 🇰🇵</th>
     <th align="center">Iran 🇮🇷</th>
@@ -41,54 +41,53 @@ This repository contains detailed adversary simulation APT campaigns targeting v
     <td align="center"><strong>APT Groups</strong></td>
     <td align="center">
 
-[**Cozy Bear ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Russian%20APT/APT29-Adversary-Simulation)<br>
-[**Voodoo Bear ✅**](https://github.com/S3N4T0R-0X0/Voodoo-Bear-APT.git)<br>
-[**Fancy Bear ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation)<br>
-[**Energetic Bear ✅**](https://github.com/S3N4T0R-0X0/Energetic-Bear-APT.git)<br>
-[**Berserk Bear ✅**](https://github.com/S3N4T0R-0X0/Berserk-Bear-APT.git)<br>
-[**Gossamer Bear ✅**](https://github.com/S3N4T0R-0X0/Gossamer-Bear-APT.git)<br>
-[**Primitive Bear ✅**](https://github.com/S3N4T0R-0X0/Primitive-Bear-APT.git)<br>
-[**Ember Bear ✅**](https://github.com/S3N4T0R-0X0/Ember-Bear-APT.git)<br>
-[**Venomous Bear ✅**](https://github.com/S3N4T0R-0X0/Venomous-Bear-APT.git)
+[**Cozy Bear**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Russian%20APT/APT29-Adversary-Simulation)<br>
+[**Voodoo Bear**](https://github.com/S3N4T0R-0X0/Voodoo-Bear-APT.git)<br>
+[**Fancy Bear**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Russian%20APT/APT28-Adversary-Simulation)<br>
+[**Energetic Bear**](https://github.com/S3N4T0R-0X0/Energetic-Bear-APT.git)<br>
+[**Berserk Bear**](https://github.com/S3N4T0R-0X0/Berserk-Bear-APT.git)<br>
+[**Gossamer Bear**](https://github.com/S3N4T0R-0X0/Gossamer-Bear-APT.git)<br>
+[**Primitive Bear**](https://github.com/S3N4T0R-0X0/Primitive-Bear-APT.git)<br>
+[**Ember Bear**](https://github.com/S3N4T0R-0X0/Ember-Bear-APT.git)<br>
+[**Venomous Bear**](https://github.com/S3N4T0R-0X0/Venomous-Bear-APT.git)
 
 </td>
 <td align="center">
 
-[**Mustang Panda ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Mustang%20Panda)<br>
-[Glacial Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Glacial-Panda)<br>
-[**Wicked Panda ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Wicked%20Panda)<br>
-[Goblin Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Goblin-Panda)<br>
-[Anchor Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Anchor-Panda)<br>
-[Deep Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Deep-Panda)<br>
-[Samurai Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Samurai-Panda)<br>
-[Phantom Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Phantom-Panda)<br>
-[Sunrise Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Sunrise-Panda)<br>
-[Ethereal Panda](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Ethereal-Panda)
+[**Mustang Panda**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Mustang%20Panda)<br>
+[**Wicked Panda**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Chinese%20APT/Wicked%20Panda)<br>
+Goblin Panda <br>
+Deep Panda <br>
+Glacial Panda <br>
+Anchor Panda <br>
+Samurai Panda <br>
+Phantom Panda <br>
+Sunrise Panda <br>
+Ethereal Panda <br>
+</td>
+<td align="center">
+
+[**Lazarus**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Lazarus)<br>
+[**Labyrinth Chollima**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Labyrinth%20Chollima)<br>
+[**Velvet Chollima**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Velvet%20Chollima)<br>
+[**Famous Chollima**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Famous%20Chollima)<br>
+[**Ricochet Chollima**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Ricochet%20Chollima)<br>
+[**Silent Chollima**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Silent%20Chollima)
 
 </td>
 <td align="center">
 
-[**Labyrinth Chollima ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Labyrinth%20Chollima)<br>
-[**Velvet Chollima ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Velvet%20Chollima)<br>
-[**Famous Chollima ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Famous%20Chollima)<br>
-[**Lazarus ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Lazarus)<br>
-[**Ricochet Chollima ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Ricochet%20Chollima)<br>
-[**Silent Chollima ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/North%20Koreans%20APT/Silent%20Chollima)
-
-</td>
-<td align="center">
-
-[Helix Kitten ✅](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Helix%20Kitten)<br>
-[Pioneer Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Pioneer-Kitten)<br>
-[Charming Kitten ✅](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Charming%20Kitten)<br>
-[Clever Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Clever-Kitten)<br>
-[**Static Kitten ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Static%20Kitten)<br>
-[Tracer Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Tracer-Kitten)<br>
-[Nemesis Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Nemesis-Kitten)<br>
-[**Muddy Water ✅**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Muddy%20Water)<br>
-[Pulsar Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Pulsar-Kitten)<br>
-[Remix Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Remix-Kitten)<br>
-[Haywire Kitten](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iran%20APT/Haywire-Kitten)
+[**Helix Kitten**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Helix%20Kitten)<br>
+[**Charming Kitten**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Charming%20Kitten)<br>
+[**Static Kitten**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Static%20Kitten)<br>
+[**Muddy Water**](https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation/tree/main/Iranian%20APT/Muddy%20Water)<br>
+Tracer Kitten <br>
+Pioneer Kitten <br>
+Nemesis Kitten <br>
+Clever Kitten <br>
+Pulsar Kitten <br>
+Remix Kitten <br>
+Haywire Kitten <br>
 
 </td>
   </tr>

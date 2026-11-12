@@ -2,7 +2,7 @@
 
 ---
 
-A comprehensive collection of simulated Advanced Persistent Threat (APT) attacks based on real world tactics, techniques, and procedures (TTPs) used by state sponsored APT Groups from `Russia, China, Iran, and North Korea`
+Comprehensive collection of simulated APT attacks based on real world TTPs used by state sponsored APT Groups from `Russia, China, Iran, and North Korea`
 
 <img width="1500" height="578" alt="hollywood-Comp-02" src="https://github.com/user-attachments/assets/72dc8468-35bc-403c-b0e5-28b8a7efb954" />
 
